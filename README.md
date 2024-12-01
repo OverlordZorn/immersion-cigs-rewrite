@@ -8,15 +8,15 @@ Mod is fully multiplayer compatible so you will hear the sound of the matches fr
 
 We do not encourage anyone to smoke in real life, we don't smoke irl, it's just a small addition in favour for some additional immersion.
 
-## Usage
+### Usage
 - By Left Clicking on the Items in the Inventory (Cig Packs, Smokable and Suckable Items)
 - With ACE Loaded, via ACE Interaction Menu
 
 
-## For MissionMakers
+### For MissionMakers
 - `[_unit] call cigs_core_fnc_start_smoking;` (Requires Smokeable Item in Glasses or HMD Slot)
 
-## Credits
+### Credits
 - Original Authors:
   - Rebel - Configs, Scripting.
   - Facel - 3d models, Textures.
@@ -28,24 +28,24 @@ We do not encourage anyone to smoke in real life, we don't smoke irl, it's just 
   - OverlordZorn - Rewrite of configs and scripts, fixing some models here, adding some new textures there and glueing everything together.
   - ArtemisGodfrey - Helping with models.
 
-## Dependencies
+### Dependencies
 - Latest Arma 3
 - CBA - Community Based Addon - https://steamcommunity.com/sharedfiles/filedetails/?id=450814997
 
-## Optionals
+### Optionals
 - ACE3 - https://steamcommunity.com/sharedfiles/filedetails/?id=463939057
 
-## Compats for
+### Compats for
 - SOG: Prarie Fire
 - KJW's Imposter - https://steamcommunity.com/sharedfiles/filedetails/?id=2917554904
 
-## For Server Admins
+### For Server Admins
 - This mod has to be loaded on both, Server and Client.
+
 
 # The Rewrite
 
 This is Mod is a full Rewrite of the original Immersion Cigs Mod by Rebel & Facel:
-
 [Immersion Cigs - Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=753946944)
 [Immersion Cigs - Git Hub](https://github.com/rebelvg/immersion_cigs/tree/master)
 
