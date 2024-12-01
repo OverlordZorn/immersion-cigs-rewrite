@@ -2,7 +2,7 @@
 <Project name="cigs_main">
     <Package name="Main">
         <Key ID="STR_mod_URL">
-            <English>https://github.com/rebelvg/immersion_cigs</English>
+            <English>https://github.com/OverlordZorn/immersion-cigs-rewrite</English>
         </Key>
         <Key ID="STR_mod_author">
             <English>Immersion Cigs Team</English>

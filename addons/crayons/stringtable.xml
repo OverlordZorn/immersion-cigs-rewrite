@@ -19,7 +19,7 @@
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_crayons_author">
-            <English>Vesapde / OverlordZorn</English>
+            <English>Vespade / OverlordZorn</English>
         </Key>
     </Package>
 </Project>
