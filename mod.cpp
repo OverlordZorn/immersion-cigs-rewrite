@@ -14,12 +14,12 @@ actionName      = "Website";
 action          = "https://github.com/OverlordZorn/immersion-cigs-rewrite";
 
 
-picture         = "img\mod-rw.paa";
-logoSmall       = "img\mod-rw.paa";
-logo            = "img\mod-rw.paa";
-logoOver        = "img\mod-rw.paa";
+picture         = "img\mod-rw-trans.paa";
+logoSmall       = "img\mod-rw-trans.paa";
+logo            = "img\mod-rw-trans.paa";
+logoOver        = "img\mod-rw-trans.paa";
 
-overviewPicture = "img\mod-rw.paa";
+overviewPicture = "img\mod-rw-trans.paa";
 overviewText    = "Immersion Cigs - Rewrite";
 
 overviewFootnote = "Immersion Cigs - Rewrite";
