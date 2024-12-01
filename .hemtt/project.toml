@@ -1,0 +1,35 @@
+name = "Immersion Cigs"
+prefix = "cigs"
+mainprefix = "z"
+
+[properties]
+author = "Rebel / Facel / OverlordZorn / prisonerMO"
+url = "https://github.com/rebelvg/immersion_cigs"
+
+
+[binarize]
+enabled = true # Default: true
+
+[files]
+include = [
+    "mod.cpp",      # These files are copied to the build directory by default
+    "meta.cpp",     # They do not need to be added to your list
+    "LICENSE",
+    "/img/*.paa",
+    "logo_ca.paa",
+    "logo_co.paa",
+    "*.bikey",
+]
+exclude = [
+    "*.psd",        # By default this list is empty
+    "*.md",
+    "/.vscode/",
+    "/template_addon/"
+]
+
+[version]
+# path = "addons/main/script_version.hpp" # Default
+# major = 0 # Overrides path when set
+# minor = 1
+# patch = 1
+# git_hash = 4 # Default: 8

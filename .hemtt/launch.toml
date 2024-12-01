@@ -1,0 +1,37 @@
+[default]
+workshop = [
+    "450814997",  # CBA_A3's Workshop ID
+    "463939057",  # ACE3
+    "2369477168", # Advanced Developer Tools
+    "1779063631", # ZEN
+]
+
+dlc = [
+]
+
+optionals = [
+]
+
+parameters = [
+    "-window",
+    "-noPause",
+    "-noPauseAudio",
+]
+
+# executable = "arma3_x64"        # Default: "arma3_x64"
+# file_patching = true # Default: true
+# binarize = false # Default: false
+# rapify = true # Default: true
+
+[Test]
+extends = "default"
+mission = "test.Stratis"
+
+
+[VN]
+extends = "Test"
+dlc = ["vn"]
+
+[SPE]
+extends = "Test"
+dlc = ["vn", "spe"]

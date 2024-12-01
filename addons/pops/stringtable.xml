@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="cigs_pops">
+    <Package name="Items">
+        <Key ID="STR_cigs_pops_pop0">
+            <English>Lollipop</English>
+            <German>Lutscher</German>
+            <Japanese>ロリポップ</Japanese>
+            <Chinese>棒棒糖</Chinese>
+        </Key>
+        <Key ID="STR_cigs_pops_pop0_nv">
+            <English>Lollipop</English>
+            <German>Lutscher</German>
+            <Japanese>ロリポップ</Japanese>
+            <Chinese>棒棒糖</Chinese>
+        </Key>
+        <Key ID="STR_cigs_pops_poppack">
+            <English>Lollipop (Packed)</English>
+            <German>Lutscher (Verpackt)</German>
+            <Japanese>ロリポップ (未開封)</Japanese>
+            <Chinese>棒棒糖（未開封）</Chinese>
+        </Key>
+        <Key ID="STR_cigs_pops_poppack_desc">
+            <English>One packed lollipop. Not hazardous to your health and sweet.</English>
+            <German>Ein verpackter Lutscher. Nicht ungesund und auch noch süß.</German>
+            <Japanese>1つの未開封のロリポップ。健康に害を与えず甘い。</Japanese>
+            <Chinese>一根未開封的棒棒糖。不會導致你性功能障礙而且還很甜。</Chinese>
+        </Key>
+    </Package>
+    <Package name="Main">
+        <Key ID="STR_cigs_pops_author">
+            <English>Rebel / Facel</English>
+            <German>Rebel / Facel</German>
+            <Japanese>Rebel / Facel</Japanese>
+        </Key>
+    </Package>
+</Project>

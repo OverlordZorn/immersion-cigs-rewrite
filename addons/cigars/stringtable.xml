@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="cigs_cigars">
+    <Package name="Items">
+        <Key ID="STR_cigs_cigars_template"></Key>
+        <Key ID="STR_cigs_cigars_template_desc"></Key>
+    </Package>
+    <Package name="Main">
+        <Key ID="STR_cigs_cigars_author">
+            <Original>Rebel / Facel</Original>
+        </Key>
+    </Package>
+</Project>

@@ -1,0 +1,71 @@
+# This action will use hemtt release to build the mod folder which then will be uploaded to the provided steam workshop page
+#
+# Pre-Requisites
+# - Mod needs to be already on the Workshop
+# - Steam Account that owns Arma and needs to be a contributer to the workshop item.
+# -- It is recommended to use a dedicated Steam Account with 2FA disabled.
+#
+# How to use
+#
+# 1. Update the FOLDER Variable and remove the #
+# 2. Update the WORKSHOP ID Variable and remove the #
+# 3. Add STEAM_USERNAME as github repo secret
+# 4. Add STEAM_PASSWORD as github repo secret
+
+name: Release
+
+env:
+  FOLDER: # '@cvo_aux'
+  WORKSHOPID: # '3037257908'
+
+on:
+  release:
+    types: released
+
+permissions:
+  contents: write
+
+jobs:
+  release-addon:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Set VERSION env
+          run: echo VERSION=${GITHUB_REF:11} >> $GITHUB_ENV
+
+        - name: Checkout the source code
+          uses: actions/checkout@v2
+
+        - name: Setup HEMTT
+          uses: arma-actions/hemtt@v1
+
+        - name: Run HEMTT build
+          run: hemtt release --no-archive
+
+        - name: Move release to releases folder
+          run:
+            version="${{ github.event.release.tag_name }}"
+            mv .hemttout/release "${{ env.FOLDER }}-${{ env.VERSION }}"
+
+        - name: Zip release
+          run: zip -r "${{ env.FOLDER }}-${{ env.VERSION }}.zip" ./${{ env.FOLDER }}-${{ env.VERSION }}
+
+        - name: Update Release with Files
+          uses: softprops/action-gh-release@v1
+          with:
+            files: ./${{ env.FOLDER }}-${{ env.VERSION }}.zip
+            draft: true
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Update to Steam Workshop (stable)
+          uses: arma-actions/workshop-upload@v1
+          with:
+            itemId: ${{ env.WORKSHOPID }}
+            contentPath: './${{ env.FOLDER }}-${{ env.VERSION }}'
+            changelog: |
+              https://github.com/${{ github.repository }}/releases/tag/v${{ env.VERSION }}
+
+              ${{ github.event.release.body }}
+          env:
+            STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
+            STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
