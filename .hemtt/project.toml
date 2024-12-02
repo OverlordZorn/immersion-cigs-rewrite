@@ -24,7 +24,8 @@ exclude = [
     "*.psd",        # By default this list is empty
     "*.md",
     "/.vscode/",
-    "/template_addon/"
+    "/template_addon/",
+    "/Workshop/"
 ]
 
 [version]
