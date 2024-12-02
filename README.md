@@ -88,6 +88,6 @@ This is Mod is a full Rewrite of the original Immersion Cigs Mod by Rebel & Face
 
 ### Note
 
-## Steam Workshop Page
-[Github Repository: Immersion Cigs - Rewrite](https://github.com/OverlordZorn/immersion-cigs-rewrite)
-[Steam Workshop: Immersion Cigs - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=3375788189)
+## Links
+- [Github Repository: Immersion Cigs - Rewrite](https://github.com/OverlordZorn/immersion-cigs-rewrite)
+- [Steam Workshop: Immersion Cigs - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=3375788189)
