@@ -5,7 +5,7 @@ class CfgGlasses {
 
     class None;
     
-    class PVAR(cigar0): None {
+    class GVAR(cigar0): None {
         scope = 2;
         author = CSTRING(author);
         mass = 0.1;
@@ -27,7 +27,7 @@ class CfgGlasses {
         KJW_Imposters_SuspicionAmount = 0;
     };
 
-    class PVAR(cigar1): PVAR(cigar0) {
+    class GVAR(cigar1): GVAR(cigar0) {
         scope = 1;
 
         displayName = "Cigar (Stage 1)";
@@ -38,7 +38,7 @@ class CfgGlasses {
         PVAR(nextState) = QPVAR(cigar2);
     };
 
-    class PVAR(cigar2): PVAR(cigar0) {
+    class GVAR(cigar2): GVAR(cigar0) {
         scope = 1;
 
         displayName = "Cigar (Stage 2)";
@@ -49,7 +49,7 @@ class CfgGlasses {
         PVAR(nextState) = QPVAR(cigar3);
     };
 
-    class PVAR(cigar3): PVAR(cigar0) {
+    class GVAR(cigar3): GVAR(cigar0) {
         scope = 1;
 
         displayName = "Cigar (Stage 3)";
@@ -60,7 +60,7 @@ class CfgGlasses {
         PVAR(nextState) = QPVAR(cigar4);
     };
 
-    class PVAR(cigar4): PVAR(cigar0) {
+    class GVAR(cigar4): GVAR(cigar0) {
         scope = 1;
 
         displayName = "Cigar (Stage 4)";
