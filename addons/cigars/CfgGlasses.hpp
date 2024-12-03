@@ -12,9 +12,9 @@ class CfgGlasses {
   
         identityTypes[] = {};
 
-        displayName = "Cigar";
+        displayName = CSTRING(cigar);
         model = PATH_TO_ADDON_3(data,cigars,cigar0.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigar0_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cigar0_x_ca); 
 
         PVAR(maxTime) = 660;
 
