@@ -21,3 +21,10 @@
 ## Immersive Crayons
 `cigs_crayons_crayonpack`
 
+## SOG:PF Compat
+`vn_b_item_lighter_01` - Vanilla Item (zippo lighter) updated with config properties to enable Immersion Cigs integration.
+`vn_b_item_cigs_01` - Vanilla Item (cigarette pack) updated with config properties to enable Immersion Cigs integration.
+
+`cigs_savage_cigpack` - as an additional Item to go in line with the immersion cigs naming structure.
+`cigs_savage_cig0` - New Item, texture adjusted to be in line with savage tiger premium branding
+`cigs_savage_cig0_nv` - New Item, texture adjusted to be in line with savage tiger premium branding
