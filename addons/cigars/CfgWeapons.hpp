@@ -4,7 +4,7 @@
 class CfgWeapons {
 	class NVGoggles;
 
-    class PVAR(cigar0_nv): NVGoggles {
+    class GVAR(cigar0_nv): NVGoggles {
 
         visionMode[] = {"Normal"};
 		thermalMode[] = {0};
@@ -38,7 +38,7 @@ class CfgWeapons {
         KJW_Imposters_SuspicionAmount = 0;
     };
 
-    class PVAR(cigar1_nv): PVAR(cigar0_nv) {
+    class GVAR(cigar1_nv): GVAR(cigar0_nv) {
         scope = 1;
 
         displayName = "Cigar (Stage 1)";
@@ -57,7 +57,7 @@ class CfgWeapons {
         };
     };
 
-    class PVAR(cigar2_nv): PVAR(cigar0_nv) {
+    class GVAR(cigar2_nv): GVAR(cigar0_nv) {
         scope = 1;
 
         displayName = "Cigar (Stage 2)";
@@ -76,7 +76,7 @@ class CfgWeapons {
         };
     };
 
-    class PVAR(cigar3_nv): PVAR(cigar0_nv) {
+    class GVAR(cigar3_nv): GVAR(cigar0_nv) {
         scope = 1;
 
         displayName = "Cigar (Stage 3)";
@@ -95,7 +95,7 @@ class CfgWeapons {
         };
     };
 
-    class PVAR(cigar4_nv): PVAR(cigar0_nv) {
+    class GVAR(cigar4_nv): GVAR(cigar0_nv) {
         scope = 1;
 
         displayName = "Cigar (Stage 4)";
