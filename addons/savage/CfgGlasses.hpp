@@ -8,7 +8,7 @@ class CfgGlasses {
         scope = 2;
         author = CSTRING(author);
         mass = 0.02;
-        displayName = CSTRING(cigarette0);
+        displayName = CSTRING(cigarette);
         model = PATH_TO_ADDON_3(data,cigs,cig0.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig0_x_ca.paa);
         identityTypes[] = {};
@@ -26,7 +26,7 @@ class CfgGlasses {
     class GVAR(cig1): GVAR(cig0) {
         scope = 1;
         author = CSTRING(author);
-        displayName = "Savage Cigarette (Stage 1)";
+        displayName = CSTRING(cigarette);
         model = PATH_TO_ADDON_3(data,cigs,cig1.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig1_x_ca.paa);
 
@@ -38,7 +38,7 @@ class CfgGlasses {
     class GVAR(cig2): GVAR(cig0) {
         scope = 1;
         author = CSTRING(author);
-        displayName = "Savage Cigarette (Stage 2)";
+        displayName = CSTRING(cigarette);
         model = PATH_TO_ADDON_3(data,cigs,cig2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig2_x_ca.paa);
 
@@ -50,7 +50,7 @@ class CfgGlasses {
     class GVAR(cig3): GVAR(cig0) {
         scope = 1;
         author = CSTRING(author);
-        displayName = "Savage Cigarette (Stage 3)";
+        displayName = CSTRING(cigarette);
         model = PATH_TO_ADDON_3(data,cigs,cig3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig3_x_ca.paa);
 
@@ -62,7 +62,7 @@ class CfgGlasses {
     class GVAR(cig4): GVAR(cig0) {
         scope = 1;
         author = CSTRING(author);
-        displayName = "Savage Cigarette (Stage 4)";
+        displayName = CSTRING(cigarette);
         model = PATH_TO_ADDON_3(data,cigs,cig4.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig4_x_ca.paa);
 
