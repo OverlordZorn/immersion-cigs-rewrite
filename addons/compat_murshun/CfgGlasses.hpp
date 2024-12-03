@@ -66,7 +66,7 @@ class CfgGlasses {
 
     // Pops
     class EGVAR(pops,pop0);
-    class immersion_pops_pop0: EGVAR(pop,pop0) {
+    class immersion_pops_pop0: EGVAR(pops,pop0) {
         scope = 1;
         displayName = "DEPRICATED";
     };
