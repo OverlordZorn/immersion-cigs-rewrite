@@ -2,7 +2,6 @@
 // The Facewear Version is defined in CfgGlasses
 
 class CfgGlasses {
-
     // Cigars
     class EGVAR(cigars,cigar0);
     class immersion_cigs_cigar0: EGVAR(cigars,cigar0) {
