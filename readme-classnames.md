@@ -13,18 +13,22 @@
 | cigs_cigars_cigar0_nv | immersion_cigs_cigar0_nv |
 | cigs_pops_poppack | immersion_pops_poppack |
 
++ assosiated `_cig0..4` / `_cig0..4_nv` classnames for facewear/nvg slot
++ assosiated `_cigar0..4` / `_cigar0..4_nv` classnames for facewear/nvg slot
+
 ## WW2 Stuff
-`cigs_eckstein_cigpack`
-`cigs_craven_cigpack`
-`cigs_lucky_strike_cigpack`
+- `cigs_eckstein_cigpack`
+- `cigs_craven_cigpack`
+- `cigs_lucky_strike_cigpack`
++ assosiated `_cig0..4` / `_cig0..4_nv` classnames for facewear/nvg slot
 
 ## Immersive Crayons
-`cigs_crayons_crayonpack`
+- `cigs_crayons_crayonpack`
++ assosiated `_crayon_COLOR` / `_crayon_COLOR_nv` classnames for facewear/nvg slot
 
 ## SOG:PF Compat
-`vn_b_item_lighter_01` - Vanilla Item (zippo lighter) updated with config properties to enable Immersion Cigs integration.
-`vn_b_item_cigs_01` - Vanilla Item (cigarette pack) updated with config properties to enable Immersion Cigs integration.
+- `vn_b_item_lighter_01` - Vanilla Item (zippo lighter) updated with config properties to enable Immersion Cigs integration.
+- `vn_b_item_cigs_01` - Vanilla Item (cigarette pack) updated with config properties to enable Immersion Cigs integration.
 
-`cigs_savage_cigpack` - as an additional Item to go in line with the immersion cigs naming structure.
-`cigs_savage_cig0` - New Item, texture adjusted to be in line with savage tiger premium branding
-`cigs_savage_cig0_nv` - New Item, texture adjusted to be in line with savage tiger premium branding
+- `cigs_savage_cigpack` - as an additional Item to go in line with the immersion cigs naming structure.
++ assosiated `_cig0..4` / `_cig0..4_nv` classnames for facewear/nvg slot
