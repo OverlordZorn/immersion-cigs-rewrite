@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_cigars">
     <Package name="Items">
-        <Key ID="STR_cigs_cigars_template"></Key>
-        <Key ID="STR_cigs_cigars_template_desc"></Key>
+        <Key ID="STR_cigs_cigar">
+        
+        </Key>
+        <Key ID="STR_cigs_cigar_desc">
+        
+        </Key>
+        <Key ID="STR_cigs_cigarbox_5_">
+        
+        </Key>
+        <Key ID="STR_cigs_cigarbox_5_desc">
+        
+        </Key>
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_cigars_author">
             <Original>Rebel / Facel</Original>
+        </Key>
+        <Key ID="STR_cigs_cigars_author_cigarbox_5">
+            <Original>Bromine / OverlordZorn</Original>
         </Key>
     </Package>
 </Project>
