@@ -67,7 +67,7 @@ class CfgWeapons {
 
     // Pops
     class EGVAR(pops,pop0_nv);
-    class immersion_pops_pop0_nv: EGVAR(pop,pop0_nv) {
+    class immersion_pops_pop0_nv: EGVAR(pops,pop0_nv) {
         scope = 1;
         displayName = "DEPRICATED";
     };
