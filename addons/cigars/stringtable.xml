@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_cigars">
     <Package name="Items">
-        <Key ID="STR_cigs_cigar">
-        
+        <Key ID="STR_cigs_cigars_cigar">
+            <English>Cigar</English>
+            <German>Zigarre</German>
         </Key>
-        <Key ID="STR_cigs_cigar_desc">
-        
+        <Key ID="STR_cigs_cigars_cigar_desc">
+            <English>Cigar</English>
+            <German>Zigarre</German>
         </Key>
-        <Key ID="STR_cigs_cigarbox_5_">
-        
+        <Key ID="STR_cigs_cigarbox_5">
+            <English>Cigarbox (5 pc.)</English>
+            <German>Zigarrenschachtel (5 Stk.)</German>      
         </Key>
         <Key ID="STR_cigs_cigarbox_5_desc">
-        
+            <English>Cigarbox with 5 cigars</English>
+            <German>Zigarrenschachtel mit 5 Zigarren</German>
         </Key>
     </Package>
     <Package name="Main">
