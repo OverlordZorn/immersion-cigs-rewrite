@@ -30,6 +30,11 @@ class CfgPatches {
         weapons[] = {};
 
 	};
+
+    // Create Dummy CfgPatches Addons to avoid Missing Addons Errors
+    class murshun_cigs : ADDON {};
+    class immersion_pops : ADDON {};
+    class immersion_cigs_animations : ADDON {};
 };
 
 #include "CfgFunctions.hpp"
