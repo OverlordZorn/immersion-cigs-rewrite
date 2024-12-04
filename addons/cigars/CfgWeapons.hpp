@@ -15,7 +15,9 @@ class CfgWeapons {
         author = CSTRING(author);
         mass = 0.1;
 
-        displayName = "Cigar (NVG Slot)";
+        displayName = CSTRING(cigar);
+        descriptionShort = ECSTRING(core,hmd_stage0);
+
         model = PATH_TO_ADDON_3(data,cigars,cigar0.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar0_x_ca);
 
@@ -41,7 +43,9 @@ class CfgWeapons {
     class GVAR(cigar1_nv): GVAR(cigar0_nv) {
         scope = 1;
 
-        displayName = "Cigar (Stage 1)";
+        displayName = CSTRING(cigar);
+        descriptionShort = ECSTRING(core,hmd_stage1);
+
         model = PATH_TO_ADDON_3(data,cigars,cigar1.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca);
 
@@ -60,7 +64,9 @@ class CfgWeapons {
     class GVAR(cigar2_nv): GVAR(cigar0_nv) {
         scope = 1;
 
-        displayName = "Cigar (Stage 2)";
+        displayName = CSTRING(cigar);
+        descriptionShort = ECSTRING(core,hmd_stage2);
+
         model = PATH_TO_ADDON_3(data,cigars,cigar2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca);
 
@@ -79,7 +85,9 @@ class CfgWeapons {
     class GVAR(cigar3_nv): GVAR(cigar0_nv) {
         scope = 1;
 
-        displayName = "Cigar (Stage 3)";
+        displayName = CSTRING(cigar);
+        descriptionShort = ECSTRING(core,hmd_stage3);
+
         model = PATH_TO_ADDON_3(data,cigars,cigar3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca);
 
@@ -98,7 +106,9 @@ class CfgWeapons {
     class GVAR(cigar4_nv): GVAR(cigar0_nv) {
         scope = 1;
 
-        displayName = "Cigar (Stage 4)";
+        displayName = CSTRING(cigar);
+        descriptionShort = ECSTRING(core,hmd_stage4);
+
         model = PATH_TO_ADDON_3(data,cigars,cigar4.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar4_x_ca);
 
