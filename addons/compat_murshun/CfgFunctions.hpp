@@ -7,7 +7,9 @@ class CfgFunctions
 
             file = PATH_TO_FUNC;
 
-            class example { postInit = 1; };
+            class register {};
+            class onArsenalOpen {};
+            class getReplacementItem {};
 
         };
     };
