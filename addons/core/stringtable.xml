@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_core">
+    <Package name="GlobalDescription">
+        <Key ID="STR_cigs_core_face_stage0">
+            <English>Facewear Slot - Stage 0</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage1">
+            <English>Facewear Slot - Stage 1</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage2">
+            <English>Facewear Slot - Stage 2</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage3">
+            <English>Facewear Slot - Stage 3</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage4">
+            <English>Facewear Slot - Stage 4</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage0">
+            <English>Nightvision Slot - Stage 0</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage1">
+            <English>Nightvision Slot - Stage 1</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage2">
+            <English>Nightvision Slot - Stage 2</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage3">
+            <English>Nightvision Slot - Stage 3</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage4">
+            <English>Nightvision Slot - Stage 4</English>
+        </Key>
+    </Package>
     <Package name="Interactions_cigs">
         <Key ID="STR_cigs_core_start_cig_own">
             <English>Light Up your Cig</English>
@@ -103,38 +135,6 @@
         <Key ID="STR_cigs_core_taste_flavour">
             <English>Hmm, its %1 flavour!</English>
             <German>Hmm, es schmeckt nach %1!</German>
-        </Key>
-    </Package>
-    <Package name="GlobalDescription">
-        <Key ID="STR_cigs_core_face_stage0">
-            <English>Facewear Slot - Stage 0</English>
-        </Key>
-        <Key ID="STR_cigs_core_face_stage1">
-            <English>Facewear Slot - Stage 1</English>
-        </Key>
-        <Key ID="STR_cigs_core_face_stage2">
-            <English>Facewear Slot - Stage 2</English>
-        </Key>
-        <Key ID="STR_cigs_core_face_stage3">
-            <English>Facewear Slot - Stage 3</English>
-        </Key>
-        <Key ID="STR_cigs_core_face_stage4">
-            <English>Facewear Slot - Stage 4</English>
-        </Key>
-        <Key ID="STR_cigs_core_hmd_stage0">
-            <English>Nightvision Slot - Stage 0</English>
-        </Key>
-        <Key ID="STR_cigs_core_hmd_stage1">
-            <English>Nightvision Slot - Stage 1</English>
-        </Key>
-        <Key ID="STR_cigs_core_hmd_stage2">
-            <English>Nightvision Slot - Stage 2</English>
-        </Key>
-        <Key ID="STR_cigs_core_hmd_stage3">
-            <English>Nightvision Slot - Stage 3</English>
-        </Key>
-        <Key ID="STR_cigs_core_hmd_stage4">
-            <English>Nightvision Slot - Stage 4</English>
         </Key>
     </Package>
 </Project>
