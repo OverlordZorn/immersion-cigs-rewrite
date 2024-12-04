@@ -40,7 +40,7 @@ class CfgWeapons {
     };
 
     class GVAR(cig1_nv): GVAR(cig0_nv) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
 
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,hmd_stage1);
@@ -61,7 +61,7 @@ class CfgWeapons {
     };
 
     class GVAR(cig2_nv): GVAR(cig0_nv) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
 
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,hmd_stage2);
@@ -82,7 +82,7 @@ class CfgWeapons {
     };
 
     class GVAR(cig3_nv): GVAR(cig0_nv) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
 
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,hmd_stage3);
@@ -103,7 +103,7 @@ class CfgWeapons {
     };
 
     class GVAR(cig4_nv): GVAR(cig0_nv) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
 
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,hmd_stage4);

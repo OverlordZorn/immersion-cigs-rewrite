@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="cigs_legacy">
+    <Package name="Main">
+        <Key ID="STR_cigs_legacy_author">
+            <Original>OverlordZorn / DartRuffian</Original>
+        </Key>
+    </Package>
+    <Package name="Settings">
+        <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_mission">
+            <Original>Update Missions Arsenal Loadouts</Original>
+            <English>Update Missions Arsenal Loadouts</English>
+        </Key>
+        <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_mission_desc">
+            <Original>On mission start or setting change to true, will scan  default ace loadouts and replace deprecated legacy classnames with the new counterparts.</Original>
+            <English>On mission start or setting change to true, will scan  default ace loadouts and replace deprecated legacy classnames with the new counterparts.</English>
+        </Key>
+        <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_personal">
+            <Original>Update Personal Arsenal Loadouts</Original>
+            <English>Update Personal Arsenal Loadouts</English>
+        </Key>
+        <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_personal_desc">
+            <Original>Whenever the ace or vanilla arsenal are being opened, it will scan the saved loadouts and will replace deprecated legacy classnames with their new counterparts.</Original>
+            <English>Whenever the ace or vanilla arsenal are being opened, it will scan the saved loadouts and will replace deprecated legacy classnames with their new counterparts.</English>
+        </Key>
+    </Package>
+    <Package name="Settings-Categories">
+        <Key ID="STR_cigs_legacy_set_cat_loadout">
+            <Original>Legacy Classnames and Loadouts</Original>
+        </Key>
+    </Package>
+</Project>
