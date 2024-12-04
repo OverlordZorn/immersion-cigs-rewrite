@@ -4,6 +4,7 @@ class CfgMagazines {
     {
         scope = 1;
         displayName = "DEPRECATED";
+        PVAR(replacementItems) = QPVAR(lighter);
     };
 
     class PVAR(matches);
@@ -11,6 +12,7 @@ class CfgMagazines {
     {
         scope = 1;
         displayName = "DEPRECATED";
+        PVAR(replacementItems) = QPVAR(matches);
     };
 
     class EGVAR(morley,cigpack);
@@ -18,5 +20,6 @@ class CfgMagazines {
     {
         scope = 1;
         displayName = "DEPRECATED";
+        PVAR(replacementItems) = QEGVAR(morley,cigpack);
     };
 };
