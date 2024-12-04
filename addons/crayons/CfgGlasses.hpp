@@ -8,6 +8,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_black_ca.paa);
@@ -39,6 +40,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_blue_ca.paa);
@@ -70,6 +72,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_brown_ca.paa);
@@ -101,6 +104,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_gray_ca.paa);
@@ -132,6 +136,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_green_ca.paa);
@@ -163,6 +168,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_orange_ca.paa);
@@ -194,6 +200,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_pink_ca.paa);
@@ -225,6 +232,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_purple_ca.paa);
@@ -256,6 +264,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_red_ca.paa);
@@ -287,6 +296,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_white_ca.paa);
@@ -318,6 +328,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_crayon_yellow_ca.paa);
