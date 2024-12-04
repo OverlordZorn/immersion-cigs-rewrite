@@ -1,8 +1,6 @@
 #include "../script_component.hpp"
 
 
-#define SETLLSTRING(key) [LSTRING(DOUBLES(set,key)),LSTRING(TRIPLES(set,key,desk))]
-
 
 [
 	QSET(sp_addItems),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
