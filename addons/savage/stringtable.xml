@@ -8,13 +8,6 @@
             <Japanese>Savage 葉巻</Japanese>
             <Chinese>Savage 香菸</Chinese>
         </Key>
-        <Key ID="STR_cigs_savage_cigarette_nv">
-            <English>Savage Cigarette (NVG Slot)</English>
-            <French>Savage Cigarette</French>
-            <German>Savage Zigarette (NVG Slot)</German>
-            <Japanese>Savage 葉巻</Japanese>
-            <Chinese>Savage 香菸</Chinese>
-        </Key>
         <Key ID="STR_cigs_savage_cigpack">
             <English>Savage Cigarette Pack</English>
             <French>Savage Paquet de cigarettes</French>
