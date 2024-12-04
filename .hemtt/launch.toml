@@ -25,7 +25,7 @@ parameters = [
 
 [Test]
 extends = "default"
-mission = "test.Stratis"
+mission = "test.VR"
 
 
 [VN]
