@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_pops">
     <Package name="Items">
-        <Key ID="STR_cigs_pops_pop0">
+        <Key ID="STR_cigs_pops_pop">
             <English>Lollipop</English>
             <German>Lutscher</German>
             <Japanese>ロリポップ</Japanese>
             <Chinese>棒棒糖</Chinese>
         </Key>
-        <Key ID="STR_cigs_pops_pop0_nv">
-            <English>Lollipop</English>
-            <German>Lutscher</German>
-            <Japanese>ロリポップ</Japanese>
-            <Chinese>棒棒糖</Chinese>
-        </Key>
+>
         <Key ID="STR_cigs_pops_poppack">
             <English>Lollipop (Packed)</English>
             <German>Lutscher (Verpackt)</German>
