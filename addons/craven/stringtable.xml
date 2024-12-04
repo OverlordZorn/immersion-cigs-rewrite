@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_craven">
     <Package name="Items">
-        <Key ID="STR_cigs_craven_cigarette0">
+        <Key ID="STR_cigs_craven_cigarette">
             <English>Craven "A" Cigarette</English>
             <French>Craven "A" Cigarette</French>
             <German>Craven "A" Zigarette</German>
             <Japanese>Craven "A" 葉巻</Japanese>
             <Chinese>Craven "A" 香菸</Chinese>
-        </Key>
-        <Key ID="STR_cigs_craven_cigarette0_nv">
-            <English>Craven "A" Cigarette (NVG Slot)</English>
-            <French>Craven "A" Cigarette (NVG Slot)</French>
-            <German>Craven "A" Zigarette (NVG Slot)</German>
-            <Japanese>Craven "A" 葉巻 (NVG Slot)</Japanese>
-            <Chinese>Craven "A" 香菸 (NVG Slot)</Chinese>
         </Key>
         <Key ID="STR_cigs_craven_cigpack">
             <English>Craven "A" Cigarette Pack</English>
@@ -32,7 +25,7 @@
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_craven_author">
-            <Original>B. Kneely</Original>
+            <Original>B. Kneely / Vespade</Original>
         </Key>
     </Package>
 </Project>

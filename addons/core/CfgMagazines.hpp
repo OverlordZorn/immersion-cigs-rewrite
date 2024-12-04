@@ -20,7 +20,7 @@ class CfgMagazines {
         ACE_asItem = 1;
 
         PVAR(isLighter) = 1;
-        PVAR(LighterSound) = QPVAR(matches_01);     // CfgSounds Class
+        PVAR(LighterSound)[] = {QPVAR(matches_01),QPVAR(matches_02)};     // CfgSounds Class
     };
 
     class PVAR(lighter): CA_Magazine {
@@ -42,6 +42,6 @@ class CfgMagazines {
         ACE_asItem = 1;
 
         PVAR(isLighter) = 1;
-        PVAR(LighterSound) = QPVAR(lighter_01);     // CfgSounds Class
+        PVAR(LighterSound)[] = {QPVAR(lighter_01),QPVAR(lighter_02)};     // CfgSounds Class
     };
 };

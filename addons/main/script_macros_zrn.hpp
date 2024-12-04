@@ -13,7 +13,8 @@
 // Stringtable.xml - use LSTRING() instead
 // #define XML(var1) TRIPLES(STR,ADDON,var1)
 // #define QXML(var1) Q(XML(var1))
-#define LSTRING_SET_ARRAY(name) [LSTRING(DOUBLES(set,name)), LSTRING(TRIPLES(set,name,desc))]
+#define SETLSTRING(key) [LSTRING(DOUBLES(set,key)),LSTRING(TRIPLES(set,key,desc))]
+
 
 // hashMapObjects
 #define OGET(var1) (_self get Q(var1))

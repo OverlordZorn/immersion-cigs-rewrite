@@ -10,7 +10,8 @@ class CfgWeapons {
         author = CSTRING(author);
 
         displayName = CSTRING(crayon);
-        descriptionShort = "";
+        descriptionShort = ECSTRING(core,hmd_stage0);
+
 
         // Model/Textures
         model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
