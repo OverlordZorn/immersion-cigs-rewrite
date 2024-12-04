@@ -26,7 +26,7 @@ class CfgGlasses {
     };
 
     class GVAR(cig1): GVAR(cig0) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
         author = CSTRING(author);
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,face_stage1);
@@ -40,7 +40,7 @@ class CfgGlasses {
     };
 
     class GVAR(cig2): GVAR(cig0) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
         author = CSTRING(author);
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,face_stage2);
@@ -54,7 +54,7 @@ class CfgGlasses {
     };
 
     class GVAR(cig3): GVAR(cig0) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
         author = CSTRING(author);
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,face_stage3);
@@ -68,7 +68,7 @@ class CfgGlasses {
     };
 
     class GVAR(cig4): GVAR(cig0) {
-        scope = 1;
+        scope = _DEBUG_SCOPE_;
         author = CSTRING(author);
         displayName = CSTRING(cigarette);
         descriptionShort = ECSTRING(core,face_stage4);
