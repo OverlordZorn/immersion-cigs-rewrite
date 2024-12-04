@@ -21,7 +21,7 @@ class CfgGlasses {
         PVAR(maxTime) = 660;
 
         PVAR(initStateTime) = 0;
-        PVAR(nextState) = QPVAR(cigar1);
+        PVAR(nextState) = QGVAR(cigar1);
 
         PVAR(isSmokable) = 1;
         PVAR(smokeMultiplier) = 2;
@@ -39,7 +39,7 @@ class CfgGlasses {
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca);
 
         PVAR(initStateTime) = 12;
-        PVAR(nextState) = QPVAR(cigar2);
+        PVAR(nextState) = QGVAR(cigar2);
     };
 
     class GVAR(cigar2): GVAR(cigar0) {
@@ -52,7 +52,7 @@ class CfgGlasses {
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca);
 
         PVAR(initStateTime) = 132;
-        PVAR(nextState) = QPVAR(cigar3);
+        PVAR(nextState) = QGVAR(cigar3);
     };
 
     class GVAR(cigar3): GVAR(cigar0) {
@@ -65,7 +65,7 @@ class CfgGlasses {
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca);
 
         PVAR(initStateTime) = 252;
-        PVAR(nextState) = QPVAR(cigar4);
+        PVAR(nextState) = QGVAR(cigar4);
     };
 
     class GVAR(cigar4): GVAR(cigar0) {
