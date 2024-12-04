@@ -6,7 +6,7 @@ class CfgPatches {
         // Meta information for editor
 		name = ADDON_NAME;
 		author = "$STR_mod_author";
-        authors[] = {"OverlordZorn [CVO]"};
+        authors[] = {"OverlordZorn CVO]", "DartRuffian"};
 		
         url = "$STR_mod_URL";
 
@@ -31,6 +31,9 @@ class CfgPatches {
 
 	};
 };
+
+#include "CfgFunctions.hpp"
+#include "XEH\CfgXEH.hpp"
 
 #include "CfgGlasses.hpp"
 #include "CfgWeapons.hpp"
