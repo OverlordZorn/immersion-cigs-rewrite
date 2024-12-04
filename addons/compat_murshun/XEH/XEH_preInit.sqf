@@ -2,6 +2,8 @@
 
 
 /*	here, you put in your CBA Settings so they are available in the editor!
+https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System#create-a-custom-setting-for-mission-or-mod
+
 [
 	QSET(displayMusic),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
@@ -23,6 +25,6 @@
 	[ELSTRING(core,set_cat_main), LSTRING(set_cat_loadout)],					//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	false,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	0,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
-	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>
+	{ [_this] call FUNC(registerEH) },		//    _script      - Script to execute when setting is changed. (optional) <CODE>
 	false									//    _needRestart - Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 ] call CBA_fnc_addSetting;
