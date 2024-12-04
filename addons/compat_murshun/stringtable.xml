@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="cigs_compat_murshun">
+    <Package name="Main">
+        <Key ID="STR_cigs_compat_murshun_author">
+            <Original>OverlordZorn / DartRuffian</Original>
+        </Key>
+    </Package>
+    <Package name="Settings">
+        <Key ID="STR_cigs_compat_murshun_set_loadoutReplacer_enable">
+            <Original>Update Saved Arsenal Loadouts</Original>
+            <English>Update Saved Arsenal Loadouts</English>
+        </Key>
+        <Key ID="STR_cigs_compat_murshun_set_loadoutReplacer_enable_desc">
+            <Original>Whenever the ace or vanilla arsenal are being opened, it will scan the saved loadouts and will replace deprecated legacy classnames with their new counterparts.</Original>
+            <English>Whenever the ace or vanilla arsenal are being opened, it will scan the saved loadouts and will replace deprecated legacy classnames with their new counterparts.</English>
+        </Key>
+    </Package>
+    <Package name="Settings-Categories">
+        <Key ID="STR_cigs_compat_murshun_set_cat_loadout">
+            <Original>Loadouts</Original>
+        </Key>
+    </Package>
+</Project>
