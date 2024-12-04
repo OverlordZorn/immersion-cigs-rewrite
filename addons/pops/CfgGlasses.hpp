@@ -8,6 +8,7 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(pop0);
+        descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,pop,pop.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_pop0_x_ca.paa);
