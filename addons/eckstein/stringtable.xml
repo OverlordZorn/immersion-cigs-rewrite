@@ -32,7 +32,7 @@
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_eckstein_author">
-            <Original>B. Kneely</Original>
+            <Original>B. Kneely / Vespade</Original>
         </Key>
     </Package>
 </Project>

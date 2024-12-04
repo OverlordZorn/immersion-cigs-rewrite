@@ -15,7 +15,7 @@ class CfgWeapons {
         mass = 0.02;
 
         displayName = CSTRING(pop0_nv);
-        descriptionShort = "";
+        descriptionShort = ECSTRING(core,hmd_stage0);
 
         model = PATH_TO_ADDON_3(data,pop,pop.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_pop0_x_ca);
