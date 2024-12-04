@@ -26,7 +26,7 @@ class CfgWeapons {
 
         PVAR(maxTime) = 660;
         PVAR(initStateTime) = 0;
-        PVAR(nextState) = QPVAR(cigar1_nv);
+        PVAR(nextState) = QGVAR(cigar1_nv);
 
 
         class ItemInfo
@@ -50,7 +50,7 @@ class CfgWeapons {
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca);
 
         PVAR(initStateTime) = 12;
-        PVAR(nextState) = QPVAR(cigar2_nv);
+        PVAR(nextState) = QGVAR(cigar2_nv);
 
         class ItemInfo
         {
@@ -70,8 +70,8 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,cigars,cigar2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca);
 
-        PVAR(initStateTime) = 132;
-        PVAR(nextState) = QPVAR(cigar3_nv);
+        PVAR(initStateTime) = 262;
+        PVAR(nextState) = QGVAR(cigar3_nv);
 
         class ItemInfo
         {
@@ -91,8 +91,8 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,cigars,cigar3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca);
 
-        PVAR(initStateTime) = 252;
-        PVAR(nextState) = QPVAR(cigar4_nv);
+        PVAR(initStateTime) = 452;
+        PVAR(nextState) = QGVAR(cigar4_nv);
 
         class ItemInfo
         {
