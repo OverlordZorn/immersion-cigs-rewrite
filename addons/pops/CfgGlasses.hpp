@@ -7,7 +7,7 @@ class CfgGlasses {
         author = CSTRING(author);
         mass = 0.2;
 
-        displayName = CSTRING(pop0);
+        displayName = CSTRING(pop);
         descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,pop,pop.p3d);
