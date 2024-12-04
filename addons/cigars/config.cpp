@@ -6,7 +6,7 @@ class CfgPatches {
         // Meta information for editor
 		name = ADDON_NAME;
 		author = "$STR_mod_author";
-        authors[] = {"Rebel", "Facel", "Panimala", "OverlordZorn [CVO]", "prisonerMO"};
+        authors[] = {"Rebel", "Facel", "Panimala", "OverlordZorn [CVO]", "prisonerMO", "Bromine"};
 		
         url = "$STR_mod_URL";
 
@@ -33,3 +33,6 @@ class CfgPatches {
 
 #include "CfgGlasses.hpp"
 #include "CfgWeapons.hpp"
+
+#include "CfgMagazines.hpp"
+#include "CfgVehicles.hpp"
