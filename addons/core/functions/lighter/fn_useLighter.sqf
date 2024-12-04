@@ -35,8 +35,8 @@ if ( _type isEqualTo "typeMagazine" ) then { [ _player, _className ] call FUNC(r
 
 // Play sound get From Lighter Class)
 private _sound = switch (_type) do {
-    case "typeMagazine": { getText ( configFile >> "CfgMagazines" >> _className >> QPVAR(LighterSound) ) };
-    case "typeItem":     { getText ( configFile >> "CfgWeapons"   >> _className >> QPVAR(LighterSound) ) };
+    case "typeMagazine": { [ configFile >> "CfgMagazines" >> _className >> QPVAR(LighterSound) ] call FUNC(getCfgDataRandom) };
+    case "typeItem":     { [ configFile >> "CfgWeapons"   >> _className >> QPVAR(LighterSound) ] call FUNC(getCfgDataRandom) };
     default { QGVAR(matches_01) };
 };
 [ QGVAR(EH_sound), [_sound, _player] ] call CBA_fnc_globalEvent;
