@@ -5,7 +5,7 @@
 [
 	QSET(sp_addItems),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLLSTRING(sp_addItems),
+	SETLSTRING(sp_addItems),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main),LSTRING(set_cat_sp)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	false,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
@@ -34,7 +34,7 @@ private _array_lighters = [ _cfgs apply { configName _x }, _cfgs apply _code, 0 
 [
 	QSET(sp_addLighter),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLLSTRING(sp_addLighter),
+	SETLSTRING(sp_addLighter),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main),LSTRING(set_cat_sp)],		//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	false,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
@@ -48,7 +48,7 @@ private _array_lighters = [ _cfgs apply { configName _x }, _cfgs apply _code, 0 
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
 	["",""],
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
-	SETLLSTRING(sp_addLighter_type),		//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
+	SETLSTRING(sp_addLighter_type),		//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	true,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	2,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>
@@ -58,7 +58,7 @@ private _array_lighters = [ _cfgs apply { configName _x }, _cfgs apply _code, 0 
 [
 	QSET(sp_addCigpack),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLLSTRING(sp_addCigpack),
+	SETLSTRING(sp_addCigpack),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main),LSTRING(set_cat_sp)],					//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	true,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
@@ -75,7 +75,7 @@ private _array_packs = [ _cfgs apply { configName _x }, _cfgs apply { getText ( 
 [
 	QSET(sp_addCigpack_type),				//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"LIST",									//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLLSTRING(sp_addCigpack_type),
+	SETLSTRING(sp_addCigpack_type),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main),LSTRING(set_cat_sp)],		//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	_array_packs,							//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
