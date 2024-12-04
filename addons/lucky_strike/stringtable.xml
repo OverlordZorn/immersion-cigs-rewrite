@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_Lucky_Strike">
     <Package name="Items">
-        <Key ID="STR_cigs_Lucky_Strike_cigarette0">
+        <Key ID="STR_cigs_Lucky_Strike_cigarette">
             <English>Lucky Strike Cigarette</English>
             <French>Lucky Strike Cigarette</French>
             <German>Lucky Strike Zigarette</German>
-            <Japanese>Lucky Strike 葉巻</Japanese>
-            <Chinese>Lucky Strike 香菸</Chinese>
-        </Key>
-        <Key ID="STR_cigs_Lucky_Strike_cigarette0_nv">
-            <English>Lucky Strike Cigarette (NVG Slot)</English>
-            <French>Lucky Strike Cigarette</French>
-            <German>Lucky Strike Zigarette (NVG Slot)</German>
             <Japanese>Lucky Strike 葉巻</Japanese>
             <Chinese>Lucky Strike 香菸</Chinese>
         </Key>

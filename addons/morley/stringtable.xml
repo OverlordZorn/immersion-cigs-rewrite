@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_morley">
     <Package name="Items">
-        <Key ID="STR_cigs_morley_cigarette0">
+        <Key ID="STR_cigs_morley_cigarette">
             <English>Morley Cigarette</English>
             <French>Morley Cigarette</French>
             <German>Morley Zigarette</German>
-            <Japanese>Morley 葉巻</Japanese>
-            <Chinese>Morley 香菸</Chinese>
-        </Key>
-        <Key ID="STR_cigs_morley_cigarette0_nv">
-            <English>Morley Cigarette (NVG Slot)</English>
-            <French>Morley Cigarette</French>
-            <German>Morley Zigarette (NVG Slot)</German>
             <Japanese>Morley 葉巻</Japanese>
             <Chinese>Morley 香菸</Chinese>
         </Key>

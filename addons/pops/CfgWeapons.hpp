@@ -14,7 +14,7 @@ class CfgWeapons {
         author = CSTRING(author);
         mass = 0.02;
 
-        displayName = CSTRING(pop0_nv);
+        displayName = CSTRING(pop);
         descriptionShort = ECSTRING(core,hmd_stage0);
 
         model = PATH_TO_ADDON_3(data,pop,pop.p3d);
