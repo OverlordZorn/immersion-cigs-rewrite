@@ -7,7 +7,7 @@ class CfgFunctions
 
             file = PATH_TO_FUNC;
 
-            class register {};
+            class registerEH {};
             class onArsenalOpen {};
             class getReplacementItem {};
 
