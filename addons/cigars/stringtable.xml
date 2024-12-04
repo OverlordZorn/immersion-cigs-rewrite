@@ -9,12 +9,12 @@
             <English>Cigar</English>
             <German>Zigarre</German>
         </Key>
-        <Key ID="STR_cigs_cigarbox_5">
-            <English>Cigarbox (5 pc.)</English>
-            <German>Zigarrenschachtel (5 Stk.)</German>      
+        <Key ID="STR_cigs_cigars_cigarbox_5">
+            <English>Box of Cigars</English>
+            <German>Zigarrenschachtel</German>
         </Key>
-        <Key ID="STR_cigs_cigarbox_5_desc">
-            <English>Cigarbox with 5 cigars</English>
+        <Key ID="STR_cigs_cigars_cigarbox_5_desc">
+            <English>Box of Cigars with 5 cigars</English>
             <German>Zigarrenschachtel mit 5 Zigarren</German>
         </Key>
     </Package>
