@@ -105,4 +105,36 @@
             <German>Hmm, es schmeckt nach %1!</German>
         </Key>
     </Package>
+    <Package name="GlobalDescription">
+        <Key ID="STR_cigs_core_face_stage0">
+            <English>Facewear Slot - Stage 0</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage1">
+            <English>Facewear Slot - Stage 1</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage2">
+            <English>Facewear Slot - Stage 2</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage3">
+            <English>Facewear Slot - Stage 3</English>
+        </Key>
+        <Key ID="STR_cigs_core_face_stage4">
+            <English>Facewear Slot - Stage 4</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage0">
+            <English>Nightvision Slot - Stage 0</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage1">
+            <English>Nightvision Slot - Stage 1</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage2">
+            <English>Nightvision Slot - Stage 2</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage3">
+            <English>Nightvision Slot - Stage 3</English>
+        </Key>
+        <Key ID="STR_cigs_core_hmd_stage4">
+            <English>Nightvision Slot - Stage 4</English>
+        </Key>
+    </Package>
 </Project>
