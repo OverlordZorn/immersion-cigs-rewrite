@@ -14,8 +14,8 @@ class CfgWeapons {
         author = CSTRING(author);
         mass = 0.02;
 
-        displayName = CSTRING(cigarette0_nv);
-        descriptionShort = "";
+        displayName = CSTRING(cigarette);
+        descriptionShort = ECSTRING(core,hmd_stage0);
 
         model = PATH_TO_ADDON_3(data,cigs,cig0.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig0_x_ca);
@@ -42,7 +42,9 @@ class CfgWeapons {
     class GVAR(cig1_nv): GVAR(cig0_nv) {
         scope = 1;
 
-        displayName = "Craven A Cigarette (Stage 1)";
+        displayName = CSTRING(cigarette);
+        descriptionShort = ECSTRING(core,hmd_stage1);
+
         model = PATH_TO_ADDON_3(data,cigs,cig1.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig1_x_ca);
 
@@ -61,7 +63,9 @@ class CfgWeapons {
     class GVAR(cig2_nv): GVAR(cig0_nv) {
         scope = 1;
 
-        displayName = "Craven A Cigarette (Stage 2)";
+        displayName = CSTRING(cigarette);
+        descriptionShort = ECSTRING(core,hmd_stage2);
+
         model = PATH_TO_ADDON_3(data,cigs,cig2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig2_x_ca);
 
@@ -80,7 +84,9 @@ class CfgWeapons {
     class GVAR(cig3_nv): GVAR(cig0_nv) {
         scope = 1;
 
-        displayName = "Craven A Cigarette (Stage 3)";
+        displayName = CSTRING(cigarette);
+        descriptionShort = ECSTRING(core,hmd_stage3);
+
         model = PATH_TO_ADDON_3(data,cigs,cig3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig3_x_ca);
 
@@ -99,7 +105,9 @@ class CfgWeapons {
     class GVAR(cig4_nv): GVAR(cig0_nv) {
         scope = 1;
 
-        displayName = "Craven A Cigarette (Stage 4)";
+        displayName = CSTRING(cigarette);
+        descriptionShort = ECSTRING(core,hmd_stage4);
+
         model = PATH_TO_ADDON_3(data,cigs,cig4.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cig4_x_ca);
 
