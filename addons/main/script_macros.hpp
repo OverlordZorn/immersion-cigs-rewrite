@@ -4,7 +4,7 @@
 // Mod Specific Macros
 
 #ifdef __A3_DEBUG__
-    #define _DEBUG_SCOPE_ 1
+    #define _DEBUG_SCOPE_ 2
 #else
     #define _DEBUG_SCOPE_ 1
 #endif
