@@ -24,7 +24,7 @@
         </Key>
     </Package>
     <Package name="Main">
-        <Key ID="STR_cigs__morley_author">
+        <Key ID="STR_cigs_morley_author">
             <English>Rebel / Facel</English>
             <French>Rebel / Facel</French>
             <German>Rebel / Facel</German>
