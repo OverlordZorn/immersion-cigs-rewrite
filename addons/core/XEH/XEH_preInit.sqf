@@ -1,7 +1,5 @@
 #include "../script_component.hpp"
 
-
-
 [
 	QSET(sp_addItems),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
