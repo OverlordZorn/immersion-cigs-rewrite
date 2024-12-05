@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="cigs_core">
     <Package name="CBASettings">
+        <Key ID="STR_cigs_core_set_ace_arsenal_tab">
+            <English>Enable Custom Category Tab in ACE Arsenal</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_ace_arsenal_tab_desc">
+            <English>When Enabled, this will create a Immersion Cig Tab in the ACE Arsenal (right side)./nThis can be enabled during the mission. To disable it, the mission needs to be restarted.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
         </Key>
@@ -33,6 +39,9 @@
         </Key>
     </Package>
     <Package name="CBASettingsCategories">
+        <Key ID="STR_cigs_core_set_cat_ace_arsenal">
+            <English>ACE Arsenal</English>
+        </Key>
         <Key ID="STR_cigs_core_set_cat_main">
             <English>Immersive Cigs</English>
         </Key>
