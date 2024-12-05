@@ -5,7 +5,7 @@
             <English>Enable Custom Category Tab in ACE Arsenal</English>
         </Key>
         <Key ID="STR_cigs_core_set_ace_arsenal_tab_desc">
-            <English>When Enabled, this will create a Immersion Cig Tab in the ACE Arsenal (right side)./nThis can be enabled during the mission. To disable it, the mission needs to be restarted.</English>
+            <English>When Enabled, this will create a Immersion Cig Tab in the ACE Arsenal (right side).\nThis can be enabled during the mission. To disable it, the mission needs to be restarted.</English>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
