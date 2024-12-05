@@ -11,6 +11,8 @@ class CfgFunctions
             class postinit { postInit = 1; };
 
             class cba_contextMenu { preInit = 1; };
+
+            class arsenalTab {};
         };
 
         class smoking
