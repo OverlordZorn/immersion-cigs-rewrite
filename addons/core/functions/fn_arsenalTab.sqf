@@ -27,14 +27,10 @@ if (_value) then {
     if (!_isEnabled) then {
         missionNamespace setVariable [QPVAR(isEstablished_aceTab), true];
 
-        private _lighters = Q(getNumber (_x >> QQPVAR(isPack)) == 1 && {getNumber (_x >> QQ(scope)) == 2}) configClasses (configFile >> "CfgMagazines") apply {configName _x};
-        private _packs = Q(getNumber (_x >> QQPVAR(isLighter)) == 1 && {getNumber (_x >> QQ(scope)) == 2}) configClasses (configFile >> "CfgMagazines") apply {configName _x};
-
         [
-            _lighters + _packs,
+            call FUNC(getAllItems),
             "Immersion Cigs",
             PATH_TO_ADDON_3(data,ui,light_cig.paa) // Image Path
         ] call ace_arsenal_fnc_addRightPanelButton
-
     };
 };
