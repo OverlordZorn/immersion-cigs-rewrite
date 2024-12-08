@@ -7,8 +7,7 @@ class CfgFunctions
         {
             file = PATH_TO_FUNC;
 
-            class preinit  { preInit = 1; };
-            class postinit { postInit = 1; };
+            class postInit { postInit = 1; };
 
             class cba_contextMenu { preInit = 1; };
 
@@ -86,6 +85,8 @@ class CfgFunctions
         {
             file = PATH_TO_FUNC_SUB(config);
             class getCfgDataRandom {};
+            class getAllItems {};
+            class getCached {};
         };
     };
 };
