@@ -15,9 +15,6 @@
 * Public: No
 */
 
-// array of all Package classes
-private _packages = Q(getNumber (_x >> QQPVAR(isPack)) == 1) configClasses (configFile >> "CfgMagazines") apply { configName _x };
-
 
 // Take from Pack
 [

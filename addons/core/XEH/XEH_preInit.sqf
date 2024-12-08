@@ -26,8 +26,9 @@ private _code = {
 
 
 // Auto-Detect Possible Cig Packs (including suckers)
-private _cfgs = Q(getNumber (_x >> QQPVAR(isLighter)) == 1 && { getNumber (_x >> QQ(scope)) == 2 }) configClasses (configFile >> "CfgMagazines");
+private _cfgs = ["LIGHTERS", true] call FUNC(getAllItems);
 private _array_lighters = [ _cfgs apply { configName _x }, _cfgs apply _code, 0 ];
+
 
 
 [
@@ -68,7 +69,7 @@ private _array_lighters = [ _cfgs apply { configName _x }, _cfgs apply _code, 0 
 
 
 // Auto-Detect Possible Cig Packs (including suckers)
-private _cfgs = Q(getNumber (_x >> QQPVAR(isPack)) == 1 && {getNumber (_x >> QQ(scope)) == 2}) configClasses (configFile >> "CfgMagazines");
+private _cfgs = ["PACKAGES", true] call FUNC(getAllItems);
 private _array_packs = [ _cfgs apply { configName _x }, _cfgs apply { getText ( _x >> "displayName" ) }, 0 ];
 
 [

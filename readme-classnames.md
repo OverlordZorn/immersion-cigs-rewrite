@@ -32,3 +32,11 @@
 
 - `cigs_savage_cigpack` - as an additional Item to go in line with the immersion cigs naming structure.
 + assosiated `_cig0..4` / `_cig0..4_nv` classnames for facewear/nvg slot
+
+##
+To retrieve all Packages classnames
+`["PACKAGES"] call cigs_core_fnc_getAllItems;`
+To retrieve all Lighters classnames
+`["LIGHTERS"] call cigs_core_fnc_getAllItems;`
+To retrieve Both
+`["ALL"] call cigs_core_fnc_getAllItems;`
