@@ -18,7 +18,7 @@ class CfgGlasses {
         model = PATH_TO_ADDON_3(data,cigars,cigar0.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar0_x_ca); 
 
-        PVAR(maxTime) = 660;
+        PVAR(maxTime) = CIGAR_MAXTIME;
 
         PVAR(initStateTime) = 0;
         PVAR(nextState) = QGVAR(cigar1);
@@ -32,52 +32,48 @@ class CfgGlasses {
     class GVAR(cigar1): GVAR(cigar0) {
         scope = _DEBUG_SCOPE_;
 
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,face_stage1);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar1.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca);
 
-        PVAR(initStateTime) = 12;
+        PVAR(initStateTime) = CIGAR_1_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar2);
     };
 
     class GVAR(cigar2): GVAR(cigar0) {
         scope = _DEBUG_SCOPE_;
 
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,face_stage2);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca);
 
-        PVAR(initStateTime) = 132;
+        PVAR(initStateTime) = CIGAR_2_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar3);
     };
 
     class GVAR(cigar3): GVAR(cigar0) {
         scope = _DEBUG_SCOPE_;
 
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,face_stage3);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca);
 
-        PVAR(initStateTime) = 252;
+        PVAR(initStateTime) = CIGAR_3_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar4);
     };
 
     class GVAR(cigar4): GVAR(cigar0) {
         scope = _DEBUG_SCOPE_;
 
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,face_stage4);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar4.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar4_x_ca);
 
-        PVAR(initStateTime) = 612;
+        PVAR(initStateTime) = CIGAR_4_INITSTATETIME;
         PVAR(nextState) = "";
     };
 };

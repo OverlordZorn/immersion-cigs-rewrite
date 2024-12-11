@@ -24,7 +24,7 @@ class CfgWeapons {
         PVAR(isSmokable) = 1;
         PVAR(smokeMultiplier) = 2;
 
-        PVAR(maxTime) = 660;
+        PVAR(maxTime) = CIGAR_MAXTIME;
         PVAR(initStateTime) = 0;
         PVAR(nextState) = QGVAR(cigar1_nv);
 
@@ -43,13 +43,12 @@ class CfgWeapons {
     class GVAR(cigar1_nv): GVAR(cigar0_nv) {
         scope = _DEBUG_SCOPE_;
 
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,hmd_stage1);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar1.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca);
 
-        PVAR(initStateTime) = 12;
+        PVAR(initStateTime) = CIGAR_1_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar2_nv);
 
         class ItemInfo
@@ -62,15 +61,12 @@ class CfgWeapons {
     };
 
     class GVAR(cigar2_nv): GVAR(cigar0_nv) {
-        scope = _DEBUG_SCOPE_;
-
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,hmd_stage2);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca);
 
-        PVAR(initStateTime) = 262;
+        PVAR(initStateTime) = CIGAR_2_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar3_nv);
 
         class ItemInfo
@@ -83,15 +79,12 @@ class CfgWeapons {
     };
 
     class GVAR(cigar3_nv): GVAR(cigar0_nv) {
-        scope = _DEBUG_SCOPE_;
-
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,hmd_stage3);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca);
 
-        PVAR(initStateTime) = 452;
+        PVAR(initStateTime) = CIGAR_3_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar4_nv);
 
         class ItemInfo
@@ -104,15 +97,13 @@ class CfgWeapons {
     };
 
     class GVAR(cigar4_nv): GVAR(cigar0_nv) {
-        scope = _DEBUG_SCOPE_;
 
-        displayName = CSTRING(cigar);
         descriptionShort = ECSTRING(core,hmd_stage4);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar4.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar4_x_ca);
 
-        PVAR(initStateTime) = 612;
+        PVAR(initStateTime) = CIGAR_4_INITSTATETIME;
         PVAR(nextState) = "";
 
         class ItemInfo
