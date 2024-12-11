@@ -73,7 +73,7 @@ private _puffs = 1 + ceil random 4;
 [{ [QGVAR(EH_smoke), _this] call CBA_fnc_globalEvent; }, [_unit, _itemConfig], _sleep_total] call CBA_fnc_waitAndExecute;
 
 for "_i" from 1 to _puffs do {
-    private _rnd = 2 + random 3;
+    private _rnd = 3 + random 5;
     _sleep_total = _sleep_total + _rnd;
     [{ [QGVAR(EH_smoke), _this] call CBA_fnc_globalEvent; }, [_unit, _itemConfig], _sleep_total] call CBA_fnc_waitAndExecute;
 };
