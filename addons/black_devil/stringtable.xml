@@ -2,18 +2,18 @@
 <Project name="black_devil">
     <Package name="Items">
         <Key ID="STR_cigs_black_devil_cigarette">
-            <English>Black Devil - Pink Cigarette</English>
-            <French>Black Devil - Pink Cigarette</French>
-            <German>Black Devil - Pink Zigarette</German>
-            <Japanese>Black Devil - Pink 葉巻</Japanese>
-            <Chinese>Black Devil - Pink 香菸</Chinese>
+            <English>Black Devil Pink Cigarette</English>
+            <French>Black Devil Pink Cigarette</French>
+            <German>Black Devil Pink Zigarette</German>
+            <Japanese>Black Devil Pink 葉巻</Japanese>
+            <Chinese>Black Devil Pink 香菸</Chinese>
         </Key>
         <Key ID="STR_cigs_black_devil_cigpack">
-            <English>Black Devil - Pink Cigarette Pack</English>
-            <French>Black Devil - Pink Paquet de cigarettes</French>
-            <German>Black Devil - Pink Zigarettenschachtel</German>
-            <Japanese>Black Devil - Pink タバコ</Japanese>
-            <Chinese>Black Devil - Pink 一包菸</Chinese>
+            <English>Black Devil Pink Cigs Pack</English>
+            <French>Black Devil Pink Paquet de cigarettes</French>
+            <German>Black Devil Pink Zigarettenschachtel</German>
+            <Japanese>Black Devil Pink タバコ</Japanese>
+            <Chinese>Black Devil Pink 一包菸</Chinese>
         </Key>
         <Key ID="STR_cigs_black_devil_cigpack_desc">
             <English>Smells like smoke. Tastes like pussy.&lt;br/&gt;Contains 20 pink filter cigarettes.&lt;br/&gt;Warning: Smoking is hazardous to your health.</English>
@@ -25,10 +25,10 @@
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_black_devil_author">
-            <English>Grahame / OverlordZorn / Rebel / Facel</English>
-            <French>Grahame / OverlordZorn / Rebel / Facel</French>
-            <German>Grahame / OverlordZorn / Rebel / Facel</German>
-            <Japanese>Grahame / OverlordZorn / Rebel / Facel</Japanese>
+            <English>Jenna / Grahame / OverlordZorn / Rebel / Facel</English>
+            <French>Jenna / Grahame / OverlordZorn / Rebel / Facel</French>
+            <German>Jenna / Grahame / OverlordZorn / Rebel / Facel</German>
+            <Japanese>Jenna / Grahame / OverlordZorn / Rebel / Facel</Japanese>
         </Key>
     </Package>
 </Project>
