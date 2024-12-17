@@ -2,18 +2,18 @@
 <Project name="baja_blast">
     <Package name="Items">
         <Key ID="STR_cigs_baja_blast_cigarette">
-            <English>Mtn Dew - Baja Blast Cigarette</English>
-            <French>Mtn Dew - Baja Blast Cigarette</French>
-            <German>Mtn Dew - Baja Blast Zigarette</German>
-            <Japanese>Mtn Dew - Baja Blast 葉巻</Japanese>
-            <Chinese>Mtn Dew - Baja Blast 香菸</Chinese>
+            <English>Mtn Dew Baja Blast Cigarette</English>
+            <French>Mtn Dew Baja Blast Cigarette</French>
+            <German>Mtn Dew Baja Blast Zigarette</German>
+            <Japanese>Mtn Dew Baja Blast 葉巻</Japanese>
+            <Chinese>Mtn Dew Baja Blast 香菸</Chinese>
         </Key>
         <Key ID="STR_cigs_baja_blast_cigpack">
-            <English>Mtn Dew - Baja Blast Cigarette Pack</English>
-            <French>Mtn Dew - Baja Blast Paquet de cigarettes</French>
-            <German>Mtn Dew - Baja Blast Zigarettenschachtel</German>
-            <Japanese>Mtn Dew - Baja Blast タバコ</Japanese>
-            <Chinese>Mtn Dew - Baja Blast 一包菸</Chinese>
+            <English>Mtn Dew Baja Blast Cigs Pack</English>
+            <French>Mtn Dew Baja Blast Paquet de cigarettes</French>
+            <German>Mtn Dew Baja Blast Zigarettenschachtel</German>
+            <Japanese>Mtn Dew Baja Blast タバコ</Japanese>
+            <Chinese>Mtn Dew Baja Blast 一包菸</Chinese>
         </Key>
         <Key ID="STR_cigs_baja_blast_cigpack_desc">
             <English>GUARANTEED TO MAKE YOU GO FUCKING BAJA BONKERS&lt;br/&gt;Contains 20 cigarettes.&lt;br/&gt;Warning: Smoking is hazardous to your health.</English>
