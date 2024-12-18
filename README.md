@@ -27,6 +27,7 @@ We do not encourage anyone to smoke in real life, we don't smoke irl, it's just 
   - Vespade - Immersive Crayon Models and Textures
   - Brominum - Model Cigarbox and new sounds
   - ArtemisGodfrey - Helping with models
+  - yepperz - Artworks
   - OverlordZorn - Rewrite of configs and scripts, fixing some models here, adding some new textures there and glueing everything together
 
 ### Dependencies
