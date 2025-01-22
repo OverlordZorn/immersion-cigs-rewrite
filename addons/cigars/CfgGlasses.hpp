@@ -16,7 +16,7 @@ class CfgGlasses {
         descriptionShort = ECSTRING(core,face_stage0);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar0.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigar0_x_ca); 
+        picture = PATH_TO_ADDON_3(data,ui,gear_cigar0_x_ca.paa); 
 
         PVAR(maxTime) = CIGAR_MAXTIME;
 
@@ -35,7 +35,7 @@ class CfgGlasses {
         descriptionShort = ECSTRING(core,face_stage1);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar1.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca.paa);
 
         PVAR(initStateTime) = CIGAR_1_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar2);
@@ -47,7 +47,7 @@ class CfgGlasses {
         descriptionShort = ECSTRING(core,face_stage2);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar2.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca.paa);
 
         PVAR(initStateTime) = CIGAR_2_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar3);
@@ -59,7 +59,7 @@ class CfgGlasses {
         descriptionShort = ECSTRING(core,face_stage3);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar3.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca.paa);
 
         PVAR(initStateTime) = CIGAR_3_INITSTATETIME;
         PVAR(nextState) = QGVAR(cigar4);
@@ -71,7 +71,7 @@ class CfgGlasses {
         descriptionShort = ECSTRING(core,face_stage4);
 
         model = PATH_TO_ADDON_3(data,cigars,cigar4.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigar4_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cigar4_x_ca.paa);
 
         PVAR(initStateTime) = CIGAR_4_INITSTATETIME;
         PVAR(nextState) = "";
