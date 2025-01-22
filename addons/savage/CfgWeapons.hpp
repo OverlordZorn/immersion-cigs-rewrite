@@ -18,7 +18,7 @@ class CfgWeapons {
         descriptionShort = ECSTRING(core,hmd_stage0);
 
         model = PATH_TO_ADDON_3(data,cigs,cig0.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cig0_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cig0_x_ca.paa);
 
         PVAR(maxTime) = 330;
         PVAR(initStateTime) = 0;
@@ -46,7 +46,7 @@ class CfgWeapons {
         descriptionShort = ECSTRING(core,hmd_stage1);
 
         model = PATH_TO_ADDON_3(data,cigs,cig1.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cig1_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cig1_x_ca.paa);
 
         PVAR(initStateTime) = 6;
         PVAR(nextState) = QGVAR(cig2_nv);
@@ -67,7 +67,7 @@ class CfgWeapons {
         descriptionShort = ECSTRING(core,hmd_stage2);
 
         model = PATH_TO_ADDON_3(data,cigs,cig2.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cig2_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cig2_x_ca.paa);
 
         PVAR(initStateTime) = 66;
         PVAR(nextState) = QGVAR(cig3_nv);
@@ -88,7 +88,7 @@ class CfgWeapons {
         descriptionShort = ECSTRING(core,hmd_stage3);
 
         model = PATH_TO_ADDON_3(data,cigs,cig3.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cig3_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cig3_x_ca.paa);
 
         PVAR(initStateTime) = 126;
         PVAR(nextState) = QGVAR(cig4_nv);
@@ -109,7 +109,7 @@ class CfgWeapons {
         descriptionShort = ECSTRING(core,hmd_stage4);
 
         model = PATH_TO_ADDON_3(data,cigs,cig4.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cig4_x_ca);
+        picture = PATH_TO_ADDON_3(data,ui,gear_cig4_x_ca.paa);
 
         PVAR(initStateTime) = 306;
         PVAR(nextState) = "";
