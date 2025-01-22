@@ -20,7 +20,7 @@ class CfgMagazines {
         ACE_asItem = 1;
 
         PVAR(isPack) = 1;
-        PVAR(unpackSound) = QPVAR(unwrap);
+        PVAR(unpackSound) = QPVAR(unwrap_01);
         PVAR(item_glasses) = QGVAR(cig0);
         PVAR(item_hmd) = QGVAR(cig0_nv);
     };

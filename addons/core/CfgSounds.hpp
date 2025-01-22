@@ -2,9 +2,9 @@ class CfgSounds
 {
     sounds[] = {};
 
-    class PVAR(unwrap)
+    class PVAR(unwrap_01)
     {
-        sound[] = {PATH_TO_ADDON_3(data,sounds,unwrap.ogg), 2, 1, 15};
+        sound[] = {PATH_TO_ADDON_3(data,sounds,unwrap_01.ogg), 2, 1, 15};
         titles[] = {};
     };
     class PVAR(matches_01)

@@ -21,7 +21,7 @@ class CfgMagazines {
         ACE_asItem = 1;
 
         PVAR(isPack) = 1;
-        PVAR(unpackSound) = QPVAR(unwrap);
+        PVAR(unpackSound) = QPVAR(unwrap_01);
         PVAR(item_glasses) = QGVAR(cigar0);
         PVAR(item_hmd) = QGVAR(cigar0_nv);
     };
