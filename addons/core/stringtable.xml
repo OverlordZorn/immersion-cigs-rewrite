@@ -83,12 +83,18 @@
         </Key>
     </Package>
     <Package name="Interactions_cigs">
+            <German>Du hast schon richtig gelesen</German>
+        </Key>
         <Key ID="STR_cigs_core_start_cig_own">
             <English>Light Up your Cig</English>
             <French>Allumer Cigarette</French>
             <German>Zigarette anzünden</German>
             <Japanese>タバコに火を点ける</Japanese>
             <Chinese>點菸</Chinese>
+        </Key>
+        <Key ID="STR_cigs_core_start_cig_own_desc">
+            <English>Requires a Lighter or Matches in your inventory</English>
+            <German>Benötigt Feuerzeug oder Streichhölzer im Inventar</German>
         </Key>
         <Key ID="STR_cigs_core_start_cig_their">
             <English>Light Up their Cig</English>

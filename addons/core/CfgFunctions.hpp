@@ -88,5 +88,10 @@ class CfgFunctions
             class getAllItems {};
             class getCached {};
         };
+        class eat_cig
+        {
+            file = PATH_TO_FUNC_SUB(eat_cig);
+            class addEatAction { preInit = 1; };
+        };
     };
 };

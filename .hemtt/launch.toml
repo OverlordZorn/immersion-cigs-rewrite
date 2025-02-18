@@ -16,7 +16,6 @@ parameters = [
     "-window",
     "-noPause",
     "-noPauseAudio",
-    "-checkSignatures",
 ]
 
 # executable = "arma3_x64"        # Default: "arma3_x64"
