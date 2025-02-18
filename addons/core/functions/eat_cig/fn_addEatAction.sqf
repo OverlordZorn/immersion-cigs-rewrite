@@ -25,15 +25,15 @@
     ,[                          // condition - CODE or ARRAY of Code [_conditionEnable, _conditionShow] - Arguments: params ["_unit", "_container", "_item", "_slot", "_params"];
         {
             params ["_unit", "_container", "_item", "_slot", "_params"];
-            [_unit] call FUNC(canStartSmoking);
+            [_unit] call FUNC(canEat)
         },{
             params ["_unit", "_container", "_item", "_slot", "_params"];
             _hasCig = switch (_slot) do {
-                case "GOGGLES": { getNumber (configFile >> "CfgGlasses" >> _item >> QPVAR(isSmokable)) == 1 };
-                case "HMD":     { getNumber (configFile >> "CfgWeapons" >> _item >> QPVAR(isSmokable)) == 1 };
+                case "GOGGLES": { getNumber (configFile >> "CfgGlasses" >> _item >> QPVAR(isSmokable)) == 1 || { getNumber (configFile >> "CfgGlasses" >> _item >> QPVAR(isSuckable)) == 1 } };
+                case "HMD":     { getNumber (configFile >> "CfgWeapons" >> _item >> QPVAR(isSmokable)) == 1 || { getNumber (configFile >> "CfgWeapons" >> _item >> QPVAR(isSuckable)) == 1 } };
                 default { false };
             };
-            _hasCig && { [_unit] call FUNC(canStartSmoking) };
+            _hasCig && { [_unit] call FUNC(canEat) };
         }
     ],
     {                          // statement - CODE or ARRAY of Code [_conditionEnable, _conditionShow] - Arguments: params ["_unit", "_container", "_item", "_slot", "_params"];

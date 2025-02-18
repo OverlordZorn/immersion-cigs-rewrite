@@ -92,6 +92,7 @@ class CfgFunctions
         {
             file = PATH_TO_FUNC_SUB(eat_cig);
             class addEatAction { preInit = 1; };
+            class canEat {};
         };
     };
 };
