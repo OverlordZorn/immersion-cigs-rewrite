@@ -41,5 +41,5 @@
         private _sound = selectRandom [QPVAR(eat_bread_1), QPVAR(eat_bread_2), QPVAR(eat_bread_3), QPVAR(eat_bread_4), QPVAR(eat_bread_5)];
         [QGVAR(EH_sound), [_sound, _unit]] call CBA_fnc_globalEvent;
     },
-    true
+    true    // Consumes Item on Action
 ] call CBA_fnc_addItemContextMenuOption;
