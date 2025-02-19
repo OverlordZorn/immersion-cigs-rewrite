@@ -17,7 +17,7 @@ Some Cigarettes have differnt models, be it the Cigarettes or the cigpacks
 1. `$PBOPREFIX$`
 2. `script_component.hpp`
 3. `stringtable.xml` - dont forget to change keys, not only the Strings themselves
-4. `config.cpp` - Add yourself to the 'author' and 'authors[]'
+4. `config.cpp` - Add yourself to the 'authors[]'
 
 ## 3. Retexturing
 ### 3.1 Object Textures
