@@ -14,10 +14,10 @@ We dont need 10 more messy and buggy cig mods on the workshop.
 Some Cigarettes have differnt models, be it the Cigarettes or the cigpacks
 
 ## 2. Rename the Folder and replace all needed Strings inside the addon
-1. $PBOPREFIX$
-2. script_component.hpp
-3. stringtable.xml
-4. Add yourself to the 'author' and 'authors[]' entries of config.cpp
+1. `$PBOPREFIX$`
+2. `script_component.hpp`
+3. `stringtable.xml` - dont forget to change keys, not only the Strings themselves
+4. `config.cpp` - Add yourself to the 'author' and 'authors[]'
 
 ## 3. Retexturing
 ### 3.1 Object Textures
@@ -37,6 +37,6 @@ There is also "template PSD" in `tools/PSD UI Automations` which you can use. it
 
 
 ## 4. Fix the .p3d texture paths
-all .p3d files within `addons/~youraddon~/data/cigs/` and `addons/~youraddon~/data/cigpack/` need their texture paths replaced.
+all .p3d files within `addons/~youraddon~/data/cigs/` and `addons/~youraddon~/data/cigpack/` need their texture paths replaced, which is done with Arma 3 Tools / Object Builder
 
 pictures will follow
