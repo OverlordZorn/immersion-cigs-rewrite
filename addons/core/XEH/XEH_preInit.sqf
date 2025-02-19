@@ -97,7 +97,7 @@ if (_aceLoaded) then {
 		[LSTRING(set_cat_main),LSTRING(set_cat_ace_arsenal)],		//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 		true,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 		0,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
-		{ _this call FUNC(arsenalTab); },		//    _script      - Script to execute when setting is changed. (optional) <CODE>
+		FUNC(arsenalTab),		//    _script      - Script to execute when setting is changed. (optional) <CODE>
 		false									//    _needRestart - Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 	] call CBA_fnc_addSetting;
 };
