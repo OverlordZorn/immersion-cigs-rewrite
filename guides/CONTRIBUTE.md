@@ -39,4 +39,22 @@ There is also "template PSD" in `tools/PSD UI Automations` which you can use. it
 ## 4. Fix the .p3d texture paths
 all .p3d files within `addons/~youraddon~/data/cigs/` and `addons/~youraddon~/data/cigpack/` need their texture paths replaced, which is done with Arma 3 Tools / Object Builder
 
-pictures will follow
+### 4.1. Download Arma 3 Tools via Steam
+
+### 4.2. Open Object Builder from Arma 3 Tools
+
+### 4.3. For each of the p3d files inside the addon:
+by default, its `cigpack.p3d`, `cig0.p3d`,`cig1.p3d`,`cig2.p3d`,`cig3.p3d` and `cig4.p3d`
+
+#### 4.3.1 Open p3d
+![alt text](image.png)
+
+#### 4.3.2 Open `Tools / Mass Texture & Material Renaming`
+![alt text](image-1.png)
+
+#### 4.3.3 Mass Rename the Paths
+![alt text](image-2.png)
+
+#### 4.3.4 Save
+
+#### 4.3.5 Repeat
