@@ -2,18 +2,18 @@
 <Project name="cigs_apollo">
     <Package name="Items">
         <Key ID="STR_cigs_apollo_cigarette">
-            <English>Apollo - Soyuz Cigarette</English>
-            <French>Apollo - Soyuz Cigarette</French>
-            <German>Apollo - Soyuz Zigarette</German>
-            <Japanese>Apollo - Soyuz 葉巻</Japanese>
-            <Chinese>Apollo - Soyuz 香菸</Chinese>
+            <English>Apollo Soyuz Cigarette</English>
+            <French>Apollo Soyuz Cigarette</French>
+            <German>Apollo Soyuz Zigarette</German>
+            <Japanese>Apollo Soyuz 葉巻</Japanese>
+            <Chinese>Apollo Soyuz 香菸</Chinese>
         </Key>
         <Key ID="STR_cigs_apollo_cigpack">
-            <English>Apollo - Soyuz Cigarette Pack</English>
-            <French>Apollo - Soyuz Paquet de cigarettes</French>
-            <German>Apollo - Soyuz Zigarettenschachtel</German>
-            <Japanese>Apollo - Soyuz タバコ</Japanese>
-            <Chinese>Apollo - Soyuz 一包菸</Chinese>
+            <English>Apollo Soyuz Cigarette Pack</English>
+            <French>Apollo Soyuz Paquet de cigarettes</French>
+            <German>Apollo Soyuz Zigarettenschachtel</German>
+            <Japanese>Apollo Soyuz タバコ</Japanese>
+            <Chinese>Apollo Soyuz 一包菸</Chinese>
         </Key>
         <Key ID="STR_cigs_apollo_cigpack_desc">
             <English>American Blend Cigarettes - Contains 20 cigarettes.&lt;br/&gt;Warning: Smoking is hazardous to your health.</English>
