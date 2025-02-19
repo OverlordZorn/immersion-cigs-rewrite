@@ -32,7 +32,7 @@ if (_cacheMap isEqualTo "404") then {
     uiNamespace setVariable [QPVAR(cacheMap), _cacheMap];
 };
 
-if (_update || { !(_name in _cacheMap) } ) then {
+if ( _update || { !(_name in _cacheMap) } ) then {
     _return = _params call _code;
     _cacheMap set [_name, _return];
 } else {

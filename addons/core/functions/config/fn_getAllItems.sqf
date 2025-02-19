@@ -10,13 +10,11 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* 
 *
 * Public: No
 */
 
-
-// This function could benefit from a caching system but as of now i dont think it would be as 
 
 
 params [
@@ -47,8 +45,8 @@ switch (typeName _mode) do {
 // Fill the return array with the desired content.
 private _return = [];
 
-private _cfg_lighters_code = { ["CFG_LIGHTERS",{ Q(getNumber (_x >> QQPVAR(isLighter)) == 1 && { getNumber (_x >> QQ(scope)) == 2 }) configClasses (configFile >> "CfgMagazines") }] call FUNC(getCached) };
-private _cfg_packages_code = { ["CFG_PACKAGES",{ Q(getNumber (_x >> QQPVAR(isPack)   ) == 1 && { getNumber (_x >> QQ(scope)) == 2 }) configClasses (configFile >> "CfgMagazines") }] call FUNC(getCached) };
+private _cfg_lighters_code = { ["CFG_LIGHTERS", { Q(getNumber (_x >> QQPVAR(isLighter)) == 1 && { getNumber (_x >> QQ(scope)) == 2 }) configClasses (configFile >> "CfgMagazines") }] call FUNC(getCached) };
+private _cfg_packages_code = { ["CFG_PACKAGES", { Q(getNumber (_x >> QQPVAR(isPack)   ) == 1 && { getNumber (_x >> QQ(scope)) == 2 }) configClasses (configFile >> "CfgMagazines") }] call FUNC(getCached) };
 
 {
     switch (_x) do {
