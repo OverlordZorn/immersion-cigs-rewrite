@@ -15,10 +15,6 @@
 * Public: No
 */
 
-
-ZRN_LOG_1(_this);
-
-
 ["CBA_SettingChanged", {
     params ["_setting", "_value"];
 
@@ -31,3 +27,13 @@ ZRN_LOG_1(_this);
     [_sideStr, _className, _value] call FUNC(hashmap);
 
 }] call CBA_fnc_addEventHandler;
+
+addMissionEventHandler ["EntityCreated", {
+	params ["_unit"];
+
+    if !(_unit isKindOf "CAManBase") exitWith {};
+    if  (_unit isKindOf "CBA_NamespaceDummy") exitWith {};
+    if  (isPlayer _unit) exitWith {};
+
+    [_unit] call FUNC(queue);
+}];

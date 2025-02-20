@@ -97,10 +97,16 @@ class CfgFunctions
         class cigs_on_ai
         {
             file = PATH_TO_FUNC_SUB(cigs_on_ai);
+            class preInit { preInit = 1; };
+
             class cbaSetting_addSetting {};
             class cbaSetting_perSide {};
+
             class hashmap {};
-            class preInit { preInit = 1; };
+
+            class apply {};
+
+            class queue {};
         };
     };
 };

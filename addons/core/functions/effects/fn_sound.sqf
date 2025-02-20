@@ -16,5 +16,4 @@
 */
 
 params ["_sound", "_source"];
-ZRN_LOG_1(_this);
 _source say3D _sound;

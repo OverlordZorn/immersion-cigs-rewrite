@@ -17,10 +17,7 @@
 * Public: No
 */
 
-ZRN_LOG_1(_this);
-
 params ["_sideStr", "_className", "_action"];
-
 
 private _map = missionNamespace getVariable [QGVAR(cigsOnAI_hashmap), createHashMap];
 
@@ -30,6 +27,5 @@ switch (_action) do {
     case true:  { _array pushBackUnique _className };
     case false: { _array = _array - [_className] };
 };
-
 
 missionNamespace setVariable [QGVAR(cigsOnAI_hashmap), _map];

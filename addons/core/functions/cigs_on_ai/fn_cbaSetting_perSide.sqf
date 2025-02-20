@@ -21,6 +21,6 @@ params [
 
 if (_side isEqualTo "") exitWith {false};
 
-{ [_x, _side] call FUNC(cbaSetting_addSetting) } forEach ( ["PACKAGES", true] call cigs_core_fnc_getAllItems );
+{ [_x, _side] call FUNC(cbaSetting_addSetting) } forEach ( ["PACKAGES", true] call FUNC(getAllItems) );
 
 true

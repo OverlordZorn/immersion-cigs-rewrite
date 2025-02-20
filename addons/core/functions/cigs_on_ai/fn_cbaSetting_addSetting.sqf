@@ -17,8 +17,6 @@
 
 params [ "_cfg", "_side"];
 
-ZRN_LOG_1(_this);
-
 private _className = configName _cfg;
 private _displayName = getText (_cfg >> "displayName");
 
