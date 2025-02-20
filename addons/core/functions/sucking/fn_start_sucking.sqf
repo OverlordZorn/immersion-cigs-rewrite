@@ -67,9 +67,7 @@ if (_maxTime == 0) then { _maxTime = 330; };
 ////////////////////////////////////////
 // Initial Sucking Sound
 ////////////////////////////////////////
-ZRN_LOG_1(_suckerConfig);
 private _sound = [(_suckerConfig >> QPVAR(sounds))] call FUNC(getCfgDataRandom);
-ZRN_LOG_2(_sound,_unit);
 [ QGVAR(EH_sound), [_sound, _unit] ] call CBA_fnc_globalEvent;
 
 

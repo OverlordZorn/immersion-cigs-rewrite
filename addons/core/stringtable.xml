@@ -7,6 +7,24 @@
         <Key ID="STR_cigs_core_set_ace_arsenal_tab_desc">
             <English>When Enabled, this will create a Immersion Cig Tab in the ACE Arsenal (right side).\nThis can be enabled during the mission. To disable it, the mission needs to be restarted.</English>
         </Key>
+        <Key ID="STR_cigs_core_set_cigsonai_chance">
+            <English>Probability</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cigsonai_chance_desc">
+            <English>Defines how likely it is that a unit has cigarettes on them.</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cigsonai_delay">
+            <English>Delay</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cigsonai_delay_desc">
+            <English>Delays the addition of items, incase some mod/mission does some scripted inventory managemement.</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cigsonai_enable">
+            <English>Enable</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cigsonai_enable_desc">
+            <English>Enables the system to distribute cigarettes across AI Items.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
         </Key>
@@ -44,6 +62,9 @@
         </Key>
         <Key ID="STR_cigs_core_set_cat_main">
             <English>Immersive Cigs</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cat_main_cigsonai">
+            <English>Immersive Cigs - Cigs On AI</English>
         </Key>
         <Key ID="STR_cigs_core_set_cat_sp">
             <English>Singleplayer</English>
@@ -186,13 +207,6 @@
         <Key ID="STR_cigs_core_is_Empty">
             <English>%1 is now empty.</English>
             <German>%1 ist nun leer.</German>
-        </Key>
-        <Key ID="STR_cigs_core_no_matches_or_lighter">
-            <English>You don't have matches or a lighter.</English>
-            <French>Vous n'avez pas d'allumettes ou de briquet.</French>
-            <German>Du hast kein Feuerzeug oder Streichhölzer.</German>
-            <Japanese>あなたはライターかマッチを持っていません。</Japanese>
-            <Chinese>你沒有火柴或者打火機。</Chinese>
         </Key>
         <Key ID="STR_cigs_core_taste_flavour">
             <English>Hmm, its %1 flavour!</English>

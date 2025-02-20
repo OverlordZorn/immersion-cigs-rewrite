@@ -15,11 +15,8 @@
 * Public: No
 */  
 
-ZRN_LOG_1(_this);
-
 params ["_unit", "_player"];
 
-ZRN_LOG_2(_unit,_player);
 
 if !([_player] call FUNC(hasLighter)) exitWith {};
 _player playActionNow "PutDown";
