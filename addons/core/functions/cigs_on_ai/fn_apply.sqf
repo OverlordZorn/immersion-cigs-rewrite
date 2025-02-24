@@ -17,8 +17,10 @@
 
 params ["_unit"];
 
-if !( SET(cigsonai_enable) ) exitWith {};
+if (isNull _unit) exitWith {};
+if (isPlayer _unit) exitWith {};
 
+if !( SET(cigsonai_enable) ) exitWith {};
 if ( random 1 > SET(cigsonai_chance) ) exitWith {};
 
 private _code = {
