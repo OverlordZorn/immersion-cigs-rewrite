@@ -15,6 +15,8 @@
 * Public: No
 */
 
+if (!isServer) exitWith {};
+
 ["CBA_SettingChanged", {
     params ["_setting", "_value"];
 

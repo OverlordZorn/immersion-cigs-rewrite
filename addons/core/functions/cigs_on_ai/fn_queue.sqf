@@ -18,6 +18,9 @@
 
 params ["_unit"];
 
+if (isNull _unit) exitWith {};
+if (isPlayer _unit) exitWith {};
+
 private _queue = missionNamespace getVariable [QPVAR(queue), "404"];
 private _startPFEH = false;
 
