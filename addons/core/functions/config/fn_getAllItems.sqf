@@ -33,9 +33,9 @@ switch (typeName _mode) do {
             case ( (!_asConfig) && { _mode == "ALL"      } ): { ["LIGHTERS", "PACKAGES"] };             // className
             case ( (!_asConfig) && { _mode == "LIGHTERS" } ): { ["LIGHTERS"] };                         // className
             case ( (!_asConfig) && { _mode == "PACKAGES" } ): { ["PACKAGES"] };                         // className
-            case (   _asConfig  && { _mode == "ALL"      } ): { ["CFG_LIGHTERS", "CFG_PACKAGES"] };     // all as classnames
-            case (   _asConfig  && { _mode == "LIGHTERS" } ): { ["CFG_LIGHTERS"] };                     // all as classnames
-            case (   _asConfig  && { _mode == "PACKAGES" } ): { ["CFG_PACKAGES"] };                     // all as classnames
+            case (   _asConfig  && { _mode == "ALL"      } ): { ["CFG_LIGHTERS", "CFG_PACKAGES"] };     // CFG
+            case (   _asConfig  && { _mode == "LIGHTERS" } ): { ["CFG_LIGHTERS"] };                     // CFG
+            case (   _asConfig  && { _mode == "PACKAGES" } ): { ["CFG_PACKAGES"] };                     // CFG
             default { [] };
         };
     };
