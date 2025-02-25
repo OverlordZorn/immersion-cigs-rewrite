@@ -2,8 +2,8 @@
 <Project name="cigs_crayons">
     <Package name="Items">
         <Key ID="STR_cigs_crayons_crayon">
-            <English>Wachsmalkreide</English>
-            <German>Crayon</German>
+            <English>Crayon</English>
+            <German>Wachsmalkreide</German>
         </Key>
         <Key ID="STR_cigs_crayons_crayonpack">
             <English>Pack of Crayons</English>
