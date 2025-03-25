@@ -20,8 +20,8 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,pop,pop.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_pop0_x_ca.paa);
 
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         PVAR(isSuckable) = 1;

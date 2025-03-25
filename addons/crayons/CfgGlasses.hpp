@@ -19,8 +19,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_black_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -51,8 +51,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_blue_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -83,8 +83,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_brown_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -115,8 +115,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_gray_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -147,8 +147,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_green_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -179,8 +179,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_orange_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -211,8 +211,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_pink_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -243,8 +243,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_purple_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -275,8 +275,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_red_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -307,8 +307,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_white_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
@@ -339,8 +339,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_yellow_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
