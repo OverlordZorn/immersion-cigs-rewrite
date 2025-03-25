@@ -24,8 +24,8 @@ class CfgWeapons {
         PVAR(isSmokable) = 1;
         PVAR(smokeMultiplier) = 2;
 
-        PVAR(maxTime) = CIGAR_MAXTIME;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = QGVAR(cigar1_nv);
 
 
@@ -48,7 +48,7 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,cigars,cigar1.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar1_x_ca.paa);
 
-        PVAR(initStateTime) = CIGAR_1_INITSTATETIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_1;
         PVAR(nextState) = QGVAR(cigar2_nv);
 
         class ItemInfo
@@ -66,7 +66,7 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,cigars,cigar2.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar2_x_ca.paa);
 
-        PVAR(initStateTime) = CIGAR_2_INITSTATETIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_2;
         PVAR(nextState) = QGVAR(cigar3_nv);
 
         class ItemInfo
@@ -84,7 +84,7 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,cigars,cigar3.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar3_x_ca.paa);
 
-        PVAR(initStateTime) = CIGAR_3_INITSTATETIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_3;
         PVAR(nextState) = QGVAR(cigar4_nv);
 
         class ItemInfo
@@ -103,7 +103,7 @@ class CfgWeapons {
         model = PATH_TO_ADDON_3(data,cigars,cigar4.p3d);
         picture = PATH_TO_ADDON_3(data,ui,gear_cigar4_x_ca.paa);
 
-        PVAR(initStateTime) = CIGAR_4_INITSTATETIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_4;
         PVAR(nextState) = "";
 
         class ItemInfo

@@ -31,8 +31,8 @@ class CfgWeapons {
         KJW_Imposters_SuspicionAmount = 0.1;
 
         // Common Data
-        PVAR(maxTime) = 330;
-        PVAR(initStateTime) = 0;
+        PVAR(maxTime) = MAXTIME;
+        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = "";
 
         // Specific Data
