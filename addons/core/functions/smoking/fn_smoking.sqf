@@ -85,16 +85,18 @@ if (_gogglesNew != "") then {
 private _delay = (5 + random 15);
 _currentTime = _currentTime + _delay;
 
+
 ////////////////////////////////////////
 // Call Recursive Function
 ////////////////////////////////////////
-_code = {
 
+_timeoutCode = {
     params ["_unit","_currentTime","_currentItem","_itemType","_maxTime","_itemConfig"];
-
     if (  [_unit, _itemType, _currentItem, _currentTime, _maxTime] call FUNC(canKeepSmoking) ) then {
         [_unit,_currentTime,_itemType,_maxTime] call FUNC(smoking);
+
     } else {
+
         // IF fail condition detected
         [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
         _unit setVariable [QPVAR(isSmoking), false, true];
@@ -108,5 +110,24 @@ _code = {
     };
 };
 
-[_code, [_unit,_currentTime,_currentItem,_itemType,_maxTime,_itemConfig], _delay] call CBA_fnc_waitAndExecute;
+_condition = { !((_this#0) getVariable [QPVAR(isSmoking), false]) };
 
+_statement = {
+    params ["_unit","_currentTime","_currentItem","_itemType","_maxTime","_itemConfig"];
+    [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
+
+    if (_currentTime >= _maxTime) then {
+        switch (_itemType) do {
+            case ("GOGGLES"): { removeGoggles _unit; };
+            case ("HMD"):     { _unit removeWeapon (hmd _unit); };
+        };
+    };
+};
+
+[
+    _condition,
+    _statement,
+    [_unit,_currentTime,_currentItem,_itemType,_maxTime,_itemConfig],
+    _delay,
+    _timeoutCode
+] call CBA_fnc_waitUntilAndExecute;
