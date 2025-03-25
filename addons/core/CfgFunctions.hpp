@@ -54,7 +54,7 @@ class CfgFunctions
             class smoke {};
             class anim {};
 
-            class refueling {};
+            class spontaneousCombustion {};
         };
 
         class pack
