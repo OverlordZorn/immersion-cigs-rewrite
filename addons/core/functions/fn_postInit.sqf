@@ -25,8 +25,11 @@
 [QGVAR(EH_sound), FUNC(sound)] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 
-// I dont remember why this waits for cba settings :harold:
 
+["ace_refuel_started", FUNC(spontaneousCombustion)] call CBA_fnc_addEventHandler;
+
+
+// I dont remember why this waits for cba settings :harold:
 if (!hasInterface) exitWith {};
 private _code = {
     // reset isSmoking/isSucking variable on respawn
