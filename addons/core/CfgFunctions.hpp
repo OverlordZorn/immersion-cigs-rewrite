@@ -53,6 +53,8 @@ class CfgFunctions
             class sound {};
             class smoke {};
             class anim {};
+
+            class refueling {};
         };
 
         class pack
