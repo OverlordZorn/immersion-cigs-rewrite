@@ -29,6 +29,8 @@
 [
     QGVAR(EH_useLighter),
     {
+        if !(ace_fire_enabled) exitWith {};
+
         params ["_unit"];
 
         private _types = [""];
