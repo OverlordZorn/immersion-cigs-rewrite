@@ -39,7 +39,6 @@ switch (_itemType) do {
 _unit setFatigue (getFatigue _unit + 0.01);
 
 
-
 ////////////////////////////////////////
 // Get NextCigState
 ////////////////////////////////////////
@@ -78,6 +77,13 @@ if (_gogglesNew != "") then {
     };
     _currentItem = _gogglesNew;
 };
+
+////////////////////////////////////////
+// API 
+////////////////////////////////////////
+[QGVAR(EH_smoking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
+[QGVAR(EH_smoking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
+
 
 ////////////////////////////////////////
 // Define Delay and Timers

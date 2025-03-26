@@ -81,6 +81,12 @@ if (_newItem != "") then {
     _currentItem = _newItem;
 };
 
+////////////////////////////////////////
+// API 
+////////////////////////////////////////
+[QGVAR(EH_sucking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
+[QGVAR(EH_sucking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
+
 
 ////////////////////////////////////////
 // Define Delay and Timers
