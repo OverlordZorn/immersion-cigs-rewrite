@@ -40,3 +40,5 @@ private _sound = switch (_type) do {
     default { QGVAR(matches_01) };
 };
 [ QGVAR(EH_sound), [_sound, _player] ] call CBA_fnc_globalEvent;
+
+[ { [ QGVAR(EH_useLighter), [_this#0] ] call CBA_fnc_localEvent; } , [_player], 1.5 ] call CBA_fnc_waitAndExecute;
