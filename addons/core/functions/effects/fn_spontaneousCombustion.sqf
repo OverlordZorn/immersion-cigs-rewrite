@@ -15,11 +15,12 @@
 * Public: No
 */
 
-params ["_source", "_target", "_nozzle", "_unit"];
+params ["_unit"];
 
 
 if ( _unit getVariable [QPVAR(isSmoking), false] && { random 1 < SET(effect_spontaneusComustion_chance) } ) then {
 
-    [_unit, 5, _nozzle] call ace_fire_fnc_burn;
+    [ { [_this#0 , 2 + ceil random 3] call ace_fire_fnc_burn; } , [_unit], 0.1 + ceil random 2 ] call CBA_fnc_waitAndExecute;
+    
 };
  
