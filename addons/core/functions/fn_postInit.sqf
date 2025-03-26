@@ -33,13 +33,15 @@
 
         private _types = [""];
         private _nearbyObjs = nearestObjects [_unit, [], 3, true] select {
-            typeOf _x in ["ace_refuel_fuelNozzle"]
+            private _className = typeOf _x;
+            _className in ["ace_refuel_fuelNozzle"]
             ||
             {
-                _x getVariable ["ace_refuel_currentFuelCargo", 0] > 0
+                getNumber (configFile >> "CfgVehicles" >> _className >> QPVAR(canCauseCombustion) ) > 0
                 ||
                 {
-                    _x getVariable ["ace_refuel_jerryCan", false]
+                    private _fuel = [_x] call ace_refuel_fnc_getFuel;
+                    _fuel > 0 || { _fuel == -10 }
                 }
             }
         };
