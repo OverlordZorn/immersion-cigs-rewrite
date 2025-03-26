@@ -25,6 +25,12 @@
         <Key ID="STR_cigs_core_set_cigsonai_enable_desc">
             <English>Enables the system to distribute cigarettes across AI Items.</English>
         </Key>
+        <Key ID="STR_cigs_core_set_effect_spontaneusComustion_chance">
+            <English>Chance of Spontaneus Combustion</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_effect_spontaneusComustion_chance_desc">
+            <English>Defines the chance at which a player might start burning if they're doing something silly and/or risky while smoking.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
         </Key>
@@ -59,6 +65,10 @@
     <Package name="CBASettingsCategories">
         <Key ID="STR_cigs_core_set_cat_ace_arsenal">
             <English>ACE Arsenal</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_cat_effects">
+            <English>Effects</English>
+            <German>Effekte</German>
         </Key>
         <Key ID="STR_cigs_core_set_cat_main">
             <English>Immersive Cigs</English>
@@ -193,10 +203,10 @@
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_core_author">
-            <English>Rebel / Facel</English>
-            <French>Rebel / Facel</French>
-            <German>Rebel / Facel</German>
-            <Japanese>Rebel / Facel</Japanese>
+            <English>Rebel / Facel / OverlordZorn</English>
+            <French>Rebel / Facel / OverlordZorn</French>
+            <German>Rebel / Facel / OverlordZorn</German>
+            <Japanese>Rebel / Facel / OverlordZorn</Japanese>
         </Key>
     </Package>
     <Package name="Notification">
