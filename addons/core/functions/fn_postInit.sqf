@@ -25,7 +25,29 @@
 [QGVAR(EH_sound), FUNC(sound)] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 
-["ace_refuel_started", FUNC(spontaneousCombustion)] call CBA_fnc_addEventHandler;
+["ace_refuel_started", { _this#3 call FUNC(spontaneousCombustion) }] call CBA_fnc_addEventHandler;
+[
+    QGVAR(EH_useLighter),
+    {
+        params ["_unit"];
+
+        private _types = [""];
+        private _nearbyObjs = nearestObjects [_unit, [], 3, true] select {
+            typeOf _x in ["ace_refuel_fuelNozzle"]
+            ||
+            {
+                _x getVariable ["ace_refuel_currentFuelCargo", 0] > 0
+                ||
+                {
+                    _x getVariable ["ace_refuel_jerryCan", false]
+                }
+            }
+        };
+
+        { _unit call FUNC(spontaneousCombustion) } forEach _nearbyObjs;
+
+    }
+] call CBA_fnc_addEventHandler;
 
 // I dont remember why this waits for cba settings :harold:
 if (!hasInterface) exitWith {};
