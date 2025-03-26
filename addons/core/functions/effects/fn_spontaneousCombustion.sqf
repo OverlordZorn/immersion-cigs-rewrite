@@ -20,6 +20,6 @@ params ["_source", "_target", "_nozzle", "_unit"];
 
 if ( _unit getVariable [QPVAR(isSmoking), false] && { random 1 < SET(effect_spontaneusComustion_chance) } ) then {
 
-    [_unit, 4] call ace_fire_fnc_burn;
+    [_unit, 5, _nozzle] call ace_fire_fnc_burn;
 };
  
