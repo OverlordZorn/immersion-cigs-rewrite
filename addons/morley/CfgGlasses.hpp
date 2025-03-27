@@ -37,6 +37,8 @@ class CfgGlasses {
         PVAR(initStateTime) = INITSTATETIME_VARIANT_1;
         PVAR(nextState) = QGVAR(cig2);
         PVAR(isSmokable) = 1;
+        PVAR(smokeSound)[] = {QPVAR(smoke_3),QPVAR(smoke_4)};
+
     };
 
     class GVAR(cig2): GVAR(cig0) {
