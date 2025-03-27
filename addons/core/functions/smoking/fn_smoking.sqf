@@ -93,20 +93,21 @@ _currentTime = _currentTime + _delay;
 _timeoutCode = {
     params ["_unit","_currentTime","_currentItem","_itemType","_maxTime","_itemConfig"];
     if (  [_unit, _itemType, _currentItem, _currentTime, _maxTime] call FUNC(canKeepSmoking) ) then {
+
         [_unit,_currentTime,_itemType,_maxTime] call FUNC(smoking);
 
     } else {
 
         // IF fail condition detected
-        [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
         _unit setVariable [QPVAR(isSmoking), false, true];
+        
+        if (lifeState _unit in ["HEALTHY", "INJURED"]) then {
+            [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
+            if (_currentTime >= _maxTime) then { [_unit, _itemType, _currentItem] call FUNC(drop_cig); };
+        } else {
+            [_unit, _itemType, _currentItem] call FUNC(drop_cig);
+        }; 
 
-        if (_currentTime >= _maxTime) then {
-            switch (_itemType) do {
-                case ("GOGGLES"): { removeGoggles _unit; };
-                case ("HMD"):     { _unit removeWeapon (hmd _unit); };
-            };
-        };
     };
 };
 
@@ -117,10 +118,7 @@ _statement = {
     [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
 
     if (_currentTime >= _maxTime) then {
-        switch (_itemType) do {
-            case ("GOGGLES"): { removeGoggles _unit; };
-            case ("HMD"):     { _unit removeWeapon (hmd _unit); };
-        };
+        [_unit, _itemType, _currentItem] call FUNC(drop_cig);
     };
 };
 
