@@ -15,18 +15,34 @@
 * Public: No
 */
 
-params ["_unit", "_itemType", "_currentItem", ["_case", "RND", [""]] ];
+params [ "_unit", ["_currentItem", ""], ["_itemType", ""] ];
 
-if (_case == "RND") then { _case = selectRandomWeighted ["DROP", 0.5, "REMOVE", 0.5]; };
+if (_currentItem == "" || { _itemType == "" } ) then {
 
-switch (_case) do {
-    case "REMOVE": {
-        switch (_itemType) do {
-            case ("GOGGLES"): { removeGoggles _unit; };
-            case ("HMD"):     { _unit removeWeapon (hmd _unit); };
-        };
+    _itemType = switch (true) do {
+        case (getNumber (configFile >> "CfgGlasses" >> goggles _unit >> QPVAR(isSmokable)) == 1): { "GOGGLES" };
+        case (getNumber (configFile >> "CfgWeapons" >>     hmd _unit >> QPVAR(isSmokable)) == 1): { "HMD" };
+        default { "" };
     };
-    case "DROP": {
-        [_unit, _currentItem] call CBA_fnc_dropItem;
+    if (_itemType == "") exitWith {};
+    _currentItem = switch (_itemType) do {
+        case ("GOGGLES"):   { goggles _unit };
+        case ("HMD"):       { hmd _unit };
     };
 };
+
+switch (_itemType) do {
+    case ("GOGGLES"): { removeGoggles _unit; };
+    case ("HMD"):     { _unit removeWeapon (hmd _unit); };
+};
+
+private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
+
+if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+    _weaponHolder = createVehicle ["GroundWeaponHolder", [0,0,0], [], 0, "NONE"];
+    _weaponHolder setPosASL getPosASL _unit;
+};
+
+_weaponHolder addItemCargoGlobal [_currentItem, 1];
+
+if (lifeState _unit in ["HEALTHY", "INJURED"]) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim) };

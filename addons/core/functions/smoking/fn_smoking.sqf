@@ -82,8 +82,16 @@ if (_gogglesNew != "") then {
 ////////////////////////////////////////
 // Define Delay and Timers
 ////////////////////////////////////////
-private _delay = (5 + random 15);
-_currentTime = _currentTime + _delay;
+
+private "_delay";
+if (_currentTime < 15) then {
+    _delay = (random 3);
+    _currentTime = _currentTime + _delay;
+} else {
+    _delay = (5 + random 15);
+    _currentTime = _currentTime + _delay;
+};
+
 
 
 ////////////////////////////////////////
@@ -99,15 +107,13 @@ _timeoutCode = {
     } else {
 
         // IF fail condition detected
-        _unit setVariable [QPVAR(isSmoking), false, true];
+        if (_unit getVariable [QPVAR(isSmoking), false]) then { _unit setVariable [QPVAR(isSmoking), false, true] };
         
         if (lifeState _unit in ["HEALTHY", "INJURED"]) then {
-            [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
-            if (_currentTime >= _maxTime) then { [_unit, _itemType, _currentItem] call FUNC(drop_cig); };
+            if (_currentTime >= _maxTime) then { [_unit, _currentItem, _itemType] call FUNC(drop_cig); };
         } else {
-            [_unit, _itemType, _currentItem] call FUNC(drop_cig);
-        }; 
-
+            [_unit, _currentItem, _itemType] call FUNC(drop_cig);
+        };
     };
 };
 
@@ -118,7 +124,7 @@ _statement = {
     [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
 
     if (_currentTime >= _maxTime) then {
-        [_unit, _itemType, _currentItem] call FUNC(drop_cig);
+        [_unit, _currentItem, _itemType] call FUNC(drop_cig);
     };
 };
 
