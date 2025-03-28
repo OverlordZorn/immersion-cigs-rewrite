@@ -25,7 +25,7 @@ private _sound = [_cigConfig >> QPVAR(smokeSound)] call FUNC(getCfgDataRandom);
 
 if (isNil "_sound") then { _sound = selectRandom [QPVAR(smoke_3),QPVAR(smoke_4)] };
 
-[_unit, _sound, 10, true, false, true] call CBA_fnc_globalSay3d;
+[_unit, _sound, 15, true, false, true] call CBA_fnc_globalSay3d;
 
 [
     {
