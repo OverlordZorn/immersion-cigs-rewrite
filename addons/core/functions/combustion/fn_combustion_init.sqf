@@ -35,9 +35,10 @@
                 }
             }
         };
-        { _unit call FUNC(spontaneousCombustion) } forEach _nearbyObjs;
+        { _unit call FUNC(comustion) } forEach _nearbyObjs;
     }
 ] call CBA_fnc_addEventHandler;
 
-// Event: When starting Refueling, is the unit nearby smoking?
-["ace_refuel_started", { _this#3 call FUNC(spontaneousCombustion) }] call CBA_fnc_addEventHandler;
+
+// Event: When starting Refueling, is the unit doing it smoking?
+["ace_refuel_started", { _this#3 call FUNC(comustion) }] call CBA_fnc_addEventHandler;
