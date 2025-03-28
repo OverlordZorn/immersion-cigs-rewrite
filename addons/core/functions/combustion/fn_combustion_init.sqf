@@ -19,10 +19,17 @@
 [
     QGVAR(EH_useLighter),
     {
+        ZRN_LOG_MSG_1(useLighter,_this);
+
         if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
         params ["_unit"];
         private _types = [""];
-        private _nearbyObjs = nearestObjects [_unit, [], 3, true] select {
+        private _nearbyObjs = nearestObjects [_unit, [], 7, true] select {
+            //exclude Filter:
+            !( typeOf _x in ["ace_refuel_fuelHoseSegment", "#soundonvehicle"] )
+        };
+
+        _nearbyObjs = _nearbyObjs select {
             private _className = typeOf _x;
             _className in ["ace_refuel_fuelNozzle"]
             ||
@@ -35,10 +42,15 @@
                 }
             }
         };
-        { _unit call FUNC(comustion) } forEach _nearbyObjs;
+        {
+            [FUNC(combustion_check), [_unit], 1.0] call CBA_fnc_waitAndExecute;
+        } forEach _nearbyObjs;
     }
 ] call CBA_fnc_addEventHandler;
 
 
 // Event: When starting Refueling, is the unit doing it smoking?
-["ace_refuel_started", { _this#3 call FUNC(comustion) }] call CBA_fnc_addEventHandler;
+["ace_refuel_started", {
+    ZRN_LOG_MSG_1(refuel started,_this);
+    [ FUNC(combustion_check) , [_this#3], 1 + ceil random 5 ] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;

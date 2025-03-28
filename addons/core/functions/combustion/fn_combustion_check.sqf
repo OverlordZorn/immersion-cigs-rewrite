@@ -15,13 +15,21 @@
 * Public: No
 */
 
+ZRN_LOG_1(_this);
+
 params ["_unit"];
 
 if (isNil "_unit") exitWith {};
 
-if ( _unit getVariable [QPVAR(isSmoking), false] && { random 1 < SET(effect_spontaneusComustion_chance) } ) then {
+private _random = random 1;
+private _chance = _random <= SET(effect_combustion_chance);
 
-    [ ace_fire_fnc_burn , [_unit , 2 + ceil random 3], 1 + ceil random 2 ] call CBA_fnc_waitAndExecute;
+ZRN_LOG_2(_random,_chance);
+
+if ( _unit getVariable [QPVAR(isSmoking), false] && { _chance } ) then {
     
+    ZRN_LOG_1(_chance);
+
+    [_unit] call FUNC(combustion_do);
+
 };
- 

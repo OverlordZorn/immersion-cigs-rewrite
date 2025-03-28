@@ -54,8 +54,6 @@ class CfgFunctions
             class sound {};
             class smoke {};
             class anim {};
-
-            class spontaneousCombustion {};
         };
 
         class pack
@@ -114,8 +112,9 @@ class CfgFunctions
         class combustion {
             file = PATH_TO_FUNC_SUB(combustion);
 
-            class combustion_init { preInit = 1; };
-            class combustion {};
+            class combustion_init { postInit = 1; };
+            class combustion_check {};
+            class combustion_do {};
         };
     };
 };

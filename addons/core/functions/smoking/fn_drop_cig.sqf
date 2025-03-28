@@ -15,7 +15,7 @@
 * Public: No
 */
 
-params [ "_unit", ["_currentItem", ""], ["_itemType", ""], ["_remove", false] ];
+params [ "_unit", ["_currentItem", ""], ["_itemType", ""], ["_remove", false], ["_skipAnimation", false] ];
 
 if (_currentItem == "" || { _itemType == "" } ) then {
 
@@ -36,7 +36,7 @@ switch (_itemType) do {
     case ("HMD"):     { _unit removeWeapon (hmd _unit); };
 };
 
-if (lifeState _unit in ["HEALTHY", "INJURED"]) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim) };
+if ( !_skipAnimation && (lifeState _unit in ["HEALTHY", "INJURED"]) ) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim) };
 
 if (_remove) exitWith {};
 

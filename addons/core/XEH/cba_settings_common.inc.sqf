@@ -104,9 +104,9 @@ if (_aceLoaded) then {
 // Effects
 
 [
-	QSET(effect_spontaneusComustion_chance),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
+	QSET(effect_combustion_chance),					//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"SLIDER",										//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(effect_spontaneusComustion_chance),
+	SETLSTRING(effect_combustion_chance),
 													//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main),LSTRING(set_cat_effects)], //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	[0.01, 1, 0.1, 2, true],						//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>

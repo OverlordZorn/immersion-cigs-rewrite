@@ -25,11 +25,11 @@
         <Key ID="STR_cigs_core_set_cigsonai_enable_desc">
             <English>Enables the system to distribute cigarettes across AI Items.</English>
         </Key>
-        <Key ID="STR_cigs_core_set_effect_spontaneusComustion_chance">
+        <Key ID="STR_cigs_core_set_effect_combustion_chance">
             <English>Chance of Spontaneus Combustion</English>
         </Key>
-        <Key ID="STR_cigs_core_set_effect_spontaneusComustion_chance_desc">
-            <English>Defines the chance at which a player might start burning if they're doing something silly and/or risky while smoking.</English>
+        <Key ID="STR_cigs_core_set_effect_combustion_chance_desc">
+            <English>Defines the chance at which a player/unit might start burning if they're doing something silly and/or risky while smoking.</English>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
