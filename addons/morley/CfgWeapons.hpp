@@ -26,6 +26,7 @@ class CfgWeapons {
 
         PVAR(isSmokable) = 1;
         PVAR(smokeMultiplier) = 1;
+        PVAR(smokeSound)[] = {QPVAR(smoke_3),QPVAR(smoke_4)};
 
         class ItemInfo
         {

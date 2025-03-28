@@ -29,4 +29,7 @@ class CfgSounds {
     SOUND(eat_bread_3,4,1,30);
     SOUND(eat_bread_4,4,1,30);
     SOUND(eat_bread_5,4,1,30);
+
+    SOUND(smoke_3,3,1,10);
+    SOUND(smoke_4,3,1,10);
 };
