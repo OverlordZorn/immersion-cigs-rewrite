@@ -15,7 +15,7 @@
 * Public: No
 */
 
-params [ "_unit", ["_currentItem", ""], ["_itemType", ""] ];
+params [ "_unit", ["_currentItem", ""], ["_itemType", ""], ["_remove", false] ];
 
 if (_currentItem == "" || { _itemType == "" } ) then {
 
@@ -36,6 +36,11 @@ switch (_itemType) do {
     case ("HMD"):     { _unit removeWeapon (hmd _unit); };
 };
 
+if (lifeState _unit in ["HEALTHY", "INJURED"]) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim) };
+
+if (_remove) exitWith {};
+
+// Put Cigarette on the floor
 private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
 if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
@@ -44,5 +49,3 @@ if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
 };
 
 _weaponHolder addItemCargoGlobal [_currentItem, 1];
-
-if (lifeState _unit in ["HEALTHY", "INJURED"]) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim) };
