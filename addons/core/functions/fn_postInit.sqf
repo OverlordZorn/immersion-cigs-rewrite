@@ -25,14 +25,12 @@
 [QGVAR(EH_sound), FUNC(sound)] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 
-["ace_refuel_started", { _this#3 call FUNC(spontaneousCombustion) }] call CBA_fnc_addEventHandler;
+
 [
     QGVAR(EH_useLighter),
     {
-        if !(ace_fire_enabled) exitWith {};
-
+        if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
         params ["_unit"];
-
         private _types = [""];
         private _nearbyObjs = nearestObjects [_unit, [], 3, true] select {
             private _className = typeOf _x;
@@ -47,14 +45,29 @@
                 }
             }
         };
-
         { _unit call FUNC(spontaneousCombustion) } forEach _nearbyObjs;
-
     }
 ] call CBA_fnc_addEventHandler;
+["ace_refuel_started", { _this#3 call FUNC(spontaneousCombustion) }] call CBA_fnc_addEventHandler;
+
+
+if (isServer) then {
+
+    ["ace_unconscious", {
+        params ["_unit", "_state"];
+        if (_state && { _unit getVariable [QPVAR(isSmoking), false] } ) then {
+
+            [ FUNC(drop_cig), [_unit], 1 ] call CBA_fnc_waitAndExecute;
+
+            _unit setVariable [QPVAR(isSmoking), false, true];
+        };
+
+    }] call CBA_fnc_addEventHandler;
+};
+
+if !(hasInterface) exitWith {};
 
 // I dont remember why this waits for cba settings :harold:
-if (!hasInterface) exitWith {};
 private _code = {
     // reset isSmoking/isSucking variable on respawn
     player addEventHandler ["Respawn", {

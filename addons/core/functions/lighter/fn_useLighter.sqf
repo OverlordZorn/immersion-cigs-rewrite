@@ -18,20 +18,20 @@
 
 // Why check if it can be checked before ?
 /*
-if (!(QPVAR(matches) in (magazines _player)) && !(QPVAR(lighter) in (magazines _player))) exitWith {
-    [QGVAR(EH_notify), [LLSTRING(no_matches_or_lighter), 2.5], _player] call CBA_fnc_targetEvent;
+if (!(QPVAR(matches) in (magazines _unit)) && !(QPVAR(lighter) in (magazines _unit))) exitWith {
+    [QGVAR(EH_notify), [LLSTRING(no_matches_or_lighter), 2.5], _unit] call CBA_fnc_targetEvent;
     false
 };
 */
 
-params [ "_player" ];
+params [ "_unit" ];
 
-[ _player ] call FUNC(getLighter) params [ "_className", "_type" ];
+[ _unit ] call FUNC(getLighter) params [ "_className", "_type" ];
 
 if ( _className isEqualTo false ) exitWith {};
 
 // Reduce Magazine Size if its a Magazine
-if ( _type isEqualTo "typeMagazine" ) then { [ _player, _className ] call FUNC(removeItemFromMag); };
+if ( _type isEqualTo "typeMagazine" ) then { [ _unit, _className ] call FUNC(removeItemFromMag); };
 
 // Play sound get From Lighter Class)
 private _sound = switch (_type) do {
@@ -39,6 +39,11 @@ private _sound = switch (_type) do {
     case "typeItem":     { [ configFile >> "CfgWeapons"   >> _className >> QPVAR(LighterSound) ] call FUNC(getCfgDataRandom) };
     default { QGVAR(matches_01) };
 };
-[ QGVAR(EH_sound), [_sound, _player] ] call CBA_fnc_globalEvent;
 
-[ { [ QGVAR(EH_useLighter), [_this#0] ] call CBA_fnc_localEvent; } , [_player], 1.5 ] call CBA_fnc_waitAndExecute;
+
+[ CBA_fnc_localEvent , [QGVAR(EH_useLighter), [_unit] ], 1.5 ] call CBA_fnc_waitAndExecute;
+
+[ QGVAR(EH_sound), [_sound, _unit] ] call CBA_fnc_globalEvent;
+
+[QGVAR(EH_useLighter_local),  [_unit, _className, _type]] call CBA_fnc_localEvent;
+[QGVAR(EH_useLighter_server), [_unit, _className, _type]] call CBA_fnc_serverEvent;

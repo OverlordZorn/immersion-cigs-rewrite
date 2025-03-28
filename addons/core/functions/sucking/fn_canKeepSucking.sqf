@@ -21,7 +21,7 @@ params ["_unit", "_itemType", "_currentItem", "_currentTime", "_maxTime"];
 // Fail/Break/Exit Conditions => If this Function will return false, it will interrupt the smoking
 (
     // if the unit is dead
-    alive _unit
+    lifeState _unit in ["HEALTHY", "INJURED"]
     &&
     {
         // if the unit isnt sucking

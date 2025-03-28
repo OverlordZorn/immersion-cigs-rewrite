@@ -29,6 +29,7 @@ class CfgFunctions
 
             class canStopSmoking {};
             class stop_cig {};
+            class drop_cig {};
         };
 
         class sucking

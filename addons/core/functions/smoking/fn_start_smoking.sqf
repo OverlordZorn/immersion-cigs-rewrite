@@ -68,18 +68,11 @@ if (_maxTime == 0) then { _maxTime = 330; };
 // Initial Smoke Puffs
 ////////////////////////////////////////
 private _sleep_total = 3.5;
-private _puffs = 1 + ceil random 4;
 
 [{ [QGVAR(EH_smoke), _this] call CBA_fnc_globalEvent; }, [_unit, _itemConfig], _sleep_total] call CBA_fnc_waitAndExecute;
-
-for "_i" from 1 to _puffs do {
-    private _rnd = 3 + random 5;
-    _sleep_total = _sleep_total + _rnd;
-    [{ [QGVAR(EH_smoke), _this] call CBA_fnc_globalEvent; }, [_unit, _itemConfig], _sleep_total] call CBA_fnc_waitAndExecute;
-};
 
 
 ////////////////////////////////////////
 // Start Recursive Loop
 ////////////////////////////////////////
-[ FUNC(smoking), [_unit,_currentTime,_itemType,_maxTime], _sleep_total + 2] call CBA_fnc_waitAndExecute;
+[ FUNC(smoking), [_unit,_currentTime,_itemType,_maxTime], _sleep_total + 1] call CBA_fnc_waitAndExecute;
