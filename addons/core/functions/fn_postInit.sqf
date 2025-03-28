@@ -25,9 +25,24 @@
 [QGVAR(EH_sound), FUNC(sound)] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 
-// I dont remember why this waits for cba settings :harold:
 
-if (!hasInterface) exitWith {};
+if (isServer) then {
+
+    ["ace_unconscious", {
+        params ["_unit", "_state"];
+        if (_state && { _unit getVariable [QPVAR(isSmoking), false] } ) then {
+
+            [ FUNC(drop_cig), [_unit], 1 ] call CBA_fnc_waitAndExecute;
+
+            _unit setVariable [QPVAR(isSmoking), false, true];
+        };
+
+    }] call CBA_fnc_addEventHandler;
+};
+
+
+if !(hasInterface) exitWith {};
+
 private _code = {
     // reset isSmoking/isSucking variable on respawn
     player addEventHandler ["Respawn", {
