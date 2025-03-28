@@ -26,31 +26,6 @@
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 
 
-[
-    QGVAR(EH_useLighter),
-    {
-        if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
-        params ["_unit"];
-        private _types = [""];
-        private _nearbyObjs = nearestObjects [_unit, [], 3, true] select {
-            private _className = typeOf _x;
-            _className in ["ace_refuel_fuelNozzle"]
-            ||
-            {
-                getNumber (configFile >> "CfgVehicles" >> _className >> QPVAR(canCauseCombustion) ) > 0
-                ||
-                {
-                    private _fuel = [_x] call ace_refuel_fnc_getFuel;
-                    _fuel > 0 || { _fuel == -10 }
-                }
-            }
-        };
-        { _unit call FUNC(spontaneousCombustion) } forEach _nearbyObjs;
-    }
-] call CBA_fnc_addEventHandler;
-["ace_refuel_started", { _this#3 call FUNC(spontaneousCombustion) }] call CBA_fnc_addEventHandler;
-
-
 if (isServer) then {
 
     ["ace_unconscious", {

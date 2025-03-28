@@ -17,10 +17,11 @@
 
 params ["_unit"];
 
+if (isNil "_unit") exitWith {};
 
 if ( _unit getVariable [QPVAR(isSmoking), false] && { random 1 < SET(effect_spontaneusComustion_chance) } ) then {
 
-    [ { [_this#0 , 2 + ceil random 3] call ace_fire_fnc_burn; } , [_unit], 0.1 + ceil random 2 ] call CBA_fnc_waitAndExecute;
+    [ ace_fire_fnc_burn , [_unit , 2 + ceil random 3], 1 + ceil random 2 ] call CBA_fnc_waitAndExecute;
     
 };
  
