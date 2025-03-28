@@ -40,9 +40,9 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-
 if !(hasInterface) exitWith {};
 
+// I dont remember why this waits for cba settings :harold:
 private _code = {
     // reset isSmoking/isSucking variable on respawn
     player addEventHandler ["Respawn", {

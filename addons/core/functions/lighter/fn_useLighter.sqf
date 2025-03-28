@@ -39,6 +39,10 @@ private _sound = switch (_type) do {
     case "typeItem":     { [ configFile >> "CfgWeapons"   >> _className >> QPVAR(LighterSound) ] call FUNC(getCfgDataRandom) };
     default { QGVAR(matches_01) };
 };
+
+
+[ CBA_fnc_localEvent , [QGVAR(EH_useLighter), [_unit] ], 1.5 ] call CBA_fnc_waitAndExecute;
+
 [ QGVAR(EH_sound), [_sound, _unit] ] call CBA_fnc_globalEvent;
 
 [QGVAR(EH_useLighter_local),  [_unit, _className, _type]] call CBA_fnc_localEvent;

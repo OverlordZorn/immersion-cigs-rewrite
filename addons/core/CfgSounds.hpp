@@ -32,4 +32,10 @@ class CfgSounds {
 
     SOUND(smoke_3,3,1,10);
     SOUND(smoke_4,3,1,10);
+
+    SOUND(verpuffung_00,4,1,100);
+    SOUND(verpuffung_01,4,1,100);
+    SOUND(verpuffung_02,4,1,100);
+    SOUND(verpuffung_03,4,1,100);
+    SOUND(verpuffung_04,4,1,100);
 };

@@ -109,5 +109,12 @@ class CfgFunctions
 
             class queue {};
         };
+        class combustion {
+            file = PATH_TO_FUNC_SUB(combustion);
+
+            class combustion_init { postInit = 1; };
+            class combustion_check {};
+            class combustion_do {};
+        };
     };
 };
