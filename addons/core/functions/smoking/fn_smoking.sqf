@@ -130,7 +130,7 @@ _statement = {
     [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
 
     if (_currentTime >= _maxTime) then {
-        [_unit, _currentItem, _itemType] call FUNC(drop_cig);
+        [_unit, _currentItem, _itemType, true] call FUNC(drop_cig);
     };
 };
 
