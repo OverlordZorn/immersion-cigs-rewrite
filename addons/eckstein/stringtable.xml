@@ -25,7 +25,6 @@
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_eckstein_author">
-            <Original>B. Kneely / Vespade</Original>
             <English>B. Kneely / Vespade</English>
         </Key>
     </Package>
