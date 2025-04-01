@@ -21,6 +21,7 @@
     <Package name="Settings-Categories">
         <Key ID="STR_cigs_legacy_set_cat_loadout">
             <Original>Legacy Classnames and Loadouts</Original>
+            <English>Legacy Classnames and Loadouts</English>
         </Key>
     </Package>
 </Project>

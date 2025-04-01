@@ -17,9 +17,11 @@
     <Package name="Main">
         <Key ID="STR_cigs_cigars_author">
             <Original>Rebel / Facel</Original>
+            <English>Rebel / Facel</English>
         </Key>
         <Key ID="STR_cigs_cigars_author_cigarbox_5">
             <Original>Bromine / OverlordZorn</Original>
+            <English>Bromine / OverlordZorn</English>
         </Key>
     </Package>
 </Project>
