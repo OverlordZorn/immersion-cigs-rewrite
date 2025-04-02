@@ -6,17 +6,20 @@
         </Key>
         <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_mission_desc">
             <English>On mission start or setting change to true, will scan  default ace loadouts and replace deprecated legacy classnames with the new counterparts.</English>
+            <French>Au début de la mission ou lorsque le paramètre est réglé sur true, le système analyse les chargements par défaut de ace et remplace les anciens noms de classe obsolètes par leurs nouveaux équivalents.</French>
         </Key>
         <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_personal">
             <English>Update Personal Arsenal Loadouts</English>
         </Key>
         <Key ID="STR_cigs_legacy_set_loudout_replacer_enable_personal_desc">
             <English>Whenever the ace or vanilla arsenal are being opened, it will scan the saved loadouts and will replace deprecated legacy classnames with their new counterparts.</English>
+            <French>Chaque fois que l'ACE ou  l'arsenal vanille sont ouverts, il analysera les chargements sauvegardés et remplacera les anciens noms de classe obsolètes par leurs nouveaux équivalents.</French>
         </Key>
     </Package>
     <Package name="Settings-Categories">
         <Key ID="STR_cigs_legacy_set_cat_loadout">
             <English>Legacy Classnames and Loadouts</English>
+            <French>Anciens noms de classe et chargements</French>
         </Key>
     </Package>
 </Project>

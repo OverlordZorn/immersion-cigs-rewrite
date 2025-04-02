@@ -3,82 +3,107 @@
     <Package name="CBASettings">
         <Key ID="STR_cigs_core_set_ace_arsenal_tab">
             <English>Enable Custom Category Tab in ACE Arsenal</English>
+            <French>Activer les catégories personnalisées dans ACE Arsenal</French>
         </Key>
         <Key ID="STR_cigs_core_set_ace_arsenal_tab_desc">
             <English>When Enabled, this will create a Immersion Cig Tab in the ACE Arsenal (right side).\nThis can be enabled during the mission. To disable it, the mission needs to be restarted.</English>
+            <French>Lorsque cette option est activée, elle crée un onglet « Immersion Cig » dans l'arsenal ACE (côté droit). Pour le désactiver, la mission doit être redémarrée.</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_chance">
             <English>Probability</English>
+            <French>Probabilité</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_chance_desc">
             <English>Defines how likely it is that a unit has cigarettes on them.</English>
+            <French>Définit la probabilité qu'une unité ait des cigarettes sur elle.</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_delay">
             <English>Delay</English>
+            <French>Délai</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_delay_desc">
             <English>Delays the addition of items, incase some mod/mission does some scripted inventory managemement.</English>
+            <French>Retarde l'ajout d'objets, au cas où un mod/mission ferait de la gestion d'inventaire par script.</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_enable">
             <English>Enable</English>
+            <French>Activer</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_enable_desc">
             <English>Enables the system to distribute cigarettes across AI Items.</English>
+            <French>Permet au système de distribuer des cigarettes parmi les objets de l'IA.</French>
         </Key>
         <Key ID="STR_cigs_core_set_effect_combustion_chance">
             <English>Chance of Spontaneus Combustion</English>
+            <French>Risque de combustion spontanée</French>
         </Key>
         <Key ID="STR_cigs_core_set_effect_combustion_chance_desc">
             <English>Defines the chance at which a player/unit might start burning if they're doing something silly and/or risky while smoking.</English>
+            <French>Définit le risque qu'un joueur ou une unité commence à brûler s'il fait quelque chose de stupide et/ou de risqué en fumant.</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
+            <French>Commencer avec un CigPack</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack_desc">
             <English>Adds a Cigpack the beginning of a singeplayer mission.</English>
+            <French>Ajoute un Cigpack au début d'une mission singeplayer.</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack_type">
             <English>Type of Pack</English>
+            <French>Type d'emballage</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack_type_desc">
             <English>Defines which type of Cigpack (or other) will be added at the beginning of a singeplayer mission.</English>
+            <French>Définit le type de Cigpack (ou autre) qui sera ajouté au début d'une mission singeplayer.</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addItems">
             <English>Add Items to Player in SP</English>
+            <French>Ajouter des éléments au joueur dans le SP</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addItems_desc">
             <English>When this is enabled, the following items will be added in singleplayer to the players inventory.</English>
+            <French>Lorsque cette option est activée, les objets suivants sont ajoutés à l'inventaire du joueur en mode solo.</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addLighter">
             <English>Start with a Lighter</English>
+            <French>Commencer avec un briquet</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addLighter_desc">
             <English>Adds an Lighter at the beginning of a singeplayer mission.</English>
+            <French>Ajoute un briquet au début d'une mission (SP seulement).</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addLighter_type">
             <English>Type of Lighter</English>
+            <French>Type de briquet</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addLighter_type_desc">
             <English>Defines which type of lighter will be added at the beginning of a singeplayer mission.</English>
+            <French>Définit le type de briquet qui sera ajouté au début d'une mission (SP seulement).</French>
         </Key>
     </Package>
     <Package name="CBASettingsCategories">
         <Key ID="STR_cigs_core_set_cat_ace_arsenal">
             <English>ACE Arsenal</English>
+            <French>Arsenal ACE</French>
         </Key>
         <Key ID="STR_cigs_core_set_cat_effects">
             <English>Effects</English>
             <German>Effekte</German>
+            <French>Effets</French>
         </Key>
         <Key ID="STR_cigs_core_set_cat_main">
             <English>Immersive Cigs</English>
+            <French>Immersive Cigs</French>
         </Key>
         <Key ID="STR_cigs_core_set_cat_main_cigsonai">
             <English>Immersive Cigs - Cigs On AI</English>
+            <French>Immersive Cigs - Cigs On AI</French>
         </Key>
         <Key ID="STR_cigs_core_set_cat_sp">
             <English>Singleplayer</English>
             <German>Einzelspieler</German>
+            <French>Joueur unique</French>
         </Key>
     </Package>
     <Package name="GlobalDescription">
@@ -117,10 +142,12 @@
         <Key ID="STR_cigs_core_eat_cig">
             <English>Eat</English>
             <German>Essen</German>
+            <French>Manger</French>
         </Key>
         <Key ID="STR_cigs_core_eat_cig_desc">
             <English>Eat the thing, duh</English>
             <German>Du hast schon richtig gelesen</German>
+            <French>Manger la chose, bien sûr</French>
         </Key>
         <Key ID="STR_cigs_core_start_cig_own">
             <English>Light Up your Cig</English>
@@ -132,6 +159,7 @@
         <Key ID="STR_cigs_core_start_cig_own_desc">
             <English>Requires a Lighter or Matches in your inventory</English>
             <German>Benötigt Feuerzeug oder Streichhölzer im Inventar</German>
+            <French>Nécessite un briquet ou des allumettes dans votre inventaire</French>
         </Key>
         <Key ID="STR_cigs_core_start_cig_their">
             <English>Light Up their Cig</English>
@@ -163,12 +191,14 @@
             <German>Lutsch den Lutscher</German>
             <Japanese>吸い始める</Japanese>
             <Chinese>放進嘴巴含</Chinese>
+            <French>Lèche la sucette</French>
         </Key>
         <Key ID="STR_cigs_core_stop_sucking">
             <English>Stop Sucking</English>
             <German>Stop das Lutschen</German>
             <Japanese>吸うのを止める</Japanese>
             <Chinese>從嘴巴拿出來</Chinese>
+            <French>Arrêter de sucer</French>
         </Key>
     </Package>
     <Package name="Items">
@@ -207,20 +237,24 @@
             <French>Rebel / Facel / OverlordZorn</French>
             <German>Rebel / Facel / OverlordZorn</German>
             <Japanese>Rebel / Facel / OverlordZorn</Japanese>
+            <Chinese>Rebel / Facel / OverlordZorn</Chinese>
         </Key>
     </Package>
     <Package name="Notification">
         <Key ID="STR_cigs_core_gave_fire">
             <English>%1 gave you a light.</English>
             <German>%1 hat dir Feuer gegeben.</German>
+            <French>%1 vous a donné du feu.</French>
         </Key>
         <Key ID="STR_cigs_core_is_Empty">
             <English>%1 is now empty.</English>
             <German>%1 ist nun leer.</German>
+            <French>%1 est maintenant vide.</French>
         </Key>
         <Key ID="STR_cigs_core_taste_flavour">
             <English>Hmm, its %1 flavour!</English>
             <German>Hmm, es schmeckt nach %1!</German>
+            <French>Hmm, ça a un goût de %1 !</French>
         </Key>
     </Package>
 </Project>
