@@ -3,14 +3,14 @@
     <Package name="Items">
         <Key ID="STR_cigs_voron_cigarette">
             <English>Voron Cigarette</English>
-            <French>Voron Cigarette</French>
+            <French>Cigarette Voron</French>
             <German>Voron Zigarette</German>
             <Japanese>Voron 葉巻</Japanese>
             <Chinese>Voron 香菸</Chinese>
         </Key>
         <Key ID="STR_cigs_voron_cigpack">
             <English>Voron Cigarette Pack</English>
-            <French>Voron Paquet de cigarettes</French>
+            <French>Paquet de cigarettes Voron</French>
             <German>Voron Zigarettenschachtel</German>
             <Japanese>Voron タバコ</Japanese>
             <Chinese>Voron 一包菸</Chinese>
@@ -26,6 +26,10 @@
     <Package name="Main">
         <Key ID="STR_cigs_voron_author">
             <English>OverlordZorn</English>
+            <Chinese>OverlordZorn</Chinese>
+            <French>OverlordZorn</French>
+            <German>OverlordZorn</German>
+            <Japanese>OverlordZorn</Japanese>
         </Key>
     </Package>
 </Project>

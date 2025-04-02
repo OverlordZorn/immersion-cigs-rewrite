@@ -26,6 +26,10 @@
     <Package name="Main">
         <Key ID="STR_cigs_apollo_author">
             <English>OverlordZorn</English>
+            <Chinese>OverlordZorn</Chinese>
+            <French>OverlordZorn</French>
+            <German>OverlordZorn</German>
+            <Japanese>OverlordZorn</Japanese>
         </Key>
     </Package>
 </Project>

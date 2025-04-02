@@ -26,6 +26,10 @@
     <Package name="Main">
         <Key ID="STR_cigs_savage_author">
             <English>Savage Game Design / Overlord Zorn</English>
+            <Chinese>Savage Game Design / Overlord Zorn</Chinese>
+            <French>Savage Game Design / Overlord Zorn</French>
+            <German>Savage Game Design / Overlord Zorn</German>
+            <Japanese>Savage Game Design / Overlord Zorn</Japanese>
         </Key>
     </Package>
 </Project>

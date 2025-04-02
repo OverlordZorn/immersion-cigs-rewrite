@@ -4,22 +4,29 @@
         <Key ID="STR_cigs_cigars_cigar">
             <English>Cigar</English>
             <German>Zigarre</German>
+            <French>Cigar</French>
         </Key>
         <Key ID="STR_cigs_cigars_cigarbox_5">
             <English>Box of Cigars</English>
             <German>Zigarrenschachtel</German>
+            <French>Boîte de cigares</French>
         </Key>
         <Key ID="STR_cigs_cigars_cigarbox_5_desc">
             <English>Box of Cigars with 5 cigars</English>
             <German>Zigarrenschachtel mit 5 Zigarren</German>
+            <French>Coffret de 5 cigares</French>
         </Key>
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_cigars_author">
             <English>Rebel / Facel</English>
+            <French>Rebel / Facel</French>
+            <German>Rebel / Facel</German>
         </Key>
         <Key ID="STR_cigs_cigars_author_cigarbox_5">
             <English>Bromine / OverlordZorn</English>
+            <French>Bromine / OverlordZorn</French>
+            <German>Bromine / OverlordZorn</German>
         </Key>
     </Package>
 </Project>
