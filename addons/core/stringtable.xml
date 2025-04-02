@@ -109,33 +109,43 @@
     <Package name="GlobalDescription">
         <Key ID="STR_cigs_core_face_stage0">
             <English>Facewear Slot - Stage 0</English>
+            <French>Masques - Stage 0</French>
         </Key>
         <Key ID="STR_cigs_core_face_stage1">
             <English>Facewear Slot - Stage 1</English>
+            <French>Masques - Stage 1</French>
         </Key>
         <Key ID="STR_cigs_core_face_stage2">
             <English>Facewear Slot - Stage 2</English>
+            <French>Masques - Stage 2</French>
         </Key>
         <Key ID="STR_cigs_core_face_stage3">
             <English>Facewear Slot - Stage 3</English>
+            <French>Masques - Stage 3</French>
         </Key>
         <Key ID="STR_cigs_core_face_stage4">
             <English>Facewear Slot - Stage 4</English>
+            <French>Masques - Stage 4</French>
         </Key>
         <Key ID="STR_cigs_core_hmd_stage0">
             <English>Nightvision Slot - Stage 0</English>
+            <French>Vision nocturne - Stage 0</French>
         </Key>
         <Key ID="STR_cigs_core_hmd_stage1">
             <English>Nightvision Slot - Stage 1</English>
+            <French>Vision nocturne - Stage 1</French>
         </Key>
         <Key ID="STR_cigs_core_hmd_stage2">
             <English>Nightvision Slot - Stage 2</English>
+            <French>Vision nocturne - Stage 2</French>
         </Key>
         <Key ID="STR_cigs_core_hmd_stage3">
             <English>Nightvision Slot - Stage 3</English>
+            <French>Vision nocturne - Stage 3</French>
         </Key>
         <Key ID="STR_cigs_core_hmd_stage4">
             <English>Nightvision Slot - Stage 4</English>
+            <French>Vision nocturne - Stage 4</French>
         </Key>
     </Package>
     <Package name="Interactions_cigs">
