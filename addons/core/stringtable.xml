@@ -21,8 +21,14 @@
         <Key ID="STR_cigs_core_set_adv_fatigue_modifier_desc">
             <English>Defines how strong smoking will be taken into account.</English>
         </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_decrease_delay">
+            <English>Fatigue Decrease Delay</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_decrease_delay_desc">
+            <English>Defines the delay before the smoking penalty will start to wear off.\nin Minutes.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_cigsonai_chance">
-            <English>Probability</English>
+            <English>Probability</English> 
             <French>Probabilité</French>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_chance_desc">

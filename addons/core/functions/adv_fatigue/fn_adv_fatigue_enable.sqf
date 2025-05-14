@@ -17,3 +17,8 @@
 
 params ["_enable"];
 
+if (_enable) then {
+    [QADDON, FUNC(adv_fatigue_dutyFactor)] call ace_advanced_fatigue_fnc_addDutyFactor;
+} else {
+    [QADDON] call ace_advanced_fatigue_fnc_removeDutyFactor;
+};

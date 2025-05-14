@@ -40,17 +40,29 @@ if (_puffs isEqualTo "404") then {
         _unit setVariable [QPVAR(recentPuffs), nil];
     };
 
-    [{
-        params ["_args", "_handle"];
-        _args params ["_codeToRun", "_parameters", "_exitCode", "_condition"];
 
-        if (_parameters call _condition) then {
-            _parameters call _codeToRun;
-        } else {
-            _handle call CBA_fnc_removePerFrameHandler;
-            _parameters call _exitCode;
-        };
-    }, 60, [_codeToRun, _parameters, _exitCode, _condition]] call CBA_fnc_addPerFrameHandler;
+
+
+    [
+        CBA_fnc_addPerFrameHandler,
+        [
+            {
+                params ["_args", "_handle"];
+                _args params ["_codeToRun", "_parameters", "_exitCode", "_condition"];
+
+                if (_parameters call _condition) then {
+                    _parameters call _codeToRun;
+                } else {
+                    _handle call CBA_fnc_removePerFrameHandler;
+                    _parameters call _exitCode;
+                };
+            },
+            60,
+            [_codeToRun, _parameters, _exitCode, _condition]
+        ],
+        60 * missionNamespace getVariable [QSET()]
+    ] call CBA_fnc_waitAndExecute;
+
 };
 
 _unit setVariable [QPVAR(recentPuffs), _puffs + 1];
