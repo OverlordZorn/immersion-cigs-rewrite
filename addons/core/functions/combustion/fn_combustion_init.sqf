@@ -16,17 +16,19 @@
 */
 
 // Event: When using the Lighter, is there something flammable nearby?
+
 [
     QGVAR(EH_useLighter),
     {
-        ZRN_LOG_MSG_1(useLighter,_this);
 
         if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
+
         params ["_unit"];
-        private _types = [""];
         private _nearbyObjs = nearestObjects [_unit, [], 7, true] select {
             //exclude Filter:
             !( typeOf _x in ["ace_refuel_fuelHoseSegment", "#soundonvehicle"] )
+            &&
+            { isClass (configFile >> "CfgVehicles" >> typeOf _x) };
         };
 
         _nearbyObjs = _nearbyObjs select {
@@ -38,7 +40,7 @@
                 ||
                 {
                     private _fuel = [_x] call ace_refuel_fnc_getFuel;
-                    _fuel > 0 || { _fuel == -10 }
+                    _fuel > 0 || { _fuel == -10 } // -10 infinite fuel source
                 }
             }
         };

@@ -2,12 +2,12 @@
 
 /*
 * Author: Zorn
-* EH Function to the sound 3d on each client
+* Function to be used for advanced fatuige
 *
 * Arguments:
 *
 * Return Value:
-* None
+* Duty Factor as Number
 *
 * Example:
 * ['something', player] call prefix_component_fnc_functionname
@@ -15,5 +15,5 @@
 * Public: No
 */
 
-params ["_sound", "_source"];
-_source say3D _sound;
+params ["_enable"];
+

@@ -41,7 +41,8 @@
         params ["_unit", "_container", "_item", "_slot", "_params"];
         private _sound = selectRandom [QPVAR(eat_bread_1), QPVAR(eat_bread_2), QPVAR(eat_bread_3), QPVAR(eat_bread_4), QPVAR(eat_bread_5)];
         
-        [QGVAR(EH_sound), [_sound, _unit]] call CBA_fnc_globalEvent;
+        
+        [_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
 
         [QGVAR(EH_eatCig_local),  [_unit, _item, _slot]] call CBA_fnc_localEvent;
         [QGVAR(EH_eatCig_server), [_unit, _item, _slot]] call CBA_fnc_serverEvent;

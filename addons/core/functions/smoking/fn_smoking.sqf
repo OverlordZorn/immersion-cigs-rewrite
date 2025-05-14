@@ -38,6 +38,10 @@ switch (_itemType) do {
 [QGVAR(EH_smoke), [_unit, _itemConfig]] call CBA_fnc_globalEvent;
 _unit setFatigue (getFatigue _unit + 0.01);
 
+if SET(adv_fatigue_enabled) then {
+    [_unit] call FUNC(adv_fatigue_addPuffs);
+};
+
 
 ////////////////////////////////////////
 // Get NextCigState
@@ -81,8 +85,8 @@ if (_gogglesNew != "") then {
 ////////////////////////////////////////
 // API 
 ////////////////////////////////////////
-[QGVAR(EH_smoking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
-[QGVAR(EH_smoking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
+[QGVAR(API_smoking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
+[QGVAR(API_smoking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
 
 
 ////////////////////////////////////////
@@ -91,10 +95,10 @@ if (_gogglesNew != "") then {
 
 private "_delay";
 if (_currentTime < 15) then {
-    _delay = (random 3);
+    _delay = (3 + random 3);
     _currentTime = _currentTime + _delay;
 } else {
-    _delay = (5 + random 15);
+    _delay = (15 + random 25);
     _currentTime = _currentTime + _delay;
 };
 

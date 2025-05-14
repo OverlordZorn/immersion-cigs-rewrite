@@ -51,7 +51,6 @@ class CfgFunctions
         class effects
         {
             file = PATH_TO_FUNC_SUB(effects);
-            class sound {};
             class smoke {};
             class anim {};
         };
@@ -115,6 +114,12 @@ class CfgFunctions
             class combustion_init { postInit = 1; };
             class combustion_check {};
             class combustion_do {};
+        };
+        class adv_fatigue {
+            file = PATH_TO_FUNC_SUB(adv_fatigue);
+
+            class adv_fatigue_enable {};
+            class adv_fatigue_duty_factor {};
         };
     };
 };
