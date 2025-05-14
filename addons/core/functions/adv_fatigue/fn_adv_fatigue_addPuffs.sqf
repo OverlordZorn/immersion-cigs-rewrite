@@ -60,10 +60,9 @@ if (_puffs isEqualTo "404") then {
             60,
             [_codeToRun, _parameters, _exitCode, _condition]
         ],
-        60 * missionNamespace getVariable [QSET()]
+        60 * missionNamespace getVariable [QSET(adv_fatigue_modifier), 1]
     ] call CBA_fnc_waitAndExecute;
 
 };
 
 _unit setVariable [QPVAR(recentPuffs), _puffs + 1];
-
