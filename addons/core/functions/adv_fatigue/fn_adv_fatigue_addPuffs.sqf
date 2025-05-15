@@ -29,7 +29,6 @@ if (_puffs isEqualTo -1) then {
 
     private _parameters = _unit;
     private _codeToRun = {
-        diag_log format ['[CVO](debug)(fn_adv_fatigue_addPuffs) _this: %1', _this];
         _puffs = _this getVariable [QPVAR(recent_puffs), 0];
         _puffs = _puffs - 1;
 
@@ -42,7 +41,6 @@ if (_puffs isEqualTo -1) then {
 
     private _exitCode = {
         _this setVariable [QPVAR(recent_puffs), nil];
-        diag_log "[CVO](debug)(fn_adv_fatigue_addPuffs) PFH - Exit";
     };
 
 
@@ -61,7 +59,7 @@ if (_puffs isEqualTo -1) then {
                     _parameters call _exitCode;
                 };
             },
-            60,
+            90,
             [_codeToRun, _parameters, _exitCode, _condition]
         ],
         SET(adv_fatigue_decrease_delay) * 60
