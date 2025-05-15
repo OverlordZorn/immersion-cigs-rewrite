@@ -76,3 +76,5 @@ private _sleep_total = 3.5;
 // Start Recursive Loop
 ////////////////////////////////////////
 [ FUNC(smoking), [_unit,_currentTime,_itemType,_maxTime], _sleep_total + 1] call CBA_fnc_waitAndExecute;
+
+diag_log format ['[CVO](debug)(fn_start_smoking) _unit: %1', _unit];

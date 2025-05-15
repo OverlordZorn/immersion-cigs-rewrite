@@ -32,21 +32,24 @@ switch (_itemType) do {
         _itemConfig = configFile >> "CfgWeapons" >> _currentItem;
     };
 };
+
+
 ////////////////////////////////////////
-// Smoke Particles & Effects
+// Smoke Particles
 ////////////////////////////////////////
 [QGVAR(EH_smoke), [_unit, _itemConfig]] call CBA_fnc_globalEvent;
-_unit setFatigue (getFatigue _unit + 0.01);
 
-if SET(adv_fatigue_enabled) then {
-    [_unit] call FUNC(adv_fatigue_addPuffs);
-};
+
+////////////////////////////////////////
+// Fatigue
+////////////////////////////////////////
+_unit setFatigue (getFatigue _unit + 0.01);
+[_unit] call FUNC(adv_fatigue_addPuffs);
 
 
 ////////////////////////////////////////
 // Get NextCigState
 ////////////////////////////////////////
-
 private _gogglesNew = "";
 private _nextItemState = getText (_itemConfig >> QPVAR(nextState));
 

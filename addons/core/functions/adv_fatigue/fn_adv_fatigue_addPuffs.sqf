@@ -16,30 +16,34 @@
 */
 
 
-private ["_unit"];
+params ["_unit"];
 
-private _puffs = _unit getVariable [QPVAR(recentPuffs), "404"];
+if !( SET(adv_fatigue_enabled) && {ace_advanced_fatigue_enabled} ) exitWith {};
 
-if (_puffs isEqualTo "404") then {
-    // If no previous puffs have been found, set it to 0 and 
+private _puffs = _unit getVariable [QPVAR(recent_puffs), -1];
+
+
+if (_puffs isEqualTo -1) then {
+    // If no previous puffs have been found, set it to 0 and
     _puffs = 0;
 
-    private _parameters = [_unit];
+    private _parameters = _unit;
     private _codeToRun = {
-        params ["_unit"];
-        _puffs = _unit getVariable [QPVAR(recentPuffs), 0];
-        _unit setVariable [QPVAR(recentPuffs), _puffs - 1];
+        diag_log format ['[CVO](debug)(fn_adv_fatigue_addPuffs) _this: %1', _this];
+        _puffs = _this getVariable [QPVAR(recent_puffs), 0];
+        _puffs = _puffs - 1;
+
+        _this setVariable [QPVAR(recent_puffs), _puffs];
+        diag_log format ['[CVO](debug)(decreasing) _puffs: %1', _puffs]; 
     };
     private _condition = {
-        params ["_unit"];
-        _unit getVariable [QPVAR(recentPuffs), 0] > 0;
+        _this getVariable [QPVAR(recent_puffs), 0] > 0
     };
 
     private _exitCode = {
-        params ["_unit"];
-        _unit setVariable [QPVAR(recentPuffs), nil];
+        _this setVariable [QPVAR(recent_puffs), nil];
+        diag_log "[CVO](debug)(fn_adv_fatigue_addPuffs) PFH - Exit";
     };
-
 
 
 
@@ -60,9 +64,12 @@ if (_puffs isEqualTo "404") then {
             60,
             [_codeToRun, _parameters, _exitCode, _condition]
         ],
-        60 * missionNamespace getVariable [QSET(adv_fatigue_modifier), 1]
+        SET(adv_fatigue_decrease_delay) * 60
     ] call CBA_fnc_waitAndExecute;
 
 };
 
-_unit setVariable [QPVAR(recentPuffs), _puffs + 1];
+_puffs = _puffs + 1;
+
+_unit setVariable [QPVAR(recent_puffs), _puffs];
+diag_log format ['[CVO](debug)(increasing) _puffs: %1', _puffs];

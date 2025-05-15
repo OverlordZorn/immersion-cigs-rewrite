@@ -56,3 +56,6 @@
     ZRN_LOG_MSG_1(refuel started,_this);
     [ FUNC(combustion_check) , [_this#3], 1 + ceil random 5 ] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(EH_burn), ace_fire_fnc_burn] call CBA_fnc_addEventHandler;
+[QGVAR(EH_drop_cig), FUNC(drop_cig)] call CBA_fnc_addEventHandler;

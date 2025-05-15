@@ -118,8 +118,9 @@ class CfgFunctions
         class adv_fatigue {
             file = PATH_TO_FUNC_SUB(adv_fatigue);
 
+            class adv_fatigue_addPuffs {};
             class adv_fatigue_enable {};
-            class adv_fatigue_duty_factor {};
+            class adv_fatigue_dutyFactor {};
         };
     };
 };
