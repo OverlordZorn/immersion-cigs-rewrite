@@ -5,7 +5,7 @@
 - [Github Repository: Immersion Cigs - Rewrite](https://github.com/OverlordZorn/immersion-cigs-rewrite)
 - [Steam Workshop: Immersion Cigs - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=3375788189)
 - [Readme: Rewrite](README-Rewrite.md)
-- [Readme: Classnames](README-Classnames.md)
+- [Readme: Classnames](readme-classnames.md)
 - [Readme: API](README-API.md)
 
 ## Overview
