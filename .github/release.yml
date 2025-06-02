@@ -7,7 +7,7 @@ changelog:
     - title: New Features 🎉
       labels:
         - changelog/enhancement
-    - title: Improvements  📈
+    - title: Improvements 📈
       labels:
         - changelog/improvement
     - title: Fixes 🛠
