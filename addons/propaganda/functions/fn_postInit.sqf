@@ -15,6 +15,8 @@
 * Public: Yes
 */
 
+if (isClass (configFile >> "CfgPatches" >> "cvo_aux_branding")) exitWith {};
+
 if (
     isNil "cvo_lol_stop"
     &&

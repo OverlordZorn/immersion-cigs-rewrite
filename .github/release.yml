@@ -1,0 +1,21 @@
+# .github/release.yml
+changelog:
+  exclude:
+    labels:
+      - changelog/ignore
+  categories:
+    - title: New Features 🎉
+      labels:
+        - changelog/enhancement
+    - title: Improvements 🛠
+      labels:
+        - changelog/improvements
+    - title: Fixes
+      labels:
+        - changelog/fixes
+    - title: Translations 
+      labels:
+        - changelog/translation
+    - title: Other Changes
+      labels:
+        - "*"
