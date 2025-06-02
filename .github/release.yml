@@ -4,14 +4,18 @@ changelog:
     labels:
       - changelog/ignore
   categories:
-    - title: Breaking Changes 🛠
+    - title: New Features 🎉
       labels:
-        - Major
-        - breaking-change
-    - title: Exciting New Features 🎉
+        - changelog/enhancement
+    - title: Improvements 🛠
       labels:
-        - Minor
-        - enhancement
+        - changelog/improvements
+    - title: Fixes
+      labels:
+        - changelog/fixes
+    - title: Translations 
+      labels:
+        - changelog/translation
     - title: Other Changes
       labels:
         - "*"
