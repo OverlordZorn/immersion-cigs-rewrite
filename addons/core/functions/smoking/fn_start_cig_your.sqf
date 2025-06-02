@@ -10,14 +10,14 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* [this, true] call cigs_core_fnc_start_cig_your; // the be used to start ai's cig, overwriting the need and usage for lighters.
 *
 * Public: No
 */
 
-params ["_player"];
-if !( [_player] call FUNC(hasLighter) ) exitWith {};
+params ["_player", ["_force", false, [true]]];
 
-[_player] call FUNC(useLighter);
+if (!_force && { !([_player] call FUNC(hasLighter)) } ) exitWith {};
+
+[_player, _force] call FUNC(useLighter);
 [_player] call FUNC(start_smoking);
-

@@ -24,11 +24,11 @@ if (!(QPVAR(matches) in (magazines _unit)) && !(QPVAR(lighter) in (magazines _un
 };
 */
 
-params [ "_unit" ];
+params [ "_unit", ["_forced", false, [true]] ];
 
 [ _unit ] call FUNC(getLighter) params [ "_className", "_type" ];
 
-if ( _className isEqualTo false ) exitWith {};
+if ( _className isEqualTo false && {!_forced} ) exitWith {};
 
 // Reduce Magazine Size if its a Magazine
 if ( _type isEqualTo "typeMagazine" ) then { [ _unit, _className ] call FUNC(removeItemFromMag); };
@@ -41,9 +41,9 @@ private _sound = switch (_type) do {
 };
 
 
-[ CBA_fnc_localEvent , [QGVAR(EH_useLighter), [_unit] ], 1.5 ] call CBA_fnc_waitAndExecute;
+[ CBA_fnc_serverEvent , [QGVAR(EH_useLighter), [_unit] ], 1.5 ] call CBA_fnc_waitAndExecute;
 
-[ QGVAR(EH_sound), [_sound, _unit] ] call CBA_fnc_globalEvent;
+[_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
 
-[QGVAR(EH_useLighter_local),  [_unit, _className, _type]] call CBA_fnc_localEvent;
-[QGVAR(EH_useLighter_server), [_unit, _className, _type]] call CBA_fnc_serverEvent;
+[QGVAR(API_useLighter_local),  [_unit, _className, _type]] call CBA_fnc_localEvent;
+[QGVAR(API_useLighter_server), [_unit, _className, _type]] call CBA_fnc_serverEvent;
