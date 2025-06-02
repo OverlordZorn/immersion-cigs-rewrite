@@ -6,8 +6,8 @@ changelog:
   categories:
     - title: New Features 🎉
       labels:
-        - changelog/enhancement 📈
-    - title: Improvements 
+        - changelog/enhancement
+    - title: Improvements  📈
       labels:
         - changelog/improvement
     - title: Fixes 🛠
