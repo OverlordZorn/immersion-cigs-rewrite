@@ -13,7 +13,7 @@ changelog:
     - title: Fixes 🛠
       labels:
         - changelog/fix 
-    - title: Translations 📚🖊️
+    - title: Translations 📜
       labels:
         - changelog/translation
     - title: Other Changes
