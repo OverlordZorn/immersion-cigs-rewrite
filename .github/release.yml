@@ -9,10 +9,10 @@ changelog:
         - changelog/enhancement
     - title: Improvements 🛠
       labels:
-        - changelog/improvements
+        - changelog/improvement
     - title: Fixes
       labels:
-        - changelog/fixes
+        - changelog/fix
     - title: Translations 
       labels:
         - changelog/translation
