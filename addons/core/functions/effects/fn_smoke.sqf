@@ -58,7 +58,7 @@ if (isNil "_sound") then { _sound = selectRandom [QPVAR(smoke_3),QPVAR(smoke_4)]
         ];
 
         _source setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
-        _source setDropInterval 0.025;
+        _source setDropInterval linearConversion [0, 1, SET(smoke_particles), 0.025, 0.005, true];
 
         _source attachTo [_unit, [0, 0.06, 0], "head"];
 
