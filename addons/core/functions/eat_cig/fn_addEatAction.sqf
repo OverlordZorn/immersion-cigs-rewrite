@@ -42,7 +42,10 @@
         private _sound = selectRandom [QPVAR(eat_bread_1), QPVAR(eat_bread_2), QPVAR(eat_bread_3), QPVAR(eat_bread_4), QPVAR(eat_bread_5)];
         
         [QGVAR(EH_sound), [_sound, _unit]] call CBA_fnc_globalEvent;
-        [_unit, 0.5 + random 0.5, "head", "burn", _unit] call ace_medical_fnc_addDamageToUnit;
+
+        if (_unit getVariable [QPVAR(isSmoking), false]) then {
+            [_unit, 0.5 + random 0.5, "head", "burn", _unit] call ace_medical_fnc_addDamageToUnit;
+        };
 
         [QGVAR(EH_eatCig_local),  [_unit, _item, _slot]] call CBA_fnc_localEvent;
         [QGVAR(EH_eatCig_server), [_unit, _item, _slot]] call CBA_fnc_serverEvent;
