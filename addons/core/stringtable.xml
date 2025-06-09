@@ -22,10 +22,15 @@
             <English>When Enabled, smoking will affect ACE Advanced Fatigue System.</English>
         </Key>
         <Key ID="STR_cigs_core_set_adv_fatigue_modifier">
-            <English>Modifier Factor</English>
+            <English>Fatigue Modifier</English>
         </Key>
         <Key ID="STR_cigs_core_set_adv_fatigue_modifier_desc">
-            <English>Defines how strong smoking will be taken into account.</English>
+            <English>Defines how strong smoking will be taken into account for the fatigue impact.</English>
+        <Key ID="STR_cigs_core_set_adv_fatigue_cough_modifier">
+            <English>Coughing Modifier</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_cough_modifier_desc">
+            <English>Defines how likely it is for a smoker to cough.</English>
         </Key>
         <Key ID="STR_cigs_core_set_cigsonai_chance">
             <English>Probability</English>
