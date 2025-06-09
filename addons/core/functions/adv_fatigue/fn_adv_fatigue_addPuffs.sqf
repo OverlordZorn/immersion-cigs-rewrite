@@ -69,5 +69,14 @@ if (_puffs isEqualTo -1) then {
 
 _puffs = _puffs + 1;
 
+private _roll = 0.25 + random 0.75;
+private _threshold = linearConversion [0, 200, _puffs, 0, 1, true ];
+private _doesCough = _roll < _threshold;
+
+diag_log format ['[CVO](debug)(fn_adv_fatigue_addPuffs) _puffs: %1 - _roll: %2 - _threshold: %3 - _doesCough: %4', _puffs , _roll ,_threshold, _doesCough];
+
+if (_doesCough) then { [_unit] call FUNC(cough); };
+
+
 _unit setVariable [QPVAR(recent_puffs), _puffs];
 diag_log format ['[CVO](debug)(increasing) _puffs: %1', _puffs];
