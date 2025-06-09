@@ -36,8 +36,8 @@ dlc = ["vn"]
 extends = "test"
 dlc = ["vn", "spe"]
 
-[ASP]
-extends = "Test"
+[asp]
+extends = "test"
 workshop = [
     "1645973522", # Intercept Minimal Dev
     "1652506957", # Arma Script Profiler
