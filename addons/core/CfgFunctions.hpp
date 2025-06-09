@@ -53,6 +53,7 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(effects);
             class smoke {};
             class anim {};
+            class cough {};
         };
 
         class pack
