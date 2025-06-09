@@ -29,9 +29,9 @@ mission = "test.VR"
 
 
 [vn]
-extends = "Test"
+extends = "test"
 dlc = ["vn"]
 
 [spe]
-extends = "Test"
+extends = "test"
 dlc = ["vn", "spe"]
