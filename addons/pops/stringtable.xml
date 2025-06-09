@@ -3,33 +3,33 @@
     <Package name="Items">
         <Key ID="STR_cigs_pops_pop">
             <English>Lollipop</English>
+            <French>Sucette</French>
             <German>Lutscher</German>
             <Japanese>ロリポップ</Japanese>
             <Chinese>棒棒糖</Chinese>
-            <French>Sucette</French>
         </Key>
         <Key ID="STR_cigs_pops_poppack">
             <English>Lollipop (Packed)</English>
+            <French>Lollipop (emballé)</French>
             <German>Lutscher (Verpackt)</German>
             <Japanese>ロリポップ (未開封)</Japanese>
             <Chinese>棒棒糖（未開封）</Chinese>
-            <French>Lollipop (emballé)</French>
         </Key>
         <Key ID="STR_cigs_pops_poppack_desc">
             <English>One packed lollipop. Not hazardous to your health and sweet.</English>
+            <French>Une sucette emballée. Sans danger pour la santé et sucrée.</French>
             <German>Ein verpackter Lutscher. Nicht ungesund und auch noch süß.</German>
             <Japanese>1つの未開封のロリポップ。健康に害を与えず甘い。</Japanese>
             <Chinese>一根未開封的棒棒糖。不會導致你性功能障礙而且還很甜。</Chinese>
-            <French>Une sucette emballée. Sans danger pour la santé et sucrée.</French>
         </Key>
     </Package>
     <Package name="Main">
         <Key ID="STR_cigs_pops_author">
             <English>Rebel / Facel</English>
+            <French>Rebel / Facel</French>
             <German>Rebel / Facel</German>
             <Japanese>Rebel / Facel</Japanese>
             <Chinese>Rebel / Facel</Chinese>
-            <French>Rebel / Facel</French>
         </Key>
     </Package>
 </Project>

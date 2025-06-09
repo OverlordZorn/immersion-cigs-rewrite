@@ -44,6 +44,10 @@
         
         [_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
 
+        if (_unit getVariable [QPVAR(isSmoking), false]) then {
+            [_unit, 0.5 + random 0.5, "head", "burn", _unit] call ace_medical_fnc_addDamageToUnit;
+        };
+
         [QGVAR(EH_eatCig_local),  [_unit, _item, _slot]] call CBA_fnc_localEvent;
         [QGVAR(EH_eatCig_server), [_unit, _item, _slot]] call CBA_fnc_serverEvent;
     },

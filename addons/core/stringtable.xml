@@ -59,6 +59,13 @@
             <English>Defines the chance at which a player/unit might start burning if they're doing something silly and/or risky while smoking.</English>
             <French>Définit le risque qu'un joueur ou une unité commence à brûler s'il fait quelque chose de stupide et/ou de risqué en fumant.</French>
         </Key>
+        <Key ID="STR_cigs_core_set_effect_smoke_particles">
+            <English>Amount of smoke particles</English>
+            <French>Risque de combustion spontanée</French>
+        </Key>
+        <Key ID="STR_cigs_core_set_effect_smoke_particles_desc">
+            <English>Defines the amount of smoke particles dropped when a person is smoking. Clientside setting.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
             <French>Commencer avec un CigPack</French>
@@ -107,8 +114,8 @@
         </Key>
         <Key ID="STR_cigs_core_set_cat_effects">
             <English>Effects</English>
-            <German>Effekte</German>
             <French>Effets</French>
+            <German>Effekte</German>
         </Key>
         <Key ID="STR_cigs_core_set_cat_main">
             <English>Immersive Cigs</English>
@@ -120,8 +127,8 @@
         </Key>
         <Key ID="STR_cigs_core_set_cat_sp">
             <English>Singleplayer</English>
-            <German>Einzelspieler</German>
             <French>Joueur unique</French>
+            <German>Einzelspieler</German>
         </Key>
     </Package>
     <Package name="GlobalDescription">
@@ -169,13 +176,13 @@
     <Package name="Interactions_cigs">
         <Key ID="STR_cigs_core_eat_cig">
             <English>Eat</English>
-            <German>Essen</German>
             <French>Manger</French>
+            <German>Essen</German>
         </Key>
         <Key ID="STR_cigs_core_eat_cig_desc">
             <English>Eat the thing, duh</English>
-            <German>Du hast schon richtig gelesen</German>
             <French>Manger la chose, bien sûr</French>
+            <German>Du hast schon richtig gelesen</German>
         </Key>
         <Key ID="STR_cigs_core_start_cig_own">
             <English>Light Up your Cig</English>
@@ -186,8 +193,8 @@
         </Key>
         <Key ID="STR_cigs_core_start_cig_own_desc">
             <English>Requires a Lighter or Matches in your inventory</English>
-            <German>Benötigt Feuerzeug oder Streichhölzer im Inventar</German>
             <French>Nécessite un briquet ou des allumettes dans votre inventaire</French>
+            <German>Benötigt Feuerzeug oder Streichhölzer im Inventar</German>
         </Key>
         <Key ID="STR_cigs_core_start_cig_their">
             <English>Light Up their Cig</English>
@@ -216,17 +223,17 @@
     <Package name="Interactions_suck">
         <Key ID="STR_cigs_core_start_sucking">
             <English>Start Sucking</English>
+            <French>Lèche la sucette</French>
             <German>Lutsch den Lutscher</German>
             <Japanese>吸い始める</Japanese>
             <Chinese>放進嘴巴含</Chinese>
-            <French>Lèche la sucette</French>
         </Key>
         <Key ID="STR_cigs_core_stop_sucking">
             <English>Stop Sucking</English>
+            <French>Arrêter de sucer</French>
             <German>Stop das Lutschen</German>
             <Japanese>吸うのを止める</Japanese>
             <Chinese>從嘴巴拿出來</Chinese>
-            <French>Arrêter de sucer</French>
         </Key>
     </Package>
     <Package name="Items">
@@ -271,18 +278,18 @@
     <Package name="Notification">
         <Key ID="STR_cigs_core_gave_fire">
             <English>%1 gave you a light.</English>
-            <German>%1 hat dir Feuer gegeben.</German>
             <French>%1 vous a donné du feu.</French>
+            <German>%1 hat dir Feuer gegeben.</German>
         </Key>
         <Key ID="STR_cigs_core_is_Empty">
             <English>%1 is now empty.</English>
-            <German>%1 ist nun leer.</German>
             <French>%1 est maintenant vide.</French>
+            <German>%1 ist nun leer.</German>
         </Key>
         <Key ID="STR_cigs_core_taste_flavour">
             <English>Hmm, its %1 flavour!</English>
-            <German>Hmm, es schmeckt nach %1!</German>
             <French>Hmm, ça a un goût de %1 !</French>
+            <German>Hmm, es schmeckt nach %1!</German>
         </Key>
     </Package>
 </Project>
