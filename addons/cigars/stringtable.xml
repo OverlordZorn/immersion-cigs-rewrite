@@ -3,18 +3,18 @@
     <Package name="Items">
         <Key ID="STR_cigs_cigars_cigar">
             <English>Cigar</English>
-            <German>Zigarre</German>
             <French>Cigar</French>
+            <German>Zigarre</German>
         </Key>
         <Key ID="STR_cigs_cigars_cigarbox_5">
             <English>Box of Cigars</English>
-            <German>Zigarrenschachtel</German>
             <French>Boîte de cigares</French>
+            <German>Zigarrenschachtel</German>
         </Key>
         <Key ID="STR_cigs_cigars_cigarbox_5_desc">
             <English>Box of Cigars with 5 cigars</English>
-            <German>Zigarrenschachtel mit 5 Zigarren</German>
             <French>Coffret de 5 cigares</French>
+            <German>Zigarrenschachtel mit 5 Zigarren</German>
         </Key>
     </Package>
     <Package name="Main">

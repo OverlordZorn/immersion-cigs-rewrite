@@ -26,10 +26,10 @@
     <Package name="Main">
         <Key ID="STR_cigs_craven_author">
             <English>B. Kneely / Vespade</English>
-            <Chinese>B. Kneely / Vespade</Chinese>
             <French>B. Kneely / Vespade</French>
             <German>B. Kneely / Vespade</German>
             <Japanese>B. Kneely / Vespade</Japanese>
+            <Chinese>B. Kneely / Vespade</Chinese>
         </Key>
     </Package>
 </Project>
