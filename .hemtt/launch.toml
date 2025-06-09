@@ -23,15 +23,15 @@ parameters = [
 # binarize = false # Default: false
 # rapify = true # Default: true
 
-[Test]
+[test]
 extends = "default"
 mission = "test.VR"
 
 
-[VN]
-extends = "Test"
+[vn]
+extends = "test"
 dlc = ["vn"]
 
-[SPE]
-extends = "Test"
+[spe]
+extends = "test"
 dlc = ["vn", "spe"]

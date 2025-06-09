@@ -26,15 +26,17 @@ if ( random 1 > SET(cigsonai_chance) ) exitWith {};
 private _code = {
     params ["_unit"];
 
-    private _map = missionNamespace getVariable QGVAR(cigsOnAI_hashmap);
-    
+    private _map = missionNamespace getVariable [QGVAR(cigsOnAI_hashmap), nil];
+
     private _package = selectRandom (_map get str side _unit);
+
+    if (isNil "_package") exitWith { ERROR_2("package nil - Unit %1 Side %2 undefined",_unit,str side _unit) };
+
     private _packageSize = getNumber ( configFile >> "CfgMagazines" >> _package >> "count");
 
     private _remove_amount = floor random _packageSize;
 
     _unit addMagazine [_package, _packageSize - _remove_amount];
-
 
     private _item = getText ( configFile >> "CfgMagazines" >> _package >> QPVAR(item_glasses) );
     private _isSmokeable = getNumber ( configFile >> "CfgGlasses" >> _item >> QPVAR(isSmokable) ) == 1;
@@ -48,5 +50,5 @@ private _code = {
     };
 };
 
-[_code, [_unit], SET(cigsonai_delay) min 1] call CBA_fnc_waitAndExecute;
+[_code, [_unit], SET(cigsonai_delay) min 5] call CBA_fnc_waitAndExecute;
 

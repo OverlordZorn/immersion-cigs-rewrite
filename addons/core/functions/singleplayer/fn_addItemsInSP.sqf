@@ -24,9 +24,7 @@ private _code = {
 
 
         if (!isMultiplayer && !is3DENPreview && SET(sp_addItems)) then {
-            if (SET(sp_addLighter)) then { _player addItem QPVAR(lighter)          };
-            if (SET(sp_addMatches)) then { _player addItem QPVAR(matches)          };
-            if (SET(sp_addCigar))   then { _player addItem QEGVAR(cigars,cigar0)   };
+            if (SET(sp_addLighter)) then { _player addItem SET(sp_addLighter_type) };
             if (SET(sp_addCigpack)) then { _player addItem SET(sp_addCigpack_type) };
         };
     },true] call CBA_fnc_addPlayerEventHandler;
