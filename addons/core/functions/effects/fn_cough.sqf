@@ -27,6 +27,9 @@
 
 params ["_unit"];
 
+if !(isPlayer _unit) exitWith {};
+
+
 
 private _sound = selectRandom [QPVAR(cough_0), QPVAR(cough_1), QPVAR(cough_2)];
 [_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3d;
