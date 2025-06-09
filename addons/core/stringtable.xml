@@ -41,6 +41,13 @@
             <English>Defines the chance at which a player/unit might start burning if they're doing something silly and/or risky while smoking.</English>
             <French>Définit le risque qu'un joueur ou une unité commence à brûler s'il fait quelque chose de stupide et/ou de risqué en fumant.</French>
         </Key>
+        <Key ID="STR_cigs_core_set_effect_smoke_particles">
+            <English>Amount of smoke particles</English>
+            <French>Risque de combustion spontanée</French>
+        </Key>
+        <Key ID="STR_cigs_core_set_effect_smoke_particles_desc">
+            <English>Defines the amount of smoke particles dropped when a person is smoking. Clientside setting.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
             <French>Commencer avec un CigPack</French>
