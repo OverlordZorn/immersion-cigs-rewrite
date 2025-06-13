@@ -75,15 +75,6 @@
 #define QPATH_TO_ADDON(var1) QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\var1)
 #define QQPATH_TO_ADDON(var1) Q(QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\var1))
 
-// Debug
-// Doesnt seem to work currently 
-#ifdef _ZRN_DEBUG_
-    #define _DEBUG_POSTINIT_ postInit = 1;
-    #define _DEBUG_PREINIT_ preInit = 1;
-#else
-    #define _DEBUG_POSTINIT_ postInit = 0;
-    #define _DEBUG_PREINIT_ preInit = 0;
-#endif
 
 
 #define DEBUG_HEADER format [QUOTE([PREFIX][COMPONENT](%1)),_fnc_scriptName]

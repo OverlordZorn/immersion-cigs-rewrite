@@ -68,7 +68,7 @@ if (_maxTime == 0) then { _maxTime = 330; };
 // Initial Sucking Sound
 ////////////////////////////////////////
 private _sound = [(_suckerConfig >> QPVAR(sounds))] call FUNC(getCfgDataRandom);
-[ QGVAR(EH_sound), [_sound, _unit] ] call CBA_fnc_globalEvent;
+[_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
 
 
 ////////////////////////////////////////

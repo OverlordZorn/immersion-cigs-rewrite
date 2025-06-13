@@ -23,7 +23,7 @@ params [
 [_player, _class_cigpack] call FUNC(removeItemFromMag);
 
 private _sound = [ configFile >> "CfgMagazines" >> _class_cigpack >> QPVAR(unpackSound) ] call FUNC(getCfgDataRandom);
-if (_sound != "") then { [QGVAR(EH_sound), [ _sound, _player ]] call CBA_fnc_globalEvent; };
+if (_sound != "") then { [_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D; };
 
 private _item_glasses = [(configFile >> "CfgMagazines" >> _class_cigpack >> QPVAR(item_glasses))] call FUNC(getCfgDataRandom);
 private _item_hmd =     [(configFile >> "CfgMagazines" >> _class_cigpack >> QPVAR(item_hmd)    )] call FUNC(getCfgDataRandom);

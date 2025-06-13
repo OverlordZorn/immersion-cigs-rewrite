@@ -9,6 +9,29 @@
             <English>When Enabled, this will create a Immersion Cig Tab in the ACE Arsenal (right side).\nThis can be enabled during the mission. To disable it, the mission needs to be restarted.</English>
             <French>Lorsque cette option est activée, elle crée un onglet « Immersion Cig » dans l'arsenal ACE (côté droit). Pour le désactiver, la mission doit être redémarrée.</French>
         </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_decrease_delay">
+            <English>Fatigue Decrease Delay</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_decrease_delay_desc">
+            <English>Defines the delay before the smoking penalty will start to wear off.\nin Minutes.</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_enabled">
+            <English>Enable Adv. Fatigue Integration</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_enabled_desc">
+            <English>When Enabled, smoking will affect ACE Advanced Fatigue System.</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_modifier">
+            <English>Fatigue Modifier</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_modifier_desc">
+            <English>Defines how strong smoking will be taken into account for the fatigue impact.</English>
+        <Key ID="STR_cigs_core_set_adv_fatigue_cough_modifier">
+            <English>Coughing Modifier</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_adv_fatigue_cough_modifier_desc">
+            <English>Defines how likely it is for a smoker to cough.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_cigsonai_chance">
             <English>Probability</English>
             <French>Probabilité</French>
