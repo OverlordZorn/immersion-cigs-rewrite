@@ -47,6 +47,7 @@
         </Key>
         <Key ID="STR_cigs_core_set_effect_smoke_particles_desc">
             <English>Defines the amount of smoke particles dropped when a person is smoking. Clientside setting.</English>
+            <French>Définit la quantité de particules de fumée rejetées lorsqu'une personne fume. Réglage côté client.</French>
         </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
