@@ -16,11 +16,10 @@
 */
 
 // Event: When using the Lighter, is there something flammable nearby?
-
+// Only runs on the server.
 [
     QGVAR(EH_useLighter),
     {
-
         if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
 
         params ["_unit"];
@@ -40,7 +39,7 @@
                 ||
                 {
                     private _fuel = [_x] call ace_refuel_fnc_getFuel;
-                    _fuel > 0 || { _fuel == -10 } // -10 infinite fuel source
+                    _fuel > 0 || { _fuel isEqualTo -10 } // -10 infinite fuel source
                 }
             }
         };
