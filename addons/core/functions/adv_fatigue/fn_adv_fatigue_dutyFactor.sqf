@@ -25,5 +25,4 @@ private _return = linearConversion [
     2.5,
     true
 ];
-systemChat str _return;
 _return
