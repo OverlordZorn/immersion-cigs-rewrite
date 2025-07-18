@@ -16,6 +16,7 @@
 */
 
 if (isClass (configFile >> "CfgPatches" >> "cvo_aux_branding")) exitWith {};
+if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
 
 if (
     isNil "cvo_lol_stop"

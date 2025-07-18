@@ -20,7 +20,7 @@ env:
 
 on:
   release:
-    types: released
+    types: [released]
 
 permissions:
   contents: write

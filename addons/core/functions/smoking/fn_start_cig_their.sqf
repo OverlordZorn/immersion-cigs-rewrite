@@ -26,5 +26,4 @@ _player playActionNow "PutDown";
 if (isPlayer _unit) then {
     [QGVAR(EH_notify), [format [LLSTRING(gave_fire), name _player], 1], _unit] call CBA_fnc_targetEvent;
 };
-
-[QGVAR(EH_start_cig), [_unit],_unit] call CBA_fnc_targetEvent;
+[QGVAR(EH_start_cig), [_unit],_unit] call CBA_fnc_targetEvent; // raises event local
