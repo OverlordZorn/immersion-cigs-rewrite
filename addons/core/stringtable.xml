@@ -26,6 +26,7 @@
         </Key>
         <Key ID="STR_cigs_core_set_adv_fatigue_modifier_desc">
             <English>Defines how strong smoking will be taken into account for the fatigue impact.</English>
+        </Key>
         <Key ID="STR_cigs_core_set_adv_fatigue_cough_modifier">
             <English>Coughing Modifier</English>
         </Key>
