@@ -26,7 +26,4 @@ private _sound = selectRandom [QPVAR(verpuffung_00), QPVAR(verpuffung_01), QPVAR
 // TODO
 [QGVAR(EH_burn), [_unit , 2 + ceil random 3], _unit] call CBA_fnc_targetEvent;
 [QGVAR(EH_drop_cig), [_unit, "", "", true, true], _unit] call CBA_fnc_targetEvent;
-[_unit , 2 + ceil random 3] call ace_fire_fnc_burn;
-[_unit, "", "", true, true] call FUNC(drop_cig);
-
  
