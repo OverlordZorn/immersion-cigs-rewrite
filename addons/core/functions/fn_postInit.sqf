@@ -22,7 +22,6 @@
 
 [QGVAR(EH_notify), CBA_fnc_notify] call CBA_fnc_addEventHandler;
 
-[QGVAR(EH_sound), FUNC(sound)] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 
 

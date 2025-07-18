@@ -16,17 +16,18 @@
 */
 
 // Event: When using the Lighter, is there something flammable nearby?
+// Only runs on the server.
 [
     QGVAR(EH_useLighter),
     {
-        ZRN_LOG_MSG_1(useLighter,_this);
-
         if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
+
         params ["_unit"];
-        private _types = [""];
         private _nearbyObjs = nearestObjects [_unit, [], 7, true] select {
             //exclude Filter:
             !( typeOf _x in ["ace_refuel_fuelHoseSegment", "#soundonvehicle"] )
+            &&
+            { isClass (configFile >> "CfgVehicles" >> typeOf _x) };
         };
 
         _nearbyObjs = _nearbyObjs select {
@@ -38,7 +39,7 @@
                 ||
                 {
                     private _fuel = [_x] call ace_refuel_fnc_getFuel;
-                    _fuel > 0 || { _fuel == -10 }
+                    _fuel > 0 || { _fuel isEqualTo -10 } // -10 infinite fuel source
                 }
             }
         };
@@ -54,3 +55,6 @@
     ZRN_LOG_MSG_1(refuel started,_this);
     [ FUNC(combustion_check) , [_this#3], 1 + ceil random 5 ] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(EH_burn), ace_fire_fnc_burn] call CBA_fnc_addEventHandler;
+[QGVAR(EH_drop_cig), FUNC(drop_cig)] call CBA_fnc_addEventHandler;

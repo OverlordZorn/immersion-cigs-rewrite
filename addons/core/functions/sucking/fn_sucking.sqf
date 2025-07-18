@@ -38,7 +38,7 @@ switch (_itemType) do {
 // Sound Effects
 ////////////////////////////////////////
 private _sound = [(_itemConfig >> PVAR(sounds))] call FUNC(getCfgDataRandom);
-[ QGVAR(EH_sound), [_sound, _player] ] call CBA_fnc_globalEvent;
+[_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
 
 
 ////////////////////////////////////////

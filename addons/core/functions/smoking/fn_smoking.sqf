@@ -32,17 +32,24 @@ switch (_itemType) do {
         _itemConfig = configFile >> "CfgWeapons" >> _currentItem;
     };
 };
+
+
 ////////////////////////////////////////
-// Smoke Particles & Effects
+// Smoke Particles
 ////////////////////////////////////////
 [QGVAR(EH_smoke), [_unit, _itemConfig]] call CBA_fnc_globalEvent;
+
+
+////////////////////////////////////////
+// Fatigue
+////////////////////////////////////////
 _unit setFatigue (getFatigue _unit + 0.01);
+[_unit] call FUNC(adv_fatigue_addPuffs);
 
 
 ////////////////////////////////////////
 // Get NextCigState
 ////////////////////////////////////////
-
 private _gogglesNew = "";
 private _nextItemState = getText (_itemConfig >> QPVAR(nextState));
 
@@ -81,8 +88,8 @@ if (_gogglesNew != "") then {
 ////////////////////////////////////////
 // API 
 ////////////////////////////////////////
-[QGVAR(EH_smoking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
-[QGVAR(EH_smoking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
+[QGVAR(API_smoking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
+[QGVAR(API_smoking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
 
 
 ////////////////////////////////////////
@@ -91,10 +98,10 @@ if (_gogglesNew != "") then {
 
 private "_delay";
 if (_currentTime < 15) then {
-    _delay = (random 3);
+    _delay = (3 + random 3);
     _currentTime = _currentTime + _delay;
 } else {
-    _delay = (5 + random 15);
+    _delay = (15 + random 25);
     _currentTime = _currentTime + _delay;
 };
 
