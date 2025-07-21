@@ -4,7 +4,6 @@ class PVAR(name) {\
     titles[] = {};\
 }
 
-
 class CfgSounds {
     sounds[] = {};
 

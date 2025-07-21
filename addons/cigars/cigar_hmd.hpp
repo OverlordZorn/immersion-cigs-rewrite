@@ -1,15 +1,8 @@
-// NVG's are defined within CfgWeapons
-// The Facewear Version is defined in CfgGoggles
-
 class CfgWeapons {
-	class NVGoggles;
 
-    class GVAR(cigar0_nv): NVGoggles {
+    class EGVAR(base,cigBase_nv);
 
-        visionMode[] = {"Normal"};
-		thermalMode[] = {0};
-		modelOptics[] = {};
-		opticsPPEffects[] = {};
+    class GVAR(cigar0_nv): EGVAR(base,cigBase_nv) {
 
         scope = 2;
         author = CSTRING(author);
@@ -21,23 +14,22 @@ class CfgWeapons {
         model = QPATHTOF(data\cigars\cigar0.p3d);
         picture = QPATHTOF(data\ui\gear_cigar0_x_ca.paa);
 
-        PVAR(isSmokable) = 1;
-        PVAR(smokeMultiplier) = 2;
+        // Texture paths for the hiddenSelections are defined in an array in the same order as listed in hiddenSelections:
+        hiddenSelections[]={ };
+        hiddenSelectionsTextures[] = { };
+        hiddenSelectionsMaterials[] = { };
 
         PVAR(maxTime) = MAXTIME;
         PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
         PVAR(nextState) = QGVAR(cigar1_nv);
 
-
-        class ItemInfo
-        {
+        class ItemInfo {
             type = 616;
             hmdType = 0;
-    		uniformModel = QPATHTOF(data\cigars\cigar0.p3d);
-	    	modelOff = QPATHTOF(data\cigars\cigar0.p3d);
+            uniformModel = QPATHTOF(data\cigars\cigar0.p3d);
+            modelOff = QPATHTOF(data\cigars\cigar0.p3d);
+            mass = 0.1;
         };
-
-        KJW_Imposters_SuspicionAmount = 0;
     };
 
     class GVAR(cigar1_nv): GVAR(cigar0_nv) {
@@ -51,16 +43,15 @@ class CfgWeapons {
         PVAR(initStateTime) = INITSTATETIME_VARIANT_1;
         PVAR(nextState) = QGVAR(cigar2_nv);
 
-        class ItemInfo
-        {
-            type = 616;
-            hmdType = 0;
+
+        class ItemInfo: ItemInfo {
     		uniformModel = QPATHTOF(data\cigars\cigar1.p3d);
 	    	modelOff = QPATHTOF(data\cigars\cigar1.p3d);
         };
     };
 
-    class GVAR(cigar2_nv): GVAR(cigar0_nv) {
+    class GVAR(cigar2_nv): GVAR(cigar1_nv) {
+
         descriptionShort = ECSTRING(core,hmd_stage2);
 
         model = QPATHTOF(data\cigars\cigar2.p3d);
@@ -69,16 +60,15 @@ class CfgWeapons {
         PVAR(initStateTime) = INITSTATETIME_VARIANT_2;
         PVAR(nextState) = QGVAR(cigar3_nv);
 
-        class ItemInfo
-        {
-            type = 616;
-            hmdType = 0;
+
+        class ItemInfo: ItemInfo {
     		uniformModel = QPATHTOF(data\cigars\cigar2.p3d);
 	    	modelOff = QPATHTOF(data\cigars\cigar2.p3d);
         };
     };
 
-    class GVAR(cigar3_nv): GVAR(cigar0_nv) {
+    class GVAR(cigar3_nv): GVAR(cigar1_nv) {
+
         descriptionShort = ECSTRING(core,hmd_stage3);
 
         model = QPATHTOF(data\cigars\cigar3.p3d);
@@ -87,16 +77,13 @@ class CfgWeapons {
         PVAR(initStateTime) = INITSTATETIME_VARIANT_3;
         PVAR(nextState) = QGVAR(cigar4_nv);
 
-        class ItemInfo
-        {
-            type = 616;
-            hmdType = 0;
+        class ItemInfo: ItemInfo {
     		uniformModel = QPATHTOF(data\cigars\cigar3.p3d);
 	    	modelOff = QPATHTOF(data\cigars\cigar3.p3d);
         };
     };
 
-    class GVAR(cigar4_nv): GVAR(cigar0_nv) {
+    class GVAR(cigar4_nv): GVAR(cigar1_nv) {
 
         descriptionShort = ECSTRING(core,hmd_stage4);
 
@@ -106,10 +93,7 @@ class CfgWeapons {
         PVAR(initStateTime) = INITSTATETIME_VARIANT_4;
         PVAR(nextState) = "";
 
-        class ItemInfo
-        {
-            type = 616;
-            hmdType = 0;
+        class ItemInfo: ItemInfo {
     		uniformModel = QPATHTOF(data\cigars\cigar4.p3d);
 	    	modelOff = QPATHTOF(data\cigars\cigar4.p3d);
         };

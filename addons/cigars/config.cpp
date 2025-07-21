@@ -31,8 +31,7 @@ class CfgPatches {
 	};
 };
 
-#include "CfgGlasses.hpp"
-#include "CfgWeapons.hpp"
+#include "cigar_glasses.hpp"
+#include "cigar_hmd.hpp"
 
-#include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
+#include "cigarpack.hpp"

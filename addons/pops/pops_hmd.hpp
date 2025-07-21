@@ -39,7 +39,6 @@ class CfgWeapons {
             mass = 0.02;
         };
 
-        // Compat Data
         KJW_Imposters_SuspicionAmount = 0.1;
         hoa_sling_slingWithHelmet = 0;
     };
