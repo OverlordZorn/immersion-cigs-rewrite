@@ -17,8 +17,8 @@ class CfgWeapons {
         displayName = CSTRING(pop);
         descriptionShort = ECSTRING(core,hmd_stage0);
 
-        model = PATH_TO_ADDON_3(data,pop,pop.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_pop0_x_ca.paa);
+        model = QPATHTOF(data\pop\pop.p3d);
+        picture = QPATHTOF(data\ui\gear_pop0_x_ca.paa);
 
         PVAR(maxTime) = MAXTIME;
         PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
@@ -33,8 +33,8 @@ class CfgWeapons {
         {
             type = 616;
             hmdType = 0;
-    		uniformModel = PATH_TO_ADDON_3(data,pop,pop.p3d);
-	    	modelOff = PATH_TO_ADDON_3(data,pop,pop.p3d);
+    		uniformModel = QPATHTOF(data\pop\pop.p3d);
+	    	modelOff = QPATHTOF(data\pop\pop.p3d);
             mass = 0.02;
         };
 

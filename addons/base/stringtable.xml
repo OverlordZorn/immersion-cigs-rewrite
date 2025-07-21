@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="cigs_morley">
+<Project name="cigs_base">
     <Package name="Items">
         <Key ID="STR_cigs_base_cigarette">
             <English>Base Cigarette</English>
@@ -24,7 +24,7 @@
         </Key>
     </Package>
     <Package name="Main">
-        <Key ID="STR_cigs_base_author">
+        <Key ID="str_cigs_base_author">
             <English>Zorn / Bromine</English>
         </Key>
     </Package>

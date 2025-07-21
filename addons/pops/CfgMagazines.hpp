@@ -7,8 +7,8 @@ class CfgMagazines {
 
         displayName = CSTRING(poppack);
         descriptionShort = CSTRING(poppack_desc);
-        model = PATH_TO_ADDON_3(data,poppack,poppack.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_poppack_x_ca.paa);
+        model = QPATHTOF(data\poppack\poppack.p3d);
+        picture = QPATHTOF(data\ui\gear_poppack_x_ca.paa);
 
         ammo = "";
         count = 1;

@@ -8,15 +8,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_black_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_black_ca.paa);
         identityTypes[] = {};
         
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_black_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_black_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -40,15 +40,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_blue_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_blue_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_blue_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_blue_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -72,15 +72,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_brown_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_brown_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_brown_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_brown_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -104,15 +104,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_gray_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_gray_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_gray_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_gray_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -136,15 +136,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_green_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_green_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_green_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_green_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -168,15 +168,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_orange_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_orange_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_orange_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_orange_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -200,15 +200,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_pink_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_pink_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_pink_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_pink_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -232,15 +232,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_purple_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_purple_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_purple_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_purple_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -264,15 +264,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_red_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_red_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_red_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_red_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -296,15 +296,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_white_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_white_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_white_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_white_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;
@@ -328,15 +328,15 @@ class CfgGlasses {
         mass = 0.2;
 
         displayName = CSTRING(crayon);
-        descriptionShort = ECSTRING(core,face_stage0);
+        descriptionShort = ECSTRING(core,glasses_stage0);
 
-        model = PATH_TO_ADDON_3(data,crayon,crayon.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayon_yellow_ca.paa);
+        model = QPATHTOF(data\crayon\crayon.p3d);
+        picture = QPATHTOF(data\ui\gear_crayon_yellow_ca.paa);
         identityTypes[] = {};
 
         // Textures
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {PATH_TO_ADDON_3(data,crayon,crayon_yellow_CO.paa)};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_yellow_CO.paa)};
 
         // Commmon Data
         PVAR(maxTime) = MAXTIME;

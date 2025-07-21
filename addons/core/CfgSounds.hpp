@@ -1,6 +1,6 @@
 #define SOUND(name,volume,pitch,distance)\
 class PVAR(name) {\
-    sound[] = {PATH_TO_ADDON_3(data,sounds,name##.ogg), volume, pitch, distance};\
+    sound[] = {QPATHTOF(data\sounds\name##.ogg), volume, pitch, distance};\
     titles[] = {};\
 }
 

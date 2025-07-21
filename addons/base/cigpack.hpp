@@ -1,9 +1,31 @@
+// Weaponholder - The "empty vehicle" to be placed in the world.
+class CfgVehicles
+{
+    class WeaponHolder_Single_limited_item_F;
+
+    class GVAR(cigpackItem): WeaponHolder_Single_limited_item_F {
+        scope = 1;
+        scopeCurator = 1;
+        displayName = CSTRING(cigpack);
+        author = CSTRING(author);
+        vehicleClass = "Magazines";
+
+        class TransportMagazines {
+            class GVAR(cigpack) {
+                magazine = QGVAR(cigpack);
+                count = 1;
+            };
+        };
+    };
+};
+
+// Magazine - The "Item" in a units inventory
 class CfgMagazines {
     class CA_Magazine;
 
     class GVAR(cigpack): CA_Magazine {
         author = CSTRING(author);
-        scope = 2;
+        scope = 1;
 
         displayName = CSTRING(cigpack);
         descriptionShort = CSTRING(cigpack_desc);

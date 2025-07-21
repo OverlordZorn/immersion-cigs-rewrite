@@ -8,8 +8,8 @@ class CfgMagazines {
         displayName = CSTRING(cigarbox_5);
         descriptionShort = CSTRING(cigarbox_5_desc);
 
-        model = PATH_TO_ADDON_3(data,cigarbox_5,cigarbox_5.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_cigarbox_5_x_ca.paa);
+        model = QPATHTOF(data\cigarbox_5\cigarbox_5.p3d);
+        picture = QPATHTOF(data\ui\gear_cigarbox_5_x_ca.paa);
 
         ammo = "";
         count = 5;

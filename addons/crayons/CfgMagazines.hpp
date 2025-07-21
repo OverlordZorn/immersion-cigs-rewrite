@@ -7,8 +7,8 @@ class CfgMagazines {
 
         displayName = CSTRING(crayonpack);
         descriptionShort = CSTRING(crayonpack_desc);
-        model = PATH_TO_ADDON_3(data,crayonpack,crayonpack.p3d);
-        picture = PATH_TO_ADDON_3(data,ui,gear_crayonpack_ca.paa);
+        model = QPATHTOF(data\crayonpack\crayonpack.p3d);
+        picture = QPATHTOF(data\ui\gear_crayonpack_ca.paa);
 
         ammo = "";
         count = 24; 
