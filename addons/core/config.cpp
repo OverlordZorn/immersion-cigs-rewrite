@@ -39,3 +39,6 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "CfgMagazines.hpp"
+
+#include "CfgEditorCategories.hpp"
+#include "CfgEditorSubcategories.hpp"

@@ -60,7 +60,7 @@ class Stage4
 };
 class Stage5
 {
-    texture = "z\cigs\addons\eckstein\data\cigs\cigs_smdi.paa";
+    texture = "z\cigs\addons\eckstein\data\cigs\texture_smdi.paa";
     uvSource = "tex";
     class uvTransform
     {

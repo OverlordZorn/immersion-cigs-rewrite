@@ -24,7 +24,7 @@ class Stage1
 };
 class Stage2
 {
-	texture = "z\cigs\addons\lucky_strike\data\cigs\cigs_smdi.paa";
+	texture = "z\cigs\addons\lucky_strike\data\cigs\texture_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
