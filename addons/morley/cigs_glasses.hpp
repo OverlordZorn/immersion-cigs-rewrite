@@ -43,7 +43,7 @@ class CfgGlasses {
         PVAR(nextState) = QGVAR(cig3);
     };
 
-    class GVAR(cig3): GVAR(cig2) {
+    class GVAR(cig3): GVAR(cig1) {
         descriptionShort = ECSTRING(core,glasses_stage3);
 
         model = QPATH_BASE_MODEL_CIG3;
@@ -53,7 +53,7 @@ class CfgGlasses {
         PVAR(nextState) = QGVAR(cig4);
     };
 
-    class GVAR(cig4): GVAR(cig3) {
+    class GVAR(cig4): GVAR(cig1) {
         descriptionShort = ECSTRING(core,glasses_stage4);
 
         model = QPATH_BASE_MODEL_CIG4;

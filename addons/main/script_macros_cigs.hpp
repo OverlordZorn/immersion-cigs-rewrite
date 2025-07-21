@@ -1,5 +1,5 @@
 #define QPATH_TEXTURE QPATHTOF(data\texture.paa)
-#define QPATH_MODEL_CIGPACK QPATHTOEF(base,data\cigpack.p3d)
+#define QPATH_MODEL_CIGPACK QPATHTOF(data\cigpack.p3d)
 
 #define QPATH_BASE_RVMAT QPATHTOEF(base,data\texture.rvmat)
 #define QPATH_BASE_RVMAT_LIT QPATHTOEF(base,data\texture_lit.rvmat)
