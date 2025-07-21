@@ -141,10 +141,15 @@
     <Package name="EditorCategories">
         <Key ID="STR_cigs_core_editor_category_main">
             <English>Immersion Cigs</English>
+            <German>Immersive Zigaretten</German>
         </Key>
         <Key ID="STR_cigs_core_editor_subCategory_cigpacks">
             <English>Cig Packs</English>
             <German>Schachteln</German>
+        </Key>
+        <Key ID="STR_cigs_core_editor_subCategory_lighters">
+            <English>Lighters</English>
+            <German>Feuerzeuge</German>
         </Key>
     </Package>
     <Package name="GlobalDescription">

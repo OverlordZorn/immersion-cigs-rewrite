@@ -9,7 +9,7 @@ class CAManBase: Man
             {
                 displayName = CSTRING(start_cig_their);
                 condition = Q([_player] call FUNC(hasLighter) && [_target] call FUNC(canStartSmoking));
-                statement = Q(_this call FUNC(start_cig_their));
+                statement = Q(call FUNC(start_cig_their));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\light_cig.paa);

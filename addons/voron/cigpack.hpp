@@ -31,7 +31,7 @@ class CfgMagazines {
         model = QPATH_MODEL_CIGPACK;
         picture = QPATHTOF(data\ui\gear_cigpack_x_ca.paa);
 
-        count = 20;
+        count = 24;
 
         PVAR(item_glasses) = QGVAR(cig0);
         PVAR(item_hmd) = QGVAR(cig0_nv);

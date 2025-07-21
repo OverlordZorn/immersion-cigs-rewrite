@@ -23,20 +23,15 @@ class CfgMagazines {
         PVAR(LighterSound)[] = {QPVAR(matches_01),QPVAR(matches_02)};     // CfgSounds Class
     };
 
-    class PVAR(lighter): CA_Magazine {
-        author = CSTRING(author);
-        scope = 2;
+    class PVAR(lighter): PVAR(matches) {
 
         displayName = CSTRING(lighter);
         descriptionShort = CSTRING(lighter_desc);
         model = QPATHTOF(data\lighter\lighter.p3d);
         picture = QPATHTOF(data\ui\gear_lighter_x_ca.paa);
 
-        ammo = "";
         count = 100;
         initSpeed = 0;
-        tracersEvery = 0;
-        lastRoundsTracer = 0;
         mass = 2;
 
         ACE_asItem = 1;

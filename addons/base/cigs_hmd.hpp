@@ -47,5 +47,6 @@ class CfgWeapons {
         };
 
         KJW_Imposters_SuspicionAmount = 0;
+        hoa_sling_slingWithHelmet = 0;
     };
 };
