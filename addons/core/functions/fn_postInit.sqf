@@ -17,16 +17,19 @@
 */
 
 
-// CBA Events
+//// CBA Events
+// Common
 [QGVAR(EH_start_cig), FUNC(start_smoking)] call CBA_fnc_addEventHandler;
-
 [QGVAR(EH_notify), CBA_fnc_notify] call CBA_fnc_addEventHandler;
-
 [QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
+
+// Advanced Fatigue
+[QGVAR(EH_cough), FUNC(cough_server)] call CBA_fnc_addEventHandler;
+[QGVAR(EH_aleart), FUNC(cough_aleart)] call CBA_fnc_addEventHandler;
 
 
 if (isServer) then {
-
+    // Stops unit smoking when unconscious
     ["ace_unconscious", {
         params ["_unit", "_state"];
         if (_state && { _unit getVariable [QPVAR(isSmoking), false] } ) then {

@@ -16,30 +16,34 @@
 */
 
 
-/*
-// ToDo: Implement intensity maybe which affects "range (-> volume)" of cough and intensity of shake?
+params ["_unit", "_coughIntensity"];
 
-// TODO: implmenet intensity/chance based on > I would only take Ae2 into account for long term effects. Ae1 will probably still be at 90% after a couple hours.
-// REF: https://github.com/acemod/ACE3/blob/master/addons/advanced_fatigue/script_component.hpp
-// REF: https://github.com/acemod/ACE3/blob/master/addons/advanced_fatigue/functions/fnc_mainLoop.sqf#L130
-*/
-
-
-params ["_unit"];
+diag_log format ['[CVO](debug)(fn_cough) _this: %1', _this];
 
 if !(isPlayer _unit) exitWith {};
 
-
-
 private _sound = selectRandom [QPVAR(cough_0), QPVAR(cough_1), QPVAR(cough_2)];
 private _distance = getArray (configFile >> "CfgSounds" >> _sound >> "sound") select 3; 
+
+_distance = linearConversion [
+    0,
+    0.8,
+    _coughIntensity,
+    _distance * 0.3,
+    _distance,
+    true
+];
+
+
 [ _unit, _sound, _distance, true, true, true ] call CBA_fnc_globalSay3d;
 
 if (isPlayer _unit) then {
     enableCamShake true;
 	addCamShake [
-		1 + random 2,
-		3 + random 2,
-		2 + random 3
+		1 + (4 * _coughIntensity),
+		3 + (2 * _coughIntensity),
+		3 + (3 * _coughIntensity)
 	];
 };
+
+if ( 1 * _coughIntensity > random 3 ) then { [QGVAR(EH_cough), [_unit, _distance ]] call CBA_fnc_serverEvent; };

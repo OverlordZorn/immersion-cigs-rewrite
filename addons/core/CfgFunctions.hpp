@@ -53,7 +53,6 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(effects);
             class smoke {};
             class anim {};
-            class cough {};
         };
 
         class pack
@@ -122,6 +121,10 @@ class CfgFunctions
             class adv_fatigue_addPuffs {};
             class adv_fatigue_enable {};
             class adv_fatigue_dutyFactor {};
+
+            class cough {};
+            class cough_server {};
+            class cough_aleart {};
         };
     };
 };
