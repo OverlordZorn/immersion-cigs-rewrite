@@ -13,7 +13,7 @@
             <English>Coughing Modifier</English>
         </Key>
         <Key ID="STR_cigs_core_set_adv_fatigue_cough_modifier_desc">
-            <English>Defines how likely it is for a smoker to cough.</English>
+            <English>Defines how likely it is for a smoker to cough.\n0% disables the feature.</English>
         </Key>
         <Key ID="STR_cigs_core_set_adv_fatigue_decrease_delay">
             <English>Fatigue Decrease Delay</English>
@@ -62,7 +62,7 @@
             <French>Risque de combustion spontanée</French>
         </Key>
         <Key ID="STR_cigs_core_set_effect_combustion_chance_desc">
-            <English>Defines the chance at which a player/unit might start burning if they're doing something silly and/or risky while smoking.</English>
+            <English>Defines the chance at which a player/unit might start burning if they're doing something silly and/or risky while smoking.\n 0% disables the effect.</English>
             <French>Définit le risque qu'un joueur ou une unité commence à brûler s'il fait quelque chose de stupide et/ou de risqué en fumant.</French>
         </Key>
         <Key ID="STR_cigs_core_set_effect_smoke_particles">

@@ -19,7 +19,7 @@ ZRN_LOG_1(_this);
 
 params ["_unit"];
 
-if (isNil "_unit") exitWith {};
+if (isNil "_unit" || { SET(effect_combustion_chance) isEqualTo 0 } ) exitWith {};
 
 private _random = random 1;
 private _chance = _random <= SET(effect_combustion_chance);
