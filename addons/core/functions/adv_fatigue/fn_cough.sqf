@@ -18,8 +18,6 @@
 
 params ["_unit", "_coughIntensity"];
 
-diag_log format ['[CVO](debug)(fn_cough) _this: %1', _this];
-
 if !(isPlayer _unit) exitWith {};
 
 private _sound = selectRandom [QPVAR(cough_0), QPVAR(cough_1), QPVAR(cough_2)];
