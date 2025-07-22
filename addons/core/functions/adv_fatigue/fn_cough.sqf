@@ -29,8 +29,6 @@ params ["_unit"];
 
 if !(isPlayer _unit) exitWith {};
 
-
-
 private _sound = selectRandom [QPVAR(cough_0), QPVAR(cough_1), QPVAR(cough_2)];
 private _distance = getArray (configFile >> "CfgSounds" >> _sound >> "sound") select 3; 
 [ _unit, _sound, _distance, true, true, true ] call CBA_fnc_globalSay3d;
@@ -38,8 +36,10 @@ private _distance = getArray (configFile >> "CfgSounds" >> _sound >> "sound") se
 if (isPlayer _unit) then {
     enableCamShake true;
 	addCamShake [
-		1 + random 2,
+		2 + random 3,
 		3 + random 2,
-		2 + random 3
+		3 + random 3
 	];
 };
+
+if ( 1 > random 4 ) then { [QGVAR(EH_cough), [_unit, _distance * (0.2 + random 0.8) ]] call CBA_fnc_serverEvent; };
