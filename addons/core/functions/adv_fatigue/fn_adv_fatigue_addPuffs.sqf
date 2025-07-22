@@ -69,10 +69,9 @@ if (_puffs isEqualTo -1) then {
 
 _puffs = _puffs + 1;
 
-private _roll = 0.15 + random 0.85;
+private _roll = 0.25 + random 0.75;
 private _threshold = linearConversion [0, 200, _puffs * SET(adv_fatigue_cough_modifier), 0, 1, true ];
-private _doesCough = _roll < _threshold;
 
-if (_doesCough) then { [_unit] call FUNC(cough); };
+if (_roll < _threshold) then { [ FUNC(cough), _unit, 0.5 + random 4.5 ] call CBA_fnc_waitAndExecute; };
 
 _unit setVariable [QPVAR(recent_puffs), _puffs];
