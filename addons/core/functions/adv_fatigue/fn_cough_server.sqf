@@ -17,11 +17,10 @@
 
 params ["_instigator", "_range"];
 
-systemChat format ['[CVO](debug)(fn_cough_server) _this: %1', _this];
 
 private _groups = [];
 { _groups pushBackUnique (group _x) } forEach ([getPos _instigator, _range, _range, 0, false] nearEntities [["CAManBase"], false, true, true] select { [side _instigator, side _x] call BIS_fnc_sideIsEnemy });
 
-diag_log format ['[CVO](debug)(fn_cough_server) _groups: %1', _groups];
+ZRN_LOG_3(_instigator,_range,_groups);
 
 { [QGVAR(EH_aleart), [_x, _instigator], _x] call CBA_fnc_targetEvent; } forEach _groups;
