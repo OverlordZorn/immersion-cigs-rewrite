@@ -1,3 +1,26 @@
+Some folders of this project may contain a separate LICENSE file. Should
+that be the case, everything in that folder and all subfolders is subject
+to that license instead.
+
+ - Arma Public License No Derivatives (APL-ND)
+   - \addons\base
+   - \addons\core
+ - Creative Commons Attribution 4.0 International Public License
+   - \addons\anim
+   - \addons\apollo
+   - \addons\cigars
+   - \addons\kosmos
+   - \addons\crayons
+   - \addons\morley
+   - \addons\pops
+   - \addons\voron
+
+The following Folder are under no license
+   - \addons\craven
+   - \addons\eckstein
+   - \addons\lucky_strike
+   - \addons\baja_blast
+   - \addons\black_devil
 
 Arma Public License Share Alike (APL-SA)
 Brief summary of this Licence
