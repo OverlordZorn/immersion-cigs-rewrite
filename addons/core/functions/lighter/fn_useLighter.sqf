@@ -45,5 +45,4 @@ private _sound = switch (_type) do {
 
 [_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
 
-[QGVAR(API_useLighter_local),  [_unit, _className, _type]] call CBA_fnc_localEvent;
-[QGVAR(API_useLighter_server), [_unit, _className, _type]] call CBA_fnc_serverEvent;
+[QGVAR(API_useLighter),  [_unit, _className, _type]] call CBA_fnc_localEvent;

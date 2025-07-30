@@ -5,14 +5,12 @@
 
 | Event Key | Parameters | Locality | Type | Description |
 |--------|--------|--------|--------|--------|
-| `cigs_core_eh_smoking_local` | _unit, _currentTime, _currentItem, _itemType | Local | Listen | Smoking Loop |
-| `cigs_core_eh_smoking_server` | _unit, _currentTime, _currentItem, _itemType | Server | Listen | Smoking Loop |
-| `cigs_core_eh_sucking_local` | _unit, _currentTime, _currentItem, _itemType | Local | Listen | Sucking Loop |
-| `cigs_core_eh_sucking_server` | _unit, _currentTime, _currentItem, _itemType | Server | Listen | Sucking Loop |
-| `cigs_core_eh_useLighter_local` | _unit, _className, _type | Local | Listen | Using a Lighter |
-| `cigs_core_eh_useLighter_server` | _unit, _className, _type | Server | Listen | Using a Lighter |
-| `cigs_core_eh_eatCig_local` | _unit, _item, _slot | Local | Listen | Eating a Cigarette |
-| `cigs_core_eh_eatCig_server` | _unit, _item, _slot | Server | Listen | Eating a Cigarette |
+| `cigs_core_api_takeFromPack` | _unit, _class_cigpack, _item_glasses, _item_hmd | Local | Listen | Sucking Loop |
+| `cigs_core_api_useLighter` | _unit, _className, _type | Local | Listen | Using a Lighter |
+| `cigs_core_api_smoking` | _unit, _currentTime, _currentItem, _itemType | Local | Listen | Smoking Loop |
+| `cigs_core_api_sucking` | _unit, _currentTime, _currentItem, _itemType | Local | Listen | Sucking Loop |
+| `cigs_core_api_eatCig` | _unit, _item, _slot | Local | Listen | Eating a Cigarette |
+
 
 
 ## Useful Functions
