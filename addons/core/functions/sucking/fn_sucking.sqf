@@ -84,8 +84,7 @@ if (_newItem != "") then {
 ////////////////////////////////////////
 // API 
 ////////////////////////////////////////
-[QGVAR(EH_sucking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
-[QGVAR(EH_sucking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
+[QGVAR(API_sucking),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
 
 
 ////////////////////////////////////////
