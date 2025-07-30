@@ -20,7 +20,7 @@
 [
     QGVAR(EH_useLighter),
     {
-        if !( missionNamespace getVariable ["ace_fire_enabled", false] ) exitWith {};
+        if ( !(missionNamespace getVariable ["ace_fire_enabled", false]) || { SET(effect_combustion_chance) isEqualTo 0 } ) exitWith {};
 
         params ["_unit"];
         private _nearbyObjs = nearestObjects [_unit, [], 7, true] select {
@@ -52,6 +52,7 @@
 
 // Event: When starting Refueling, is the unit doing it smoking?
 ["ace_refuel_started", {
+    if ( !(missionNamespace getVariable ["ace_fire_enabled", false]) || { SET(effect_combustion_chance) isEqualTo 0 } ) exitWith {};
     ZRN_LOG_MSG_1(refuel started,_this);
     [ FUNC(combustion_check) , [_this#3], 1 + ceil random 5 ] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;

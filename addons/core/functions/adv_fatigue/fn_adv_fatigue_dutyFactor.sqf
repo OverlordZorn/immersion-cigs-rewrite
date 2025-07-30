@@ -17,12 +17,11 @@
 
 params ["_player"];
 
-private _return = linearConversion [
+linearConversion [
     0,
-    100,
+    150,
     ( _player getVariable [QPVAR(recent_puffs), 0] ) * ( missionNamespace getVariable [QSET(adv_fatigue_modifier), 1] ),
     1,
     2.5,
     true
-];
-_return
+] // return

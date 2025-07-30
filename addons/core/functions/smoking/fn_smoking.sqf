@@ -88,8 +88,7 @@ if (_gogglesNew != "") then {
 ////////////////////////////////////////
 // API 
 ////////////////////////////////////////
-[QGVAR(API_smoking_local),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
-[QGVAR(API_smoking_server), [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_serverEvent;
+[QGVAR(API_smoking),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
 
 
 ////////////////////////////////////////
