@@ -84,7 +84,6 @@ class CfgFunctions
         class config
         {
             file = PATH_TO_FUNC_SUB(config);
-            class getCfgDataRandom {};
             class getAllItems {};
             class getCached {};
         };
