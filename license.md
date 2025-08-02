@@ -5,6 +5,7 @@ to that license instead.
 Arma Public License No Derivatives (APL-ND)
    - \addons\base
    - \addons\core
+
 Creative Commons Attribution 4.0 International Public License
    - \addons\anim
    - \addons\apollo
@@ -14,7 +15,8 @@ Creative Commons Attribution 4.0 International Public License
    - \addons\morley
    - \addons\pops
    - \addons\voron
-The following Folder are under no license
+
+The following Folders are under no license
    - \addons\craven
    - \addons\eckstein
    - \addons\lucky_strike
