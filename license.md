@@ -23,6 +23,14 @@ The following Folders are under no license
    - \addons\baja_blast
    - \addons\black_devil
 
+The following sound files  licensed under ADPL-SA and originate from the Original DayZMod.
+   - addons\core\data\sounds\cough_0.ogg
+   - addons\core\data\sounds\cough_1.ogg
+   - addons\core\data\sounds\cough_2.ogg
+
+
+
+
 Arma Public License Share Alike (APL-SA)
 Brief summary of this Licence
 

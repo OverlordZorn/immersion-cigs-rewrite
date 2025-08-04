@@ -1,3 +1,9 @@
+The following sounds are exluded from the license.
+addons\core\data\sounds\cough_0.ogg
+addons\core\data\sounds\cough_1.ogg
+addons\core\data\sounds\cough_2.ogg
+They originate from the Original DayZMod and are licensed under ADPL-SA.
+
 # Arma Public License No Derivatives (APL-ND)
 [![APL-ND License](https://www.bohemia.net/assets/img/licenses/APL-ND.png)](https://www.bohemia.net/community/licenses/arma-public-license-nd)
 
