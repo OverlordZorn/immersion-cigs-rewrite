@@ -51,12 +51,6 @@ private _itemConfig = switch (_itemType) do {
 
 
 ////////////////////////////////////////
-// Play Animation
-////////////////////////////////////////
-[_unit, QEGVAR(anim,cig_in), 3] call FUNC(anim);
-
-
-////////////////////////////////////////
 // Identify cigarette Time
 ////////////////////////////////////////
 private _currentTime = getNumber (_itemConfig >> QPVAR(initStateTime));
@@ -65,16 +59,20 @@ if (_maxTime == 0) then { _maxTime = 330; };
 
 
 ////////////////////////////////////////
+// Play Animation
+////////////////////////////////////////
+[_unit, QEGVAR(anim,cig_in), 3] call FUNC(anim);
+
+
+////////////////////////////////////////
 // Initial Smoke Puffs
 ////////////////////////////////////////
 private _sleep_total = 3.5;
-
-[{ [QGVAR(EH_smoke), _this] call CBA_fnc_globalEvent; }, [_unit, _itemConfig], _sleep_total] call CBA_fnc_waitAndExecute;
+diag_log format ['[CVO](debug)(fn_start_smoking) _unit: %1 - _itemConfig: %2', _unit , _itemConfig];
+[ CBA_fnc_globalEvent, [ QGVAR(EH_smoke), [_unit, _itemConfig] ], _sleep_total] call CBA_fnc_waitAndExecute;
 
 
 ////////////////////////////////////////
 // Start Recursive Loop
 ////////////////////////////////////////
 [ FUNC(smoking), [_unit,_currentTime,_itemType,_maxTime], _sleep_total + 1] call CBA_fnc_waitAndExecute;
-
-diag_log format ['[CVO](debug)(fn_start_smoking) _unit: %1', _unit];
