@@ -118,7 +118,7 @@ if (_currentTime < 15) then {
 // Call Recursive Function
 ////////////////////////////////////////
 
-_timeoutCode = {
+private _timeoutCode = {
     params ["_unit","_currentTime","_currentItem","_itemType","_maxTime","_itemConfig"];
     if (  [_unit, _itemType, _currentItem, _currentTime, _maxTime] call FUNC(canKeepSmoking) ) then {
 
@@ -137,9 +137,9 @@ _timeoutCode = {
     };
 };
 
-_condition = { !((_this#0) getVariable [QPVAR(isSmoking), false]) };
+private _condition = { !((_this#0) getVariable [QPVAR(isSmoking), false]) };
 
-_statement = {
+private _statement = {
     params ["_unit","_currentTime","_currentItem","_itemType","_maxTime","_itemConfig"];
     [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
 
