@@ -45,7 +45,6 @@ if (isNil "_sound") then { _sound = selectRandom [QPVAR(smoke_3),QPVAR(smoke_4)]
 ////////////////////////////////////////
 // Smoke Particles
 ////////////////////////////////////////
-diag_log format ['[CVO](debug)(fn_smoking) _unit: %1 - _itemCfg: %2', _unit , _itemCfg];
 [ CBA_fnc_globalEvent, [QGVAR(EH_smoke), [_unit, _itemCfg]], 2.5 ] call CBA_fnc_waitAndExecute;
 
 
