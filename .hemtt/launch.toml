@@ -1,4 +1,5 @@
 [default]
+mission = "test.VR"
 workshop = [
     "450814997",  # CBA_A3's Workshop ID
     "463939057",  # ACE3
@@ -23,21 +24,17 @@ parameters = [
 # binarize = false # Default: false
 # rapify = true # Default: true
 
-[test]
-extends = "default"
-mission = "test.VR"
-
 
 [vn]
-extends = "test"
+extends = "default"
 dlc = ["vn"]
 
 [spe]
-extends = "test"
+extends = "default"
 dlc = ["vn", "spe"]
 
 [asp]
-extends = "test"
+extends = "default"
 workshop = [
     "1645973522", # Intercept Minimal Dev
     "1652506957", # Arma Script Profiler
