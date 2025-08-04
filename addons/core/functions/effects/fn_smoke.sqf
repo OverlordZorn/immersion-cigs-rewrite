@@ -20,13 +20,6 @@ params ["_unit", "_cigConfig"];
 
 if !(lifeState _unit in ["HEALTHY", "INJURED"]) exitWith {};
 
-
-private _sound = [_cigConfig >> QPVAR(smokeSound)] call CBA_fnc_getCfgDataRandom;
-
-if (isNil "_sound") then { _sound = selectRandom [QPVAR(smoke_3),QPVAR(smoke_4)] };
-
-[_unit, _sound, 15, true, false, true] call CBA_fnc_globalSay3d;
-
 [
     {
         params ["_unit", "_cigConfig"];
