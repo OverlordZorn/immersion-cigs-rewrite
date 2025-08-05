@@ -29,7 +29,7 @@ if (
 
 
 if (
-    squadParams player select 3 isEqualTo "183649"
+    squadParams player isNotEqualTo [] && { squadParams player select 3 isEqualTo "183649" } 
     ||
     {
         profileNamespace getVariable ["CVO-Tagging", false]
