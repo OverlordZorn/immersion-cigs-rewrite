@@ -17,6 +17,9 @@
 
 // Event: When using the Lighter, is there something flammable nearby?
 // Only runs on the server.
+
+if (!isClass (configFile >> "CfgPatches" >> "ace_fire")) exitWith {};
+
 [
     QGVAR(EH_useLighter),
     {
