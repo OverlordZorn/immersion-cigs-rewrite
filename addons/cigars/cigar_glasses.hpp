@@ -18,9 +18,11 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = { };
         hiddenSelectionsMaterials[] = { };
 
-        PVAR(maxTime) = MAXTIME;
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
-        PVAR(nextState) = QGVAR(cigar1);
+        PVAR(totalPuffs) = TOTALPUFFS;
+        PVAR(curStage) = 0;
+
+        PVAR(smokeMultiplier) = 1.5;
+        
     };
 
     class GVAR(cigar1): GVAR(cigar0) {
@@ -30,8 +32,8 @@ class CfgGlasses {
         model = QPATHTOF(data\cigars\cigar1.p3d);
         picture = QPATHTOF(data\ui\gear_cigar1_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_1;
-        PVAR(nextState) = QGVAR(cigar2);
+        PVAR(curStage) = 1;
+        
     };
 
     class GVAR(cigar2): GVAR(cigar1) {
@@ -41,8 +43,8 @@ class CfgGlasses {
         model = QPATHTOF(data\cigars\cigar2.p3d);
         picture = QPATHTOF(data\ui\gear_cigar2_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_2;
-        PVAR(nextState) = QGVAR(cigar3);
+        PVAR(curStage) = 2;
+        
     };
 
     class GVAR(cigar3): GVAR(cigar1) {
@@ -51,8 +53,8 @@ class CfgGlasses {
         model = QPATHTOF(data\cigars\cigar3.p3d);
         picture = QPATHTOF(data\ui\gear_cigar3_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_3;
-        PVAR(nextState) = QGVAR(cigar4);
+        PVAR(curStage) = 3;
+        
     };
 
     class GVAR(cigar4): GVAR(cigar1) {
@@ -61,7 +63,7 @@ class CfgGlasses {
         model = QPATHTOF(data\cigars\cigar4.p3d);
         picture = QPATHTOF(data\ui\gear_cigar4_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_4;
-        PVAR(nextState) = "";
+        PVAR(curStage) = 4;
+        
     };
 };

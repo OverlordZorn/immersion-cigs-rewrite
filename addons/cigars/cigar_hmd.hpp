@@ -19,9 +19,11 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = { };
         hiddenSelectionsMaterials[] = { };
 
-        PVAR(maxTime) = MAXTIME;
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
-        PVAR(nextState) = QGVAR(cigar1_nv);
+        PVAR(totalPuffs) = TOTALPUFFS;
+        PVAR(curStage) = 0;
+
+        PVAR(smokeMultiplier) = 1.5;
+        
 
         class ItemInfo {
             type = 616;
@@ -40,8 +42,8 @@ class CfgWeapons {
         model = QPATHTOF(data\cigars\cigar1.p3d);
         picture = QPATHTOF(data\ui\gear_cigar1_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_1;
-        PVAR(nextState) = QGVAR(cigar2_nv);
+        PVAR(curStage) = 1;
+        
 
 
         class ItemInfo: ItemInfo {
@@ -57,8 +59,8 @@ class CfgWeapons {
         model = QPATHTOF(data\cigars\cigar2.p3d);
         picture = QPATHTOF(data\ui\gear_cigar2_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_2;
-        PVAR(nextState) = QGVAR(cigar3_nv);
+        PVAR(curStage) = 2;
+        
 
 
         class ItemInfo: ItemInfo {
@@ -74,8 +76,8 @@ class CfgWeapons {
         model = QPATHTOF(data\cigars\cigar3.p3d);
         picture = QPATHTOF(data\ui\gear_cigar3_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_3;
-        PVAR(nextState) = QGVAR(cigar4_nv);
+        PVAR(curStage) = 3;
+        
 
         class ItemInfo: ItemInfo {
     		uniformModel = QPATHTOF(data\cigars\cigar3.p3d);
@@ -90,8 +92,8 @@ class CfgWeapons {
         model = QPATHTOF(data\cigars\cigar4.p3d);
         picture = QPATHTOF(data\ui\gear_cigar4_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_4;
-        PVAR(nextState) = "";
+        PVAR(curStage) = 4;
+        
 
         class ItemInfo: ItemInfo {
     		uniformModel = QPATHTOF(data\cigars\cigar4.p3d);

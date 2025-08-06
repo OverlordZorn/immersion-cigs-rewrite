@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Function to stop smoking
+* Statement ofAction to Stop Smoking.
 *
 * Arguments:
 *
@@ -10,12 +10,11 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call cigs_core_fnc_stop_cig;
 *
 * Public: No
 */
 
-params ["_player"];
-_player setVariable [QPVAR(isSmoking), false, true];
-[_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
-diag_log format ['[CVO](debug)(fn_stop_cig) _player: %1', _player];
+params ["_unit"];
+
+_unit setVariable [QPVAR(isSmoking), false, true];

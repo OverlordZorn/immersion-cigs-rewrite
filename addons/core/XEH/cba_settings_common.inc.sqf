@@ -11,8 +11,6 @@
 ] call CBA_fnc_addSetting;
 
 
-
-//
 private _code = {
 	_displayName = getText ( _x >> "displayName" );
 

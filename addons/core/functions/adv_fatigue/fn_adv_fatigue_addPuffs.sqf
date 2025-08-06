@@ -16,7 +16,7 @@
 */
 
 
-params ["_unit"];
+params ["_unit", [ "_puffValue", 1, [0] ] ];
 
 if !( SET(adv_fatigue_enabled) && {ace_advanced_fatigue_enabled} ) exitWith {};
 
@@ -33,7 +33,14 @@ if (_puffs isEqualTo -1) then {
         _puffs = _puffs - 1;
 
         _this setVariable [QPVAR(recent_puffs), _puffs];
-        diag_log format ['[CVO](debug)(decreasing) _puffs: %1', _puffs]; 
+
+    // Handle Coughing
+    if (SET(adv_fatigue_cough_modifier) isNotEqualTo 0) then {
+        private _threshold = 0.25 + random 0.75;
+        private _coughIntensity = linearConversion [0, 250, _puffs * SET(adv_fatigue_cough_modifier), 0, 1, true ];
+        if (_threshold < _coughIntensity) then { [ FUNC(cough), [_this, _coughIntensity], 2 + random 15 ] call CBA_fnc_waitAndExecute; };
+    };
+
     };
     private _condition = {
         _this getVariable [QPVAR(recent_puffs), 0] > 0
@@ -67,13 +74,12 @@ if (_puffs isEqualTo -1) then {
 
 };
 
-_puffs = _puffs + 1;
+_puffs = _puffs + _puffValue;
 _unit setVariable [QPVAR(recent_puffs), _puffs];
 
 // Handle Coughing
 if (SET(adv_fatigue_cough_modifier) isNotEqualTo 0) then {
     private _threshold = 0.25 + random 0.75;
-    private _coughIntensity = linearConversion [0, 200, _puffs * SET(adv_fatigue_cough_modifier), 0, 1, true ];
-    if (_threshold < _coughIntensity) then { [ FUNC(cough), [_unit, _coughIntensity], 0.5 + random 4.5 ] call CBA_fnc_waitAndExecute; };
+    private _coughIntensity = linearConversion [0, 250, _puffs * SET(adv_fatigue_cough_modifier), 0, 1, true ];
+    if (_threshold < _coughIntensity) then { [ FUNC(cough), [_unit, _coughIntensity], 2 + random 15 ] call CBA_fnc_waitAndExecute; };
 };
-

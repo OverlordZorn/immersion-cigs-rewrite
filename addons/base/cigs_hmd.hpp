@@ -25,12 +25,14 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {  QPATH_TEXTURE, QPATH_TEXTURE };
         hiddenSelectionsMaterials[] = {  QPATH_BASE_RVMAT, QPATH_BASE_RVMAT_LIT };
 
-        PVAR(maxTime) = MAXTIME;
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
-        PVAR(nextState) = QGVAR(cig1_nv);
-
         PVAR(isSmokable) = 1;
+
+        PVAR(totalPuffs) = 15;
+        PVAR(curStage) = 0;
+        PVAR(endStage) = 4;
+
         PVAR(smokeMultiplier) = 1;
+        PVAR(smokeColor)[] = { 0.2, 0.2, 0.2 };
         PVAR(smokeSound)[] = {QPVAR(smoke_3),QPVAR(smoke_4)};
 
         class ItemInfo

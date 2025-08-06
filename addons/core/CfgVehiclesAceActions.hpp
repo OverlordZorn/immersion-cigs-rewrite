@@ -8,7 +8,7 @@ class CAManBase: Man
             class PVAR(start_cig_their)
             {
                 displayName = CSTRING(start_cig_their);
-                condition = Q([_player] call FUNC(hasLighter) && [_target] call FUNC(canStartSmoking));
+                condition = Q([_player] call FUNC(hasLighter) && { [_target] call FUNC(canStartSmoking) });
                 statement = Q(call FUNC(start_cig_their));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
@@ -37,7 +37,7 @@ class CAManBase: Man
             {
                 displayName = CSTRING(start_cig_own);
                 condition = Q([_player] call FUNC(canStartSmoking));
-                statement = Q([_player] call FUNC(start_cig_your));
+                statement = Q([_player] call FUNC(start_cig));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\light_cig.paa);

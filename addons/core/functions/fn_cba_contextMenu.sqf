@@ -67,7 +67,7 @@
         params ["_unit", "_container", "_item", "_slot", "_params"];
 
         //(findDisplay 602) closeDisplay 2;
-        [_unit] call FUNC(start_cig_your);
+        [_unit] call FUNC(start_cig);
     }
 ] call CBA_fnc_addItemContextMenuOption;
 

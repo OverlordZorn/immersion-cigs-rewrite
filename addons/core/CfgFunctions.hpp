@@ -19,17 +19,18 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(smoking);
 
             class canStartSmoking {};
-            class start_cig_your {};
-            class start_cig_their {};
-            class start_smoking {};
-
-            class smoking {};
-
-            class canKeepSmoking {};
-
             class canStopSmoking {};
+
+            class start_cig_their {};
+            class start_cig {};
             class stop_cig {};
             class drop_cig {};
+            
+            class smoking_start {};
+            class smoking {};
+            class smoking_stop {};
+
+
         };
 
         class sucking
@@ -51,7 +52,7 @@ class CfgFunctions
         class effects
         {
             file = PATH_TO_FUNC_SUB(effects);
-            class smoke {};
+            class smoke_effect {};
             class anim {};
         };
 

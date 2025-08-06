@@ -10,7 +10,7 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call cigs_core_fnc_getLighter;
 *
 * Public: No
 */

@@ -14,7 +14,7 @@
 
 
 ## Useful Functions
-- `[_unit] call cigs_core_fnc_start_smoking;` - Lets a Unit - AI or Players - Start Smoking - Requires Smokeable Item in Glasses or HMD Slot
+- `[_unit] call cigs_core_fnc_smoking_start;` - Lets a Unit - AI or Players - Start Smoking - Requires Smokeable Item in Glasses or HMD Slot
 - `["PACKAGES"] call cigs_core_fnc_getAllItems;` - To retrieve all Packages classnames
 - `["LIGHTERS"] call cigs_core_fnc_getAllItems;` - To retrieve all Lighters classnames
 - `["ALL"] call cigs_core_fnc_getAllItems;` - To retrieve Both

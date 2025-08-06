@@ -17,28 +17,26 @@
 */
 
 
-//// CBA Events
 // Common
-[QGVAR(EH_start_cig), FUNC(start_smoking)] call CBA_fnc_addEventHandler;
-[QGVAR(EH_notify), CBA_fnc_notify] call CBA_fnc_addEventHandler;
-[QGVAR(EH_smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
+[QGVAR(EH_smoking_start),   FUNC(smoking_start) ] call CBA_fnc_addEventHandler;
+[QGVAR(EH_smoke_effect),    FUNC(smoke_effect)  ] call CBA_fnc_addEventHandler;
+[QGVAR(EH_notify),          CBA_fnc_notify      ] call CBA_fnc_addEventHandler;
+
 
 // Advanced Fatigue
-[QGVAR(EH_cough), FUNC(cough_server)] call CBA_fnc_addEventHandler;
-[QGVAR(EH_aleart), FUNC(cough_aleart)] call CBA_fnc_addEventHandler;
+if ( isClass (configFile >> "CfgPatches" >> "ace_advanced_fatigue") ) then {
+    [QGVAR(EH_cough), FUNC(cough_server)] call CBA_fnc_addEventHandler;
+    [QGVAR(EH_aleart), FUNC(cough_aleart)] call CBA_fnc_addEventHandler;
+};
 
 
-if (isServer) then {
-    // Stops unit smoking when unconscious
+// Stops unit smoking when unconscious
+if ( isServer && { isClass (configFile >> "CfgPatches" >> "ace_medical") } ) then {
     ["ace_unconscious", {
-        params ["_unit", "_state"];
-        if (_state && { _unit getVariable [QPVAR(isSmoking), false] } ) then {
-
-            [ FUNC(drop_cig), [_unit], 1 ] call CBA_fnc_waitAndExecute;
-
+        params ["_unit", "_isUncon"];
+        if (_isUncon && { _unit getVariable [QPVAR(isSmoking), false] } ) then {
             _unit setVariable [QPVAR(isSmoking), false, true];
         };
-
     }] call CBA_fnc_addEventHandler;
 };
 

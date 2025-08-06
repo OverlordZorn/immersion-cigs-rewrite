@@ -10,11 +10,11 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call cigs_core_fnc_stop_Sucking;
 *
 * Public: No
 */
 
 
-params ["_player"];
-_player setVariable [QPVAR(isSucking), false, true];
+params ["_unit"];
+_unit setVariable [QPVAR(isSucking), false, true];

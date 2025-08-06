@@ -21,7 +21,7 @@
 if (!isClass (configFile >> "CfgPatches" >> "ace_fire")) exitWith {};
 
 [
-    QGVAR(EH_useLighter),
+    QGVAR(EH_useLighter_combustion),
     {
         if ( !(missionNamespace getVariable ["ace_fire_enabled", false]) || { SET(effect_combustion_chance) isEqualTo 0 } ) exitWith {};
 

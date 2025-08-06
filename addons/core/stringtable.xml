@@ -73,6 +73,36 @@
             <English>Defines the amount of smoke particles dropped when a person is smoking. Clientside setting.</English>
             <French>Définit la quantité de particules de fumée rejetées lorsqu'une personne fume. Réglage côté client.</French>
         </Key>
+        <Key ID="STR_cigs_core_set_smoking_frequency">
+            <English>Smoking Frequency</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_frequency_desc">
+            <English>Defines how often you puff/draw on a smokable.</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_frequency_entry_less">
+            <English>Less Often</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_frequency_entry_normal">
+            <English>Normal</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_frequency_entry_often">
+            <English>More Often</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_intensity">
+            <English>Smoking Intensity</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_intensity_desc">
+            <English>Defines which how strong/long you puff/draw a smokable.</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_intensity_entry_long">
+            <English>More Intensive</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_intensity_entry_normal">
+            <English>Normal</English>
+        </Key>
+        <Key ID="STR_cigs_core_set_smoking_intensity_entry_short">
+            <English>Less Intensive</English>
+        </Key>
         <Key ID="STR_cigs_core_set_sp_addCigpack">
             <English>Start with a CigPack</English>
             <French>Commencer avec un CigPack</French>
@@ -124,6 +154,9 @@
             <French>Effets</French>
             <German>Effekte</German>
         </Key>
+        <Key ID="STR_cigs_core_set_cat_habits_smoking">
+            <English>Habits: Smoking</English>
+        </Key>
         <Key ID="STR_cigs_core_set_cat_main">
             <English>Immersive Cigs</English>
             <French>Immersive Cigs</French>
@@ -131,6 +164,9 @@
         <Key ID="STR_cigs_core_set_cat_main_cigsonai">
             <English>Immersive Cigs - Cigs On AI</English>
             <French>Immersive Cigs - Cigs On AI</French>
+        </Key>
+        <Key ID="STR_cigs_core_set_cat_player">
+            <English>Player Preference</English>
         </Key>
         <Key ID="STR_cigs_core_set_cat_sp">
             <English>Singleplayer</English>

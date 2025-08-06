@@ -15,7 +15,7 @@
 * Public: No
 */
 
-params ["_player"];
+params ["_unit"];
 
-[_player] call FUNC(start_sucking);
+[_unit] call FUNC(start_sucking);
 

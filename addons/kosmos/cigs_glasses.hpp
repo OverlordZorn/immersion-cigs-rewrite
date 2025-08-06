@@ -16,9 +16,9 @@ class CfgGlasses {
 
         hiddenSelectionsTextures[] =  { QPATH_TEXTURE, QPATH_TEXTURE }; // From Addon
 
-        PVAR(maxTime) = MAXTIME;
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
-        PVAR(nextState) = QGVAR(cig1);
+        PVAR(totalPuffs) = TOTALPUFFS;
+        PVAR(curStage) = 0;
+        
     };
 
     class GVAR(cig1): GVAR(cig0) {
@@ -28,8 +28,8 @@ class CfgGlasses {
         model = QPATH_BASE_MODEL_CIG1;
         picture = QPATHTOF(data\ui\gear_cig1_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_1;
-        PVAR(nextState) = QGVAR(cig2);
+        PVAR(curStage) = 1;
+        
     };
 
     class GVAR(cig2): GVAR(cig1) {
@@ -39,8 +39,8 @@ class CfgGlasses {
         model = QPATH_BASE_MODEL_CIG2;
         picture = QPATHTOF(data\ui\gear_cig2_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_2;
-        PVAR(nextState) = QGVAR(cig3);
+        PVAR(curStage) = 2;
+        
     };
 
     class GVAR(cig3): GVAR(cig1) {
@@ -49,8 +49,8 @@ class CfgGlasses {
         model = QPATH_BASE_MODEL_CIG3;
         picture = QPATHTOF(data\ui\gear_cig3_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_3;
-        PVAR(nextState) = QGVAR(cig4);
+        PVAR(curStage) = 3;
+        
     };
 
     class GVAR(cig4): GVAR(cig1) {
@@ -59,7 +59,7 @@ class CfgGlasses {
         model = QPATH_BASE_MODEL_CIG4;
         picture = QPATHTOF(data\ui\gear_cig4_x_ca.paa);
 
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_4;
-        PVAR(nextState) = "";
+        PVAR(curStage) = 4;
+        
     };
 };
