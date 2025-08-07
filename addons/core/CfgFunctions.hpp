@@ -38,15 +38,14 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(sucking);
 
             class canStartSucking {};
-            class start_suck_self {};
-            class start_sucking {};
-
-            class sucking {};
-
-            class canKeepSucking {};
-
             class canStopSucking {};
-            class stop_sucking {};
+
+            class start_suck {};
+
+            class sucking_start {};
+            class sucking {};
+            class sucking_stop {};
+
         };
 
         class effects

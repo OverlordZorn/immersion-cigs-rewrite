@@ -22,11 +22,10 @@ class CfgWeapons {
 		modelOptics[] = {};
 		opticsPPEffects[] = {};
 
-        PVAR(maxTime) = 0;
-        PVAR(initStateTime) = 0;
-        PVAR(nextState) = "";
-
         PVAR(isSuckable) = 1;
+        PVAR(totalSucks) = 1;
+        PVAR(curStage) = 0;
+        PVAR(endStage) = 0;
 
         PVAR(flavour)[] = {};
         PVAR(sounds)[] = {QPVAR(eat_01), QPVAR(eat_02), QPVAR(eat_03), QPVAR(eat_04), QPVAR(eat_05), QPVAR(eat_06), QPVAR(eat_07)};
@@ -54,8 +53,7 @@ class CfgWeapons {
         model = QPATHTOF(data\pop\pop.p3d);
         picture = QPATHTOF(data\ui\gear_pop0_x_ca.paa);
 
-        PVAR(maxTime) = MAXTIME;
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
+        PVAR(totalSucks) = SUCKS_TOTAL;
         PVAR(flavour)[] = {"banana", "cherry", "strawberry", "raspberry", "bacon", "nicotine", "tomato", "chocolate", "lemon", "cola"}; 
 
         class ItemInfo: ItemInfo {

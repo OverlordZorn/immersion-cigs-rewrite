@@ -55,18 +55,18 @@ class CAManBase: Man
             // Suckable Actions
             class PVAR(start_suck)
             {
-                displayName = CSTRING(start_sucking);
+                displayName = CSTRING(sucking_start);
                 condition = Q([_player] call FUNC(canStartSucking));
-                statement = Q([_player] call FUNC(start_suck_self));
+                statement = Q([_player] call FUNC(start_suck));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\pop_consume.paa);
             };
             class PVAR(stop_suck)
             {
-                displayName = CSTRING(stop_sucking);
+                displayName = CSTRING(sucking_stop);
                 condition = Q([_player] call FUNC(canStopSucking));
-                statement = Q([_player] call FUNC(stop_sucking));
+                statement = Q([_player] call FUNC(sucking_stop));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\pop_consume.paa);

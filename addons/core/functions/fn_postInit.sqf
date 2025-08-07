@@ -18,6 +18,7 @@
 
 
 // Common
+[QGVAR(EH_sucking_start),   FUNC(sucking_start) ] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoking_start),   FUNC(smoking_start) ] call CBA_fnc_addEventHandler;
 [QGVAR(EH_smoke_effect),    FUNC(smoke_effect)  ] call CBA_fnc_addEventHandler;
 [QGVAR(EH_notify),          CBA_fnc_notify      ] call CBA_fnc_addEventHandler;

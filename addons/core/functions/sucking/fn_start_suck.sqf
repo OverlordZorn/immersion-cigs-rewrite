@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Function that will stop the suck.
+* Function to start sucking the lollipop
 *
 * Arguments:
 *
@@ -10,11 +10,12 @@
 * None
 *
 * Example:
-* ['something', player] call cigs_core_fnc_stop_Sucking;
+* ['something', player] call prefix_component_fnc_functionname
 *
 * Public: No
 */
 
-
 params ["_unit"];
-_unit setVariable [QPVAR(isSucking), false, true];
+
+[_unit] call FUNC(sucking_start);
+

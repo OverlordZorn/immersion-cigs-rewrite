@@ -278,14 +278,14 @@
         </Key>
     </Package>
     <Package name="Interactions_suck">
-        <Key ID="STR_cigs_core_start_sucking">
+        <Key ID="STR_cigs_core_sucking_start">
             <English>Start Sucking</English>
             <French>Lèche la sucette</French>
             <German>Lutsch den Lutscher</German>
             <Japanese>吸い始める</Japanese>
             <Chinese>放進嘴巴含</Chinese>
         </Key>
-        <Key ID="STR_cigs_core_stop_sucking">
+        <Key ID="STR_cigs_core_sucking_stop">
             <English>Stop Sucking</English>
             <French>Arrêter de sucer</French>
             <German>Stop das Lutschen</German>

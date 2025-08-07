@@ -48,8 +48,8 @@ private _puffIntensity = SET(smoking_intensity) + ( random 0.15 * selectRandom [
 ////////////////////////////////////////
 // Update Current Puffs
 ////////////////////////////////////////
-private _curPuffs = _smokeData get "curPuffs";
-_smokeData set ["curPuffs", _curPuffs + _puffIntensity];
+private _curPuffs = (_smokeData get "curPuffs") + _puffIntensity;
+_smokeData set ["curPuffs", _curPuffs];
 
 
 ////////////////////////////////////////
@@ -153,4 +153,4 @@ private  _delay = (20 + ceil random 10) / SET(smoking_frequency);
 ////////////////////////////////////////
 // API 
 ////////////////////////////////////////
-[QGVAR(API_smoking),  [_unit, _currentTime, _itemClass, _itemType]] call CBA_fnc_localEvent;
+[QGVAR(API_smoking),  [_unit, _smokeData]] call CBA_fnc_localEvent;
