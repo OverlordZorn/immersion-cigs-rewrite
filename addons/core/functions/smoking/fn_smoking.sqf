@@ -17,7 +17,6 @@
 
 params ["_unit","_smokeData"];
 
-
 if (!local _unit) exitWith { [QGVAR(EH_smoking_start), _unit, _unit] call CBA_fnc_targetEvent; };
 
 
@@ -95,7 +94,9 @@ if ( _curStage < _endStage ) then {
 
         // Get new Stage Classname
         private _array = _currentClass splitString "_";
-        _array set [2, (_array select 2 trim [str _curStage, 2]) + str _nextStage ];
+        private _n = count _array;
+        private _i = if (_array select -1 isEqualTo "nv") then { _n - 2 } else { _n - 1 };
+        _array set [_i, (_array select _i trim [str _curStage, 2]) + str _nextStage ];
         private _newClass = _array joinString "_";
 
         // update Data
@@ -107,7 +108,7 @@ if ( _curStage < _endStage ) then {
             case "GOGGLES": {
                 _smokeData set [ "currentConfig", (configFile >> "CfgGlasses" >> _newClass) ];
                 removeGoggles _unit;
-                _unit addGoggles _gogglesNew;
+                _unit addGoggles _newClass;
 
             };
             case "HMD": {
