@@ -83,7 +83,7 @@ for "_stage" from 0 to _endStage do {
         _stage,
         switch (_stage) do {
             case 0: { 0 };
-            case 1: { 1 };
+            case 1: { 0.1 };
             default { round ( _totalPuffs / _endStage * (_stage - 1) ) };
         }
     ]
@@ -110,7 +110,9 @@ _smokeData set ["totalPuffs", _totalPuffs ];
 private _delay = 2.5;
 [ CBA_fnc_globalEvent, [ QGVAR(EH_smoke_effect), [_unit, _itemConfig] ], _delay] call CBA_fnc_waitAndExecute;
 
+
 ////////////////////////////////////////
 // Start Recursive Loop
 ////////////////////////////////////////
 [ FUNC(smoking), [_unit, _smokeData], _delay + 1] call CBA_fnc_waitAndExecute;
+
