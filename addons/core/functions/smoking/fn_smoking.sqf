@@ -10,89 +10,121 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call cigs_core_fnc_smoking;
 *
 * Public: No
 */
 
-params ["_unit","_currentTime","_itemType","_maxTime"];
+params ["_unit","_smokeData"];
+
+
+if (!local _unit) exitWith { [QGVAR(EH_smoking_start), _unit, _unit] call CBA_fnc_targetEvent; };
+
 
 ////////////////////////////////////////
-// Update Current variables
+// Get current Variables
 ////////////////////////////////////////
-private ["_itemClass", "_itemCfg"];
+private _currentClass  = _smokeData get "currentClass";
+private _currentConfig = _smokeData get "currentConfig";
+private _itemType = _smokeData get "itemType";
 
-switch (_itemType) do {
-    case ("GOGGLES"): {
-        _itemClass = goggles _unit;
-        _itemCfg = configFile >> "CfgGlasses" >> _itemClass;
-    };
-    case ("HMD"): {
-        _itemClass = hmd _unit;
-        _itemCfg = configFile >> "CfgWeapons" >> _itemClass;
-    };
+////////////////////////////////////////
+// Check if unit is still smoking the same cigarette
+////////////////////////////////////////
+private _same = switch (_itemType) do {
+    case "HMD":     { _currentClass isEqualTo hmd _unit };
+    case "GOGGLES": { _currentClass isEqualTo goggles _unit };
+    default { false };
 };
+
+if (!_same) exitWith FUNC(smoking_stop);
+
+////////////////////////////////////////
+// Establish Puff Value
+////////////////////////////////////////
+private _puffIntensity = SET(smoking_intensity) + ( random 0.15 * selectRandom [-1, 1] );
+
+
+////////////////////////////////////////
+// Update Current Puffs
+////////////////////////////////////////
+private _curPuffs = (_smokeData get "curPuffs") + _puffIntensity;
+_smokeData set ["curPuffs", _curPuffs];
 
 
 ////////////////////////////////////////
 // Sound Effects
 ////////////////////////////////////////
-private _sound = (_itemCfg >> QPVAR(smokeSound)) call CBA_fnc_getCfgDataRandom;
+private _sound = (_currentConfig >> QPVAR(smokeSound)) call CBA_fnc_getCfgDataRandom;
 if (isNil "_sound") then { _sound = selectRandom [QPVAR(smoke_3),QPVAR(smoke_4)] };
-[_unit, _sound, 20, true, false, true] call CBA_fnc_globalSay3d;
+[_unit, _sound, 20 * _puffIntensity, true, false, true] call CBA_fnc_globalSay3d;
 
 
 ////////////////////////////////////////
 // Smoke Particles
 ////////////////////////////////////////
-[ CBA_fnc_globalEvent, [QGVAR(EH_smoke), [_unit, _itemCfg]], 2.5 ] call CBA_fnc_waitAndExecute;
+[ CBA_fnc_globalEvent, [QGVAR(EH_smoke_effect), [_unit, _currentConfig, _puffIntensity]], 2.5 ] call CBA_fnc_waitAndExecute;
 
 
 ////////////////////////////////////////
 // Fatigue
 ////////////////////////////////////////
 _unit setFatigue (getFatigue _unit + 0.01);
-[_unit] call FUNC(adv_fatigue_addPuffs);
+[_unit, _puffIntensity] call FUNC(adv_fatigue_addPuffs);
 
 
 ////////////////////////////////////////
-// Get NextCigState
+// Check and if Needed, Update Cig Class
 ////////////////////////////////////////
-private _nextClass = getText (_itemCfg >> QPVAR(nextState));
+// If Current Puffs > Total Puffs -> Stop Smoking and Drop Cig
+// If Current Puffs > Next Stage Puffs -> remove curr Cig + get new Cig, then continue
 
-private _nextItemStateTime = if (_nextClass != "") then {
-    switch (_itemType) do {
-        case ("GOGGLES"): { getNumber (configFile >> "CfgGlasses" >> _nextClass >> QPVAR(initStateTime)) };
-        case ("HMD"):     { getNumber (configFile >> "CfgWeapons" >> _nextClass >> QPVAR(initStateTime)) };
-    }
-} else {
-    _maxTime
-};
+if ( _curPuffs > (_smokeData get "totalPuffs") ) exitWith FUNC(smoking_stop); 
 
-private _gogglesNew = ["", _nextClass] select (_currentTime >= _nextItemStateTime);
+private _curStage = _smokeData get "curStage";
+private _endStage = _smokeData get "endStage";
 
-if (_gogglesNew != "") then {
-    switch (_itemType) do {
-        case ("GOGGLES"): {
-            removeGoggles _unit;
-            _unit addGoggles _gogglesNew;
-            _itemCfg = configFile >> "CfgGlasses" >> _gogglesNew;
-        };
-        case ("HMD"): {
-            _unit removeWeapon _itemClass;
-            _unit addWeapon  _gogglesNew;
-            _itemCfg = configFile >> "CfgWeapons" >> _gogglesNew;
+
+if ( _curStage < _endStage ) then {
+
+    // If there is a follow-up stage, check if Current Puffs > Next Stage Puffs
+    private _nextStage = _curStage + 1;
+    private _nextStagePuffs = _smokeData get "stages" get _nextStage;
+
+    if ( _curPuffs >= _nextStagePuffs ) then {
+
+        // Get new Stage Classname
+        private _array = _currentClass splitString "_";
+        _array set [2, (_array select 2 trim [str _curStage, 2]) + str _nextStage ];
+        private _newClass = _array joinString "_";
+
+        // update Data
+        _smokeData set ["currentClass", _newClass];
+        _smokeData set [ "curStage", _nextStage];
+
+        // Replace Item and Update CFG
+        switch (_itemType) do {
+            case "GOGGLES": {
+                _smokeData set [ "currentConfig", (configFile >> "CfgGlasses" >> _newClass) ];
+                removeGoggles _unit;
+                _unit addGoggles _gogglesNew;
+
+            };
+            case "HMD": {
+                _smokeData set [ "currentConfig", (configFile >> "CfgWeapons" >> _newClass) ];
+                _unit removeWeapon _currentClass;
+                _unit addWeapon  _newClass;
+            };
         };
     };
-    _itemClass = _gogglesNew;
 };
 
 
 ////////////////////////////////////////
 // Define Delay and Timers
 ////////////////////////////////////////
-private  _delay = [ 3 + random 3, 15 + random 25 ] select (_currentTime > 15);
-_currentTime = _currentTime + _delay;
+private  _delay = (20 + ceil random 10) / SET(smoking_frequency);
+
 
 
 ////////////////////////////////////////
@@ -100,48 +132,25 @@ _currentTime = _currentTime + _delay;
 ////////////////////////////////////////
 [
 
-    {
-        // Condition
-        !((_this#0) getVariable [QPVAR(isSmoking), false])
-    },  
-
-    {
-        // Statement ## Unit stopped smoking
-        params ["_unit","_currentTime","_itemClass","_itemType","_maxTime","_itemCfg"];
-        [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
-        if (_currentTime >= _maxTime) then { [_unit, _itemClass, _itemType, true] call FUNC(drop_cig); };
-    },  
-
-    [_unit,_currentTime,_itemClass,_itemType,_maxTime,_itemCfg],
-
+    { !( _this select 0 getVariable [QPVAR(isSmoking), false] ) },  // Condition
+    FUNC(smoking_stop),  
+    [_unit,_smokeData],
     _delay,
-
     {
         // Timeout Code ## Unit hasnt stopped smoking -> Can Keep Smoking?
 
-        params ["_unit","_currentTime","_itemClass","_itemType","_maxTime","_itemCfg"];
-        if (  [_unit, _itemType, _itemClass, _currentTime, _maxTime] call FUNC(canKeepSmoking) ) then {
+        params ["_unit","_smokeData"];
+        if ( lifeState _unit in ["HEALTHY", "INJURED"] ) then {
             // Can continue smoking
-            [_unit,_currentTime,_itemType,_maxTime] call FUNC(smoking);
+            _this call FUNC(smoking);
         } else {
-            // Can not continue smoking
-            if (_unit getVariable [QPVAR(isSmoking), false]) then { _unit setVariable [QPVAR(isSmoking), false, true] };
-
-            // Drop Cigarette            
-            if (lifeState _unit in ["HEALTHY", "INJURED"]) then {
-                // Is conscious ## Only drop cig when cig is done
-                if (_currentTime >= _maxTime) then { [_unit, _itemClass, _itemType] call FUNC(drop_cig); };
-            } else {
-                // is unconscious
-                [_unit, _itemClass, _itemType] call FUNC(drop_cig);
-            };
+            _this call FUNC(smoking_stop);
         };
     }
-
 ] call CBA_fnc_waitUntilAndExecute;
 
 
 ////////////////////////////////////////
 // API 
 ////////////////////////////////////////
-[QGVAR(API_smoking),  [_unit, _currentTime, _itemClass, _itemType]] call CBA_fnc_localEvent;
+[QGVAR(API_smoking),  [_unit, _smokeData]] call CBA_fnc_localEvent;

@@ -8,7 +8,7 @@ class CAManBase: Man
             class PVAR(start_cig_their)
             {
                 displayName = CSTRING(start_cig_their);
-                condition = Q([_player] call FUNC(hasLighter) && [_target] call FUNC(canStartSmoking));
+                condition = Q([_player] call FUNC(hasLighter) && { [_target] call FUNC(canStartSmoking) });
                 statement = Q(call FUNC(start_cig_their));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
@@ -37,7 +37,7 @@ class CAManBase: Man
             {
                 displayName = CSTRING(start_cig_own);
                 condition = Q([_player] call FUNC(canStartSmoking));
-                statement = Q([_player] call FUNC(start_cig_your));
+                statement = Q([_player] call FUNC(start_cig));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\light_cig.paa);
@@ -55,18 +55,18 @@ class CAManBase: Man
             // Suckable Actions
             class PVAR(start_suck)
             {
-                displayName = CSTRING(start_sucking);
+                displayName = CSTRING(sucking_start);
                 condition = Q([_player] call FUNC(canStartSucking));
-                statement = Q([_player] call FUNC(start_suck_self));
+                statement = Q([_player] call FUNC(start_suck));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\pop_consume.paa);
             };
             class PVAR(stop_suck)
             {
-                displayName = CSTRING(stop_sucking);
+                displayName = CSTRING(sucking_stop);
                 condition = Q([_player] call FUNC(canStopSucking));
-                statement = Q([_player] call FUNC(stop_sucking));
+                statement = Q([_player] call FUNC(sucking_stop));
                 showDisabled = 0;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\pop_consume.paa);

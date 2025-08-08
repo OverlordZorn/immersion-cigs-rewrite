@@ -19,17 +19,18 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(smoking);
 
             class canStartSmoking {};
-            class start_cig_your {};
-            class start_cig_their {};
-            class start_smoking {};
-
-            class smoking {};
-
-            class canKeepSmoking {};
-
             class canStopSmoking {};
+
+            class start_cig_their {};
+            class start_cig {};
             class stop_cig {};
             class drop_cig {};
+            
+            class smoking_start {};
+            class smoking {};
+            class smoking_stop {};
+
+
         };
 
         class sucking
@@ -37,21 +38,20 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(sucking);
 
             class canStartSucking {};
-            class start_suck_self {};
-            class start_sucking {};
-
-            class sucking {};
-
-            class canKeepSucking {};
-
             class canStopSucking {};
-            class stop_sucking {};
+
+            class start_suck {};
+
+            class sucking_start {};
+            class sucking {};
+            class sucking_stop {};
+
         };
 
         class effects
         {
             file = PATH_TO_FUNC_SUB(effects);
-            class smoke {};
+            class smoke_effect {};
             class anim {};
         };
 

@@ -19,13 +19,14 @@ class CfgGlasses {
         hiddenSelectionsTextures[] =  { QPATH_TEXTURE, QPATH_TEXTURE };
         hiddenSelectionsMaterials[] = { QPATH_BASE_RVMAT, QPATH_BASE_RVMAT_LIT };
 
-        PVAR(maxTime) = 0;
-        PVAR(initStateTime) = 0;
-        PVAR(nextState) = "";
-
         PVAR(isSmokable) = 1;
-        PVAR(smokeMultiplier) = 1;
 
+        PVAR(totalPuffs) = 15;
+        PVAR(curStage) = 0;
+        PVAR(endStage) = 4;
+
+        PVAR(smokeMultiplier) = 1;
+        PVAR(smokeColor)[] = { 0.2, 0.2, 0.2 };
         PVAR(smokeSound)[] = {QPVAR(smoke_3),QPVAR(smoke_4)};
 
         KJW_Imposters_SuspicionAmount = 0;

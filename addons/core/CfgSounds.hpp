@@ -38,7 +38,7 @@ class CfgSounds {
     SOUND(verpuffung_03,4,1,100);
     SOUND(verpuffung_04,4,1,100);
 
-    // DayZ Mod LDP (ADPL-SA) // TODO
+    // DayZ Mod LDP (ADPL-SA)
     SOUND(cough_0,4,1,75);
     SOUND(cough_1,4,1,75);
     SOUND(cough_2,4,1,75);

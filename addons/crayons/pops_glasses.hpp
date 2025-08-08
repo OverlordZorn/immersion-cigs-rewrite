@@ -21,11 +21,8 @@ class CfgGlasses {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_black_CO.paa)};
 
         // Commmon Data
-        PVAR(maxTime) = MAXTIME;
-        PVAR(initStateTime) = INITSTATETIME_VARIANT_0;
-
+        PVAR(totalSucks) = SUCKS_TOTAL;
         PVAR(flavour) = "existential anguish"; 
-        PVAR(sounds)[] = {QPVAR(eat_01), QPVAR(eat_02), QPVAR(eat_03), QPVAR(eat_04), QPVAR(eat_05), QPVAR(eat_06), QPVAR(eat_07)};
 
         KJW_Imposters_SuspicionAmount = 0.1;
     };

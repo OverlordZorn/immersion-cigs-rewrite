@@ -10,42 +10,32 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call cigs_core_fnc_drop_cig;
 *
 * Public: No
 */
 
-params [ "_unit", ["_currentItem", ""], ["_itemType", ""], ["_remove", false], ["_skipAnimation", false] ];
+params [ "_unit", "_smokeData", ["_vanish", true, [false]] ];
 
-if (_currentItem == "" || { _itemType == "" } ) then {
+if (isNil "_smokeData") then { _unit getVariable [QPVAR(smokeData)] };
 
-    _itemType = switch (true) do {
-        case (getNumber (configFile >> "CfgGlasses" >> goggles _unit >> QPVAR(isSmokable)) == 1): { "GOGGLES" };
-        case (getNumber (configFile >> "CfgWeapons" >>     hmd _unit >> QPVAR(isSmokable)) == 1): { "HMD" };
-        default { "" };
-    };
-    if (_itemType == "") exitWith {};
-    _currentItem = switch (_itemType) do {
-        case ("GOGGLES"):   { goggles _unit };
-        case ("HMD"):       { hmd _unit };
-    };
-};
+private _className = _smokeData get "currentClass";
 
-switch (_itemType) do {
+switch (_smokeData get "itemType") do {
     case ("GOGGLES"): { removeGoggles _unit; };
-    case ("HMD"):     { _unit removeWeapon (hmd _unit); };
+    case ("HMD"):     { _unit removeWeapon _className; };
 };
 
-if ( !_skipAnimation && (lifeState _unit in ["HEALTHY", "INJURED"]) ) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim) };
-
-if (_remove) exitWith {};
+if (_vanish) exitWith {};
 
 // Put Cigarette on the floor
-private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
+private _weaponHolder = getPos _unit nearObjects ["WeaponHolder", 2];
 
-if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+if (_weaponHolder isEqualTo []) then {
     _weaponHolder = createVehicle ["GroundWeaponHolder", [0,0,0], [], 0, "NONE"];
     _weaponHolder setPosASL getPosASL _unit;
+} else {
+    _weaponHolder = selectRandom _weaponHolder;
 };
 
-_weaponHolder addItemCargoGlobal [_currentItem, 1];
+_weaponHolder addItemCargoGlobal [_className, 1];

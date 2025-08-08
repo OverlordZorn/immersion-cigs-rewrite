@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Function that will stop the suck.
+* Function to start sucking the lollipop
 *
 * Arguments:
 *
@@ -15,6 +15,7 @@
 * Public: No
 */
 
+params ["_unit"];
 
-params ["_player"];
-_player setVariable [QPVAR(isSucking), false, true];
+[_unit] call FUNC(sucking_start);
+

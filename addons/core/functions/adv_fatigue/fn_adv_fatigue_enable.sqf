@@ -17,7 +17,7 @@
 
 params ["_enable"];
 
-diag_log format ['[CVO](debug)(fn_adv_fatigue_enable) _enable: %1', _enable];
+ZRN_LOG_1(_enable);
 
 if (_enable) then {
     [QADDON, FUNC(adv_fatigue_dutyFactor)] call ace_advanced_fatigue_fnc_addDutyFactor;

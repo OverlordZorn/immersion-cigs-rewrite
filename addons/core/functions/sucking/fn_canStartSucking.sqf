@@ -18,8 +18,6 @@
 params ["_unit"];
 
 
-
-
 !(_unit getVariable [QPVAR(isSucking), false])
 && 
 {

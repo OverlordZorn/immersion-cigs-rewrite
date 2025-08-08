@@ -15,18 +15,18 @@
 * Public: No
 */
 
-params ["_player", "_mag"];
+params ["_unit", "_mag"];
 
-private _matchesMags = magazinesAmmo _player select {_x select 0 == _mag};
+private _matchesMags = magazinesAmmo _unit select {_x select 0 == _mag};
 
-_player removeMagazineGlobal _mag;
+_unit removeMagazineGlobal _mag;
 
 private _oldMag = _matchesMags select 0;
 
 if ((_oldMag select 1) > 1) then {
-    _player addMagazine [_mag, (_oldMag select 1) - 1];
+    _unit addMagazine [_mag, (_oldMag select 1) - 1];
 } else {
     if (getNumber (configFile >> "CfgMagazines" >> _mag >> "count") > 1) then {
-        [QGVAR(EH_notify), [format [LLSTRING(is_Empty), getText (configFile >> "CfgMagazines" >> _mag >> "displayName")], 1], _player] call CBA_fnc_targetEvent;
+        [QGVAR(EH_notify), [format [LLSTRING(is_Empty), getText (configFile >> "CfgMagazines" >> _mag >> "displayName")], 1], _unit] call CBA_fnc_targetEvent;
     };
 };

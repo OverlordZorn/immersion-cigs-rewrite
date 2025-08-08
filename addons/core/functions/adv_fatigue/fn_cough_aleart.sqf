@@ -17,8 +17,6 @@
 
 params ["_group", "_instigator"];
 
-diag_log format ['[CVO](debug)(fn_cough_aleart) _this: %1', _this];
-
 _group setBehaviour  "COMBAT";
 
 private _leader = leader _group;

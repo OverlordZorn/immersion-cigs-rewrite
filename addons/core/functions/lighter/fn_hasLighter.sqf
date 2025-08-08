@@ -10,16 +10,16 @@
 * None
 *
 * Example:
-* ['something', _player] call prefix_component_fnc_functionname
+* ['something', _unit] call cigs_core_fnc_hasLighter;
 *
 * Public: No
 */
 
-params ["_player"];
+params ["_unit"];
 
 _return = switch (true) do {
-    case (magazines _player findIf { getNumber (configFile >> "CfgMagazines" >> _x >> QPVAR(isLighter) ) == 1}  >= 0): { true };     //   finite lighter
-    case (    items _player findIf { getNumber (configFile >> "CfgWeapons"   >> _x >> QPVAR(isLighter) ) == 1}  >= 0): { true };     // infinite lighter
+    case (magazines _unit findIf { getNumber (configFile >> "CfgMagazines" >> _x >> QPVAR(isLighter) ) == 1}  >= 0): { true };     //   finite lighter
+    case (    items _unit findIf { getNumber (configFile >> "CfgWeapons"   >> _x >> QPVAR(isLighter) ) == 1}  >= 0): { true };     // infinite lighter
     default { false };
 };
 _return

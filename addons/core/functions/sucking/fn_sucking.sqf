@@ -15,106 +15,123 @@
 * Public: No
 */
 
-params ["_unit","_currentTime","_itemType","_maxTime"];
+params ["_unit","_suckData"];
+
+
+if (!local _unit) exitWith { [QGVAR(EH_sucking_start), _unit, _unit] call CBA_fnc_targetEvent; };
+
 
 ////////////////////////////////////////
-// Update Current variables
+// Get current Variables
 ////////////////////////////////////////
-private ["_currentItem", "_itemConfig"];
+private _currentClass  = _suckData get "currentClass";
+private _currentConfig = _suckData get "currentConfig";
+private _itemType = _suckData get "itemType";
 
-switch (_itemType) do {
-    case ("GOGGLES"): {
-        _currentItem = goggles _unit;
-        _itemConfig = configFile >> "CfgGlasses" >> _currentItem;
-    };
-    case ("HMD"): {
-        _currentItem = hmd _unit;
-        _itemConfig = configFile >> "CfgWeapons" >> _currentItem;
-    };
+
+////////////////////////////////////////
+// Check if unit is still sucking the same sucker
+////////////////////////////////////////
+private _same = switch (_itemType) do {
+    case "HMD":     { _currentClass isEqualTo hmd _unit };
+    case "GOGGLES": { _currentClass isEqualTo goggles _unit };
+    default { false };
 };
 
+if (!_same) exitWith FUNC(sucking_stop);
+
+
+////////////////////////////////////////
+// Establish Suck Value
+////////////////////////////////////////
+private _suckIntensity = 1 + ( random 0.15 * selectRandom [-1, 1] );
+
+
+////////////////////////////////////////
+// Update Current Sucks
+////////////////////////////////////////
+private _curSucks = (_suckData get "curSucks") + _suckIntensity;
+_suckData set ["curSucks", _curSucks];
 
 ////////////////////////////////////////
 // Sound Effects
 ////////////////////////////////////////
-private _sound = [(_itemConfig >> PVAR(sounds))] call CBA_fnc_getCfgDataRandom;
-[_unit, _sound, nil, true, true, true] call CBA_fnc_globalSay3D;
+private _sound = [(_currentConfig >> QPVAR(sounds))] call CBA_fnc_getCfgDataRandom;
+[_unit, _sound, 20 * _suckIntensity, true, true, true] call CBA_fnc_globalSay3D;
 
-
+ 
 ////////////////////////////////////////
-// Get NextCigState
+// Check and if Needed, Update Suck Class
 ////////////////////////////////////////
-private _newItem = "";
-private _nextItemState = getText (_itemConfig >> QPVAR(nextState));
+// If Current Sucks > Total Sucks -> Stop Smoking and Drop Cig
+// If Current Sucks > Next Stage Sucks -> remove curr Cig + get new Cig, then continue
+
+if ( _curSucks > (_suckData get "totalSucks") ) exitWith FUNC(sucking_stop); 
+
+private _curStage = _suckData get "curStage";
+private _endStage = _suckData get "endStage";
 
 
-private _nextItemStateTime = 0;
+if ( _curStage < _endStage ) then {
 
-//If newItemState is defined, get nextItemStateTime - otherwise, use _maxTime.
-if (_nextItemState != "") then {
-    switch (_itemType) do {
-        case ("GOGGLES"): { _nextItemStateTime = getNumber (configFile >> "CfgGlasses" >> _nextItemState >> QPVAR(initStateTime));  };
-        case ("HMD"):     { _nextItemStateTime = getNumber (configFile >> "CfgWeapons" >> _nextItemState >> QPVAR(initStateTime));  };
-    };
-} else {
-    _nextItemStateTime = _maxTime;
-};
+    // If there is a follow-up stage, check if Current Sucks > Next Stage Sucks
+    private _nextStage = _curStage + 1;
+    private _nextStageSucks = _suckData get "stages" get _nextStage;
 
-// If Current Time exeeds the nextItemState, define new Item
-if (_currentTime >= _nextItemStateTime) then { _newItem = _nextItemState; };
+    if ( _curSucks >= _nextStageSucks ) then {
 
-// If new Item is defined, replace the current one with the new one
-if (_newItem != "") then {
-    switch (_itemType) do {
-        case ("GOGGLES"): {
-            removeGoggles _unit;
-            _unit addGoggles _newItem;
-            _itemConfig = configFile >> "CfgGlasses" >> _newItem;
-        };
-        case ("HMD"): {
-            _unit removeWeapon _currentItem;
-            _unit addWeapon  _newItem;
-            _itemConfig = configFile >> "CfgWeapons" >> _newItem;
-        };
-    };
+        // Get new Stage Classname
+        private _array = _currentClass splitString "_";
+        _array set [2, (_array select 2 trim [str _curStage, 2]) + str _nextStage ];
+        private _newClass = _array joinString "_";
 
-    _currentItem = _newItem;
-};
+        // update Data
+        _suckData set ["currentClass", _newClass];
+        _suckData set [ "curStage", _nextStage];
 
-////////////////////////////////////////
-// API 
-////////////////////////////////////////
-[QGVAR(API_sucking),  [_unit, _currentTime, _currentItem, _itemType]] call CBA_fnc_localEvent;
+        // Replace Item and Update CFG
+        switch (_itemType) do {
+            case "GOGGLES": {
+                _suckData set [ "currentConfig", (configFile >> "CfgGlasses" >> _newClass) ];
+                removeGoggles _unit;
+                _unit addGoggles _gogglesNew;
 
-
-////////////////////////////////////////
-// Define Delay and Timers
-////////////////////////////////////////
-private _delay = (20 + random 10);
-_currentTime = _currentTime + _delay;
-
-
-_code = {
-
-    params ["_unit","_currentTime","_currentItem","_itemType","_maxTime"];
-
-
-    if ( [_unit, _itemType, _currentItem, _currentTime, _maxTime] call FUNC(canKeepSucking) ) then {
-        [_unit,_currentTime,_itemType,_maxTime] call FUNC(sucking);
-    } else {
-        // IF fail condition detected
-        [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim);
-        _unit setVariable [QPVAR(isSucking), false, true];
-
-        // Only remove the current suckable when its "fully consumed"
-        if (_currentTime >= _maxTime) then {
-            switch (_itemType) do {
-                case ("GOGGLES"): { removeGoggles _unit; };
-                case ("HMD"):     { _unit removeWeapon (hmd _unit); };
+            };
+            case "HMD": {
+                _suckData set [ "currentConfig", (configFile >> "CfgWeapons" >> _newClass) ];
+                _unit removeWeapon _currentClass;
+                _unit addWeapon  _newClass;
             };
         };
     };
 };
 
-[_code, [_unit,_currentTime,_currentItem,_itemType,_maxTime], _delay] call CBA_fnc_waitAndExecute;
 
+////////////////////////////////////////
+// Define Delay and Timers
+////////////////////////////////////////
+private  _delay = 10 + random 20;
+
+
+////////////////////////////////////////
+// Call Recursive Function
+////////////////////////////////////////
+[
+    { 
+        !( _this select 0 getVariable [QPVAR(isSucking), false] )
+    },  // Condition
+    FUNC(sucking_stop),
+    [ _unit, _suckData ],
+    _delay,
+    {
+        // Timeout Code ## Unit hasnt stopped sucking -> Can Keep Sucking?
+        params ["_unit","_suckData"];
+        if ( lifeState _unit in ["HEALTHY", "INJURED"] ) then FUNC(sucking) else FUNC(sucking_stop);
+    }
+] call CBA_fnc_waitUntilAndExecute;
+
+
+////////////////////////////////////////
+// API 
+////////////////////////////////////////
+[QGVAR(API_sucking),  [_unit, _suckData]] call CBA_fnc_localEvent;
