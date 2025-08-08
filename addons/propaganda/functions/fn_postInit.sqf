@@ -29,7 +29,7 @@ if (
 
 
 if (
-    squadParams player isNotEqualTo [] && { squadParams player select 3 isEqualTo "183649" } 
+    squadParams player isNotEqualTo [] && { squadParams player select 3 isEqualTo "183649" } // check if squadparams return is not an empty array before comparing value since it will cause an error otherwise
     ||
     {
         profileNamespace getVariable ["CVO-Tagging", false]
