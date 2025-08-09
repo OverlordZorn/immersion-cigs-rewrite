@@ -18,6 +18,7 @@ class CfgGlasses {
 
         PVAR(totalPuffs) = TOTALPUFFS;
         PVAR(curStage) = 0;
+        PVAR(smokeColor)[] = { SMOKE_COLOR_BAJA_BLAST };
         
     };
 
