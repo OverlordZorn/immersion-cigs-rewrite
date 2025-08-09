@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -16,3 +16,9 @@
 */
 
 params ["_target", "_player"];
+
+_player getVariable [QPVAR(isSmoking), false]
+&&
+{
+    !(lifeState _target in ["HEALTHY", "INJURED"])
+}

@@ -125,5 +125,12 @@ class CfgFunctions
             class cough_server {};
             class cough_aleart {};
         };
+        class respect {
+            file = PATH_TO_FUNC_SUB(respect);
+            
+            class payRespect {};
+            class canPayRespect {};
+        };
+        
     };
 };
