@@ -236,6 +236,10 @@
             <French>Manger</French>
             <German>Essen</German>
         </Key>
+        <Key ID="STR_cigs_core_pay_respect">
+            <English>Pay Respect to the Fallen...</English>
+            <German>Den Gefallenen Respekt zollen...</German>
+        </Key>
         <Key ID="STR_cigs_core_eat_cig_desc">
             <English>Eat the thing, duh</English>
             <French>Manger la chose, bien sûr</French>

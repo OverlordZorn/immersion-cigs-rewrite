@@ -14,6 +14,15 @@ class CAManBase: Man
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 icon = QPATHTOF(data\ui\light_cig.paa);
             };        
+            class PVAR(pay_respect)
+            {
+                displayName = CSTRING(pay_respect);
+                condition = Q(call FUNC(canPayRespect));
+                statement = Q(call FUNC(payRespect));
+                showDisabled = 0;
+                exceptions[] = {"isNotInside", "isNotSitting"};
+                icon = QPATHTOF(data\ui\light_cig.paa);
+            };        
         };
     };
 
@@ -28,7 +37,7 @@ class CAManBase: Man
                 statement = "";
                 insertChildren = Q([_player] call FUNC(action_pack_children));
                 showDisabled = 0;
-                exceptions[] = {"isNotInside", "isNotSitting"};
+                exceptions[] = {}; // "isNotDead", "isNotUnconscious"
                 icon = QPATHTOF(data\ui\take_cig.paa);
             };
 
