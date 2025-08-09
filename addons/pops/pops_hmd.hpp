@@ -27,7 +27,7 @@ class CfgWeapons {
         PVAR(curStage) = 0;
         PVAR(endStage) = 0;
 
-        PVAR(flavour)[] = {};
+        PVAR(flavor)[] = {};
         PVAR(sounds)[] = {QPVAR(eat_01), QPVAR(eat_02), QPVAR(eat_03), QPVAR(eat_04), QPVAR(eat_05), QPVAR(eat_06), QPVAR(eat_07)};
 
         class ItemInfo {
@@ -54,7 +54,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\ui\gear_pop0_x_ca.paa);
 
         PVAR(totalSucks) = SUCKS_TOTAL;
-        PVAR(flavour)[] = {"banana", "cherry", "strawberry", "raspberry", "bacon", "nicotine", "tomato", "chocolate", "lemon", "cola"}; 
+        PVAR(flavor)[] = {"banana", "cherry", "strawberry", "raspberry", "bacon", "nicotine", "tomato", "chocolate", "lemon", "cola"}; 
 
         class ItemInfo: ItemInfo {
             uniformModel = QPATHTOF(data\pop\pop.p3d);

@@ -657,8 +657,8 @@ Parameters:
 Examples:
     (begin example)
         _fish = ["blue", "green", "smelly"];
-        PUSH(_fish,"monkey-flavoured");
-        // _fish => ["blue", "green", "smelly", "monkey-flavoured"]
+        PUSH(_fish,"monkey-flavored");
+        // _fish => ["blue", "green", "smelly", "monkey-flavored"]
     (end)
 
 Author:

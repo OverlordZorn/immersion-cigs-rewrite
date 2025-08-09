@@ -343,9 +343,9 @@
             <French>%1 est maintenant vide.</French>
             <German>%1 ist nun leer.</German>
         </Key>
-        <Key ID="STR_cigs_core_taste_flavour">
-            <English>Hmm, its %1 flavour!</English>
-            <French>Hmm, ça a un goût de %1 !</French>
+        <Key ID="STR_cigs_core_taste_flavor">
+            <English>Hmm, it tastes like %1!</English>
+            <French>Hmm, ça a un goût de %1!</French>
             <German>Hmm, es schmeckt nach %1!</German>
         </Key>
     </Package>

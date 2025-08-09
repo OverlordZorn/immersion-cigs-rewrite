@@ -22,7 +22,7 @@ class CfgWeapons {
 
 
         PVAR(totalSucks) = SUCKS_TOTAL;
-        PVAR(flavour) =  "existential anguish"; 
+        PVAR(flavor) =  "existential anguish"; 
 
         class ItemInfo
         {
@@ -39,60 +39,60 @@ class CfgWeapons {
     class GVAR(crayon_blue_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_blue_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_blue_ca.paa);
-        PVAR(flavour) =  "blue on blue";
+        PVAR(flavor) =  "blue on blue";
     };
 
     class GVAR(crayon_brown_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_brown_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_brown_ca.paa);
-        PVAR(flavour) =  "flesh";
+        PVAR(flavor) =  "flesh";
     };
 
     class GVAR(crayon_gray_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_gray_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_gray_ca.paa);
-        PVAR(flavour) =  "moral ambiguity gray"; 
+        PVAR(flavor) =  "moral ambiguity gray"; 
     };
 
     class GVAR(crayon_green_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_green_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_green_ca.paa);
-        PVAR(flavour) =  "gan green"; 
+        PVAR(flavor) =  "gan green"; 
     };
 
     class GVAR(crayon_orange_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_orange_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_orange_ca.paa);
-        PVAR(flavour) =  "agent orange"; 
+        PVAR(flavor) =  "agent orange"; 
     };
 
     class GVAR(crayon_pink_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_pink_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_pink_ca.paa);
-        PVAR(flavour) =  "pink mist"; 
+        PVAR(flavor) =  "pink mist"; 
     };
 
     class GVAR(crayon_purple_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_purple_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_purple_ca.paa);
-        PVAR(flavour) =  "purple heart"; 
+        PVAR(flavor) =  "purple heart"; 
     };
 
     class GVAR(crayon_red_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_red_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_red_ca.paa);
-        PVAR(flavour) =  "danger close"; 
+        PVAR(flavor) =  "danger close"; 
     };
 
     class GVAR(crayon_white_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_white_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_white_ca.paa);
-        PVAR(flavour) =  "white phosphorus"; 
+        PVAR(flavor) =  "white phosphorus"; 
     };
 
     class GVAR(crayon_yellow_nv): GVAR(crayon_black_nv) {
         hiddenSelectionsTextures[] = {QPATHTOF(data\crayon\crayon_yellow_CO.paa)};
         picture = QPATHTOF(data\ui\gear_crayon_yellow_ca.paa);
-        PVAR(flavour) =  "hazard pay"; 
+        PVAR(flavor) =  "hazard pay"; 
     };
 };

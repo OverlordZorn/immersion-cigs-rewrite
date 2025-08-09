@@ -112,6 +112,13 @@ private _delay = 2.5;
 
 
 ////////////////////////////////////////
+// Flavor Notification
+////////////////////////////////////////
+private _flavor = [(_itemConfig >> QPVAR(flavor))] call CBA_fnc_getCfgDataRandom;
+if (!isNil "_flavor") then { [ { [QGVAR(EH_notify), format [LLSTRING(taste_flavor), _this]] call CBA_fnc_localEvent; } , _flavor, 15 + random 30] call CBA_fnc_waitAndExecute; };
+
+
+////////////////////////////////////////
 // Start Recursive Loop
 ////////////////////////////////////////
 [ FUNC(smoking), [_unit, _smokeData], _delay + 1] call CBA_fnc_waitAndExecute;

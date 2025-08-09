@@ -23,7 +23,7 @@ class CfgGlasses {
         PVAR(curStage) = 0;
         PVAR(endStage) = 0;
 
-        PVAR(flavour)[] = {};
+        PVAR(flavor)[] = {};
         PVAR(sounds)[] = {QPVAR(eat_01), QPVAR(eat_02), QPVAR(eat_03), QPVAR(eat_04), QPVAR(eat_05), QPVAR(eat_06), QPVAR(eat_07)};
 
         // Compat Data
@@ -43,6 +43,6 @@ class CfgGlasses {
 
         PVAR(totalSucks) = SUCKS_TOTAL;
 
-        PVAR(flavour)[] = {"banana", "cherry", "strawberry", "raspberry", "bacon", "nicotine", "tomato", "chocolate", "lemon", "cola"}; 
+        PVAR(flavor)[] = {"banana", "cherry", "strawberry", "raspberry", "bacon", "nicotine", "tomato", "chocolate", "lemon", "cola"}; 
     };
 };
