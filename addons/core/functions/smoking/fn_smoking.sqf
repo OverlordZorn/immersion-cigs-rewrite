@@ -54,7 +54,7 @@ _smokeData set ["curPuffs", _curPuffs];
 ////////////////////////////////////////
 // Sound Effects
 ////////////////////////////////////////
-private _sound = (_currentConfig >> QPVAR(smokeSound)) call CBA_fnc_getCfgDataRandom;
+private _sound = (_currentConfig >> QPVAR(sound)) call CBA_fnc_getCfgDataRandom;
 if (isNil "_sound") then { _sound = selectRandom [QPVAR(smoke_3),QPVAR(smoke_4)] };
 [_unit, _sound, 20 * _puffIntensity, true, false, true] call CBA_fnc_globalSay3d;
 

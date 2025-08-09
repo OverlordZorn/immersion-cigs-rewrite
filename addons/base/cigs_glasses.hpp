@@ -27,7 +27,7 @@ class CfgGlasses {
 
         PVAR(smokeMultiplier) = 1;
         PVAR(smokeColor)[] = { 0.2, 0.2, 0.2 };
-        PVAR(smokeSound)[] = {QPVAR(smoke_3),QPVAR(smoke_4)};
+        PVAR(sound)[] = {QPVAR(smoke_3),QPVAR(smoke_4)};
 
         KJW_Imposters_SuspicionAmount = 0;
     };

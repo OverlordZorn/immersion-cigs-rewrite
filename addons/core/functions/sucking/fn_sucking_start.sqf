@@ -105,10 +105,10 @@ private _sound = [(_itemConfig >> QPVAR(sounds))] call CBA_fnc_getCfgDataRandom;
 
 
 ////////////////////////////////////////
-// Flavour Notification
+// Flavor Notification
 ////////////////////////////////////////
-private _flavour = [(_itemConfig >> QPVAR(flavour))] call CBA_fnc_getCfgDataRandom;
-[ { [QGVAR(EH_notify), format [LLSTRING(taste_flavour), _this]] call CBA_fnc_localEvent; } , _flavour, 2 + random 30] call CBA_fnc_waitAndExecute;
+private _flavor = [(_itemConfig >> QPVAR(flavor))] call CBA_fnc_getCfgDataRandom;
+if (!isNil "_flavor") then { [ { [QGVAR(EH_notify), format [LLSTRING(taste_flavor), _this]] call CBA_fnc_localEvent; } , _flavor, 15 + random 30] call CBA_fnc_waitAndExecute; };
 
 
 ////////////////////////////////////////
