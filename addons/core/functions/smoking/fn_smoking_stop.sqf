@@ -18,10 +18,16 @@
 params ["_unit", "_smokeData"];
 
 if (_unit getVariable [QPVAR(isSmoking), false] ) then { _unit setVariable [QPVAR(isSmoking), false, true] };
+_unit setVariable [QPVAR(smokeData), nil];
 
 private _isAwake = lifeState _unit in ["HEALTHY", "INJURED"];
 private _isBurning = _unit getVariable ["ace_fire_intensity", 0] > 0;
 if ( _isAwake && (!_isBurning) ) then { [_unit, QEGVAR(anim,cig_out), 1] call FUNC(anim); };
+
+
+// 5% Chance for the unit to keep their cig when getting uncon/dead
+if ( !_isAwake && { random 1 > 0.05 } ) exitWith {};
+
 
 private _vanish = switch (true) do {
     case (_isBurning): { true };
@@ -31,4 +37,3 @@ private _vanish = switch (true) do {
 
 [_unit, _smokeData, _vanish] call FUNC(drop_cig);
 
-_unit setVariable [QPVAR(smokeData), nil];
