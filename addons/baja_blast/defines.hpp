@@ -1,1 +1,3 @@
 #define TOTALPUFFS 17
+
+#define SMOKE_COLOR_BAJA_BLAST 0.25, 0.4, 0.4
